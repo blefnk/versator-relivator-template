@@ -1,42 +1,57 @@
 {
-	"compilerOptions": {
-		/* Base Options: */
-		"esModuleInterop": true,
-		"skipLibCheck": true,
-		"target": "ESNext",
-		"allowJs": true,
-		"resolveJsonModule": true,
-		"moduleDetection": "force",
-		"isolatedModules": true,
-
-		/* Strictness */
-		"strict": true,
-		"noUncheckedIndexedAccess": true,
-		"checkJs": true,
-
-		/* Bundled projects */
-		"lib": ["DOM", "DOM.Iterable", "ESNext"],
-		"noEmit": true,
-		"module": "ESNext",
-		"moduleResolution": "Bundler",
-		"jsx": "preserve",
-		"plugins": [{ "name": "next" }],
-		"incremental": true,
-
-		/* Path Aliases */
-		"baseUrl": ".",
-		"paths": {
-			"~/*": ["./src/*"]
-		}
-	},
-	"include": [
-		".eslintrc.cjs",
-		"next-env.d.ts",
-		"**/*.ts",
-		"**/*.tsx",
-		"**/*.cjs",
-		"**/*.js",
-		".next/types/**/*.ts"
-	],
-	"exclude": ["node_modules"]
+  "compilerOptions": {
+    "incremental": true,
+    "target": "es2022",
+    "jsx": "preserve",
+    "lib": ["dom", "dom.iterable", "es2022"],
+    "moduleDetection": "force",
+    "module": "preserve",
+    "paths": {
+      "#/*": ["./cluster/src/*"],
+      "@/*": ["./addons/*"],
+      "$/*": ["./public/*"],
+      "~/*": ["./src/*"]
+    },
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "strict": true,
+    "noImplicitOverride": true,
+    "noUncheckedIndexedAccess": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "verbatimModuleSyntax": false,
+    "skipLibCheck": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "include": [
+    ".next/types/**/*.ts",
+    "addons/**/*.ts",
+    "addons/**/*.tsx",
+    "cluster/deprecated/src/**/*.ts",
+    "cluster/deprecated/src/**/*.tsx",
+    "cluster/src/**/*.ts",
+    "cluster/src/**/*.tsx",
+    "drizzle.config.ts",
+    "eslint.config.js",
+    "next.config.js",
+    "next-env.d.ts",
+    "reliverse.addons.ts",
+    "reliverse.config.ts",
+    "reliverse.info.ts",
+    "reliverse.setup.ts",
+    "reliverse.themes.ts",
+    "remotion.config.ts",
+    "reset.d.ts",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/env.js",
+    "tailwind.config.ts"
+  ],
+  "exclude": ["node_modules"]
 }

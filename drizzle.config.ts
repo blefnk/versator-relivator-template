@@ -1,12 +1,20 @@
-import type { Config } from "drizzle-kit";
+import { config } from "dotenv";
+import { defineConfig } from "drizzle-kit";
 
-import { env } from "./src/env";
+config({ path: ".env" });
 
-export default {
-	schema: "./src/core/server/db/schema.ts",
-	driver: "pg",
-	dbCredentials: {
-		connectionString: env.DATABASE_URL,
-	},
-	tablesFilter: ["versator_*"],
-} satisfies Config;
+export default defineConfig({
+  dbCredentials: {
+    url: process.env.DATABASE_URL || "",
+  },
+  dialect: "postgresql",
+  migrations: {
+    schema: "public",
+    table: "drizzle/relivator/pgsql",
+  },
+  out: "drizzle/relivator/pgsql",
+  schema: "src/db/schema.ts",
+  strict: true,
+  tablesFilter: ["relivator_*"],
+  verbose: false,
+});

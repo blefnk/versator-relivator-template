@@ -1,7 +1,13 @@
 import { redirect } from "next/navigation";
 
-import { defaultLocale } from "~/navigation";
+import { env } from "~/env";
 
-const AuthPage = () => redirect(defaultLocale);
-
-export default AuthPage;
+export default function AuthRootPage() {
+  // TODO: FIX revalidateUser();
+  // return redirect(
+  //   env.NODE_ENV === "development" ? "/dashboard" : "/dashboard/billing",
+  // );
+  return redirect(
+    env.NODE_ENV === "development" ? "/error?message=session-not-found" : "/",
+  );
+}

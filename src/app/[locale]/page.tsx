@@ -1,87 +1,65 @@
-import Link from "next/link";
+import type { Metadata } from "next";
 
-import React from "react";
-import { CreatePost } from "~/components/create-post";
-import { getServerAuthSession } from "~/core/server/auth";
-import { api } from "~/core/utils/trpc/server";
+// import FeatureSection01 from "#/layout/index/feature/feature-section-01";
+// import HeroSection01 from "#/layout/index/hero/hero-section-01";
+// import PricingSection01 from "#/layout/index/pricing/pricing-section-01";
+import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
-import styles from "../index.module.css";
+import { siteConfig } from "~/app";
+import { HomeFeaturedItems } from "~/components/Commerce/FeaturedStoreItems";
+import { Features } from "~/components/Common/features";
+import { GithubStarsBadge } from "~/components/Common/stars";
+import HomeBottomSection from "~/components/Marketing/BottomSection";
+import { BannerWithButton } from "~/components/Marketing/Elements/Banners/with-button";
+import HomeHeroSection from "~/components/Marketing/HeroSection";
+import HomeMainSection from "~/components/Marketing/MainSection";
+import { AccordionSection } from "~/components/Sections/Questions/AccordionSection";
+import { Shell } from "~/components/Wrappers/ShellVariants";
 
-export default async function Home() {
-	const hello = await api.post.hello({ text: "from tRPC with i18n" });
-	const session = await getServerAuthSession();
+// @see https://github.com/blefnk/relivator
+export async function generateMetadata() {
+  // useTranslations works both on the server and client;
+  // we only need the getTranslations on async functions.
+  const t = await getTranslations();
 
-	return (
-		<main className={styles.main}>
-			<div className={styles.container}>
-				<h1 className={styles.title}>
-					Create <span className={styles.pinkSpan}>Reliverse</span> App
-				</h1>
-				<div className={styles.cardRow}>
-					<Link
-						className={styles.card}
-						href="https://docs.bleverse.com/en/usage/first-steps"
-						target="_blank"
-					>
-						<h3 className={styles.cardTitle}>First Steps →</h3>
-						<div className={styles.cardText}>
-							Just the basics - Everything you need to know to set up your
-							database and authentication.
-						</div>
-					</Link>
-					<Link
-						className={styles.card}
-						href="https://docs.bleverse.com/en/introduction"
-						target="_blank"
-					>
-						<h3 className={styles.cardTitle}>Documentation →</h3>
-						<div className={styles.cardText}>
-							Learn more about Create Reliverse App, the libraries it uses, and
-							how to deploy it.
-						</div>
-					</Link>
-				</div>
-				<div className={styles.showcaseContainer}>
-					<p className={styles.showcaseText}>
-						{hello ? hello.greeting : "Loading tRPC query..."}
-					</p>
+  const metadata: Metadata = {
+    title: `${t("metadata.title.home")} - ${siteConfig.appNameDesc}`,
+  };
 
-					<div className={styles.authContainer}>
-						<p className={styles.showcaseText}>
-							{session && <span>Logged in as {session.user?.name}</span>}
-						</p>
-						<Link
-							href={session ? "/api/auth/signout" : "/api/auth/signin"}
-							className={styles.loginButton}
-						>
-							{session ? "Sign out" : "Sign in"}
-						</Link>
-					</div>
-				</div>
-
-				<CrudShowcase />
-			</div>
-		</main>
-	);
+  return metadata;
 }
 
-async function CrudShowcase() {
-	const session = await getServerAuthSession();
-	if (!session?.user) return null;
+export default function HomePage() {
+  const t = useTranslations();
 
-	const latestPost = await api.post.getLatest();
+  return (
+    <>
+      <BannerWithButton
+        linkHref="https://reliverse.org/relivator/v126"
+        tButton={t("banners.announcements-1.button")}
+        tDetails={t("banners.announcements-1.details")}
+        tDismiss={t("banners.announcements-1.dismiss")}
+        tTitle={t("banners.announcements-1.title")}
+      />
 
-	return (
-		<div className={styles.showcaseContainer}>
-			{latestPost ? (
-				<p className={styles.showcaseText}>
-					Your most recent post: {latestPost.name}
-				</p>
-			) : (
-				<p className={styles.showcaseText}>You have no posts yet.</p>
-			)}
+      <GithubStarsBadge />
+      <HomeHeroSection />
+      <Shell
+        className={`
+          px-10
 
-			<CreatePost />
-		</div>
-	);
+          2xl:px-32
+
+          lg:20
+        `}
+      >
+        <HomeFeaturedItems />
+        <HomeMainSection />
+        <Features />
+        <AccordionSection />
+        <HomeBottomSection />
+      </Shell>
+    </>
+  );
 }
