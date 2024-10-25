@@ -1,4 +1,4 @@
-import type { AcademyQuestion } from "@/scripts/reliverse/academy/types";
+import type { AcademyQuestion } from "$/scripts/reliverse/academy/types";
 
 import { destr } from "destr";
 import fs from "fs-extra";
@@ -6,7 +6,7 @@ import { join } from "pathe";
 
 import { getCurrentDirname } from "@reliverse/fs";
 
-// import { decryptAnswer } from "@/scripts/reliverse/academy/crypto";
+// import { decryptAnswer } from "$/scripts/reliverse/academy/crypto";
 const currentDirname = getCurrentDirname(import.meta.url);
 
 const isQuestionArray = (data: unknown): data is AcademyQuestion[] => {

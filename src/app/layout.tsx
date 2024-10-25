@@ -2,8 +2,8 @@ import type { ReactNode } from "react";
 
 // TODO: @reliverse/themes (coming soon)
 // import "@radix-ui/themes/styles.css"; // import "@xyflow/react/dist/style.css";
-// eslint-disable-next-line no-relative-import-paths/no-relative-import-paths
-import "../styles/globals.css";
+// import "../styles/globals.css";
+import "~/styles/globals.css";
 
 type RootLayoutProps = {
   children: ReactNode;

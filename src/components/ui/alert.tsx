@@ -54,7 +54,6 @@ const AlertTitle = forwardRef<
   HTMLParagraphElement,
   HTMLAttributes<HTMLHeadingElement>
 >(({ className, ...props }, ref) => (
-  // eslint-disable-next-line jsx-a11y/heading-has-content
   <h5
     className={cn("mb-1 font-medium leading-none tracking-tight", className)}
     ref={ref}

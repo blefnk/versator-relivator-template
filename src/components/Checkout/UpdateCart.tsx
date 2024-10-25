@@ -28,9 +28,9 @@ export function UpdateCart({ cartLineItem }: UpdateCartProps) {
   return (
     <div
       className={`
-        flex w-full items-center justify-between space-x-2
+        xs:w-auto xs:justify-normal flex w-full items-center
 
-        xs:w-auto xs:justify-normal
+        justify-between space-x-2
       `}
     >
       <div className="flex items-center">

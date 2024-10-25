@@ -1,8 +1,7 @@
-import type { TLevel } from "@/scripts/reliverse/quotes/types";
+import type { TLevel } from "$/scripts/reliverse/quotes/types";
 
 import { config } from "@reliverse/core";
 
-/* eslint-disable @stylistic/max-len */
 export function getRandomElement<T>(array: T[]): T {
   if (array.length === 0) {
     throw new Error("Array is empty");

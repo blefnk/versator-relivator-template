@@ -23,10 +23,8 @@ export default async function SignUpPage() {
 
   const message =
     authProvider === "authjs"
-      ? // eslint-disable-next-line @stylistic/max-len
-        "Please specify Google, Discord, or GitHub environment variables in your .env file or in Vercel dashboard to unlock NextAuth.js (authjs) features. Or use Clerk instead. Refer to .env.example for more information."
-      : // eslint-disable-next-line @stylistic/max-len
-        "Please specify Clerk environment variables in your .env file or Vercel dashboard. You may also need to specify some NextAuth.js (auth) variables currently. Or just use NextAuth.js (auth) instead. Refer to .env.example for more information.";
+      ? "Please specify Google, Discord, or GitHub environment variables in your .env file or in Vercel dashboard to unlock NextAuth.js (authjs) features. Or use Clerk instead. Refer to .env.example for more information."
+      : "Please specify Clerk environment variables in your .env file or Vercel dashboard. You may also need to specify some NextAuth.js (auth) variables currently. Or just use NextAuth.js (auth) instead. Refer to .env.example for more information.";
 
   // if (session) {
   //   return redirect("/");

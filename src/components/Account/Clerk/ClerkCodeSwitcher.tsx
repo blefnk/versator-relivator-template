@@ -20,7 +20,6 @@ export function CodeSwitcher() {
       organization,
       session,
       user,
-      // @ts-expect-error TODO: fix
     }[selectedType],
     null,
     2,

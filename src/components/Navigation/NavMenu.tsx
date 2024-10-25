@@ -107,9 +107,9 @@ const NavigationMenuContent = ({
       `
         left-0 top-0 w-full
 
-        data-[motion^=from-]:animate-in data-[motion^=from-]:fade-in
+        data-[motion^=from-]:animate-in data-[motion^=to-]:animate-out
 
-        data-[motion^=to-]:animate-out data-[motion^=to-]:fade-out
+        data-[motion^=from-]:fade-in data-[motion^=to-]:fade-out
 
         data-[motion=from-end]:slide-in-from-right-52
 
@@ -147,9 +147,9 @@ const NavigationMenuViewport = ({
           w-full origin-center overflow-hidden rounded-lg border bg-popover
           text-popover-foreground shadow
 
-          data-[state=closed]:animate-out data-[state=closed]:zoom-out-95
+          data-[state=open]:animate-in data-[state=closed]:animate-out
 
-          data-[state=open]:animate-in data-[state=open]:zoom-in-90
+          data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-90
 
           md:w-[var(--radix-navigation-menu-viewport-width)]
         `,
@@ -176,9 +176,9 @@ const NavigationMenuIndicator = ({
       `
         top-[60%] z-10 flex items-center justify-center transition
 
-        data-[state=hidden]:animate-out data-[state=hidden]:fade-out
+        data-[state=visible]:animate-in data-[state=hidden]:animate-out
 
-        data-[state=visible]:animate-in data-[state=visible]:fade-in
+        data-[state=hidden]:fade-out data-[state=visible]:fade-in
       `,
       className,
     )}

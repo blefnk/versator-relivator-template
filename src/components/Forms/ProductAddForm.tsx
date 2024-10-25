@@ -45,7 +45,6 @@ import { productSchema } from "~/server/validations/deprecated/product-old";
 // import { UploadButton } from "~/utils/uthing";
 type Inputs = z.infer<typeof productSchema>;
 
-// eslint-disable-next-line max-lines-per-function
 export function ProductAddForm() {
   const t = useTranslations();
 

@@ -1,4 +1,4 @@
-import { CommandGroup, CommandItem } from "@/components/ui/command";
+import { CommandGroup, CommandItem } from "$/components/ui/command";
 import { CloudMoon, MonitorSmartphone, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 

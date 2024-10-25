@@ -1,4 +1,3 @@
-/* eslint-disable @stylistic/max-len */
 "use client";
 
 import { authProvider } from "~/auth/provider";

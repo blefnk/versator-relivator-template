@@ -62,9 +62,9 @@ export function HomeFeaturedItems() {
             className={`
               mb-10 flex-1 text-xl font-medium
 
-              lg:text-3xl
+              md:flex
 
-              md:flex md:text-2xl
+              md:text-2xl lg:text-3xl
             `}
           >
             <span
@@ -74,9 +74,9 @@ export function HomeFeaturedItems() {
                 md:block
               `}
             >
-              Music
+              Featured
             </span>{" "}
-            Sheets
+            Products
           </h3>
           <Link aria-label="Products" href="/products">
             <div
@@ -104,11 +104,11 @@ export function HomeFeaturedItems() {
           className={`
             grid grid-cols-2 gap-4
 
-            lg:grid-cols-4
+            sm:grid-cols-2
 
             md:grid-cols-3
 
-            sm:grid-cols-2
+            lg:grid-cols-4
           `}
         >
           {/* {guestEmail || session ? (
@@ -150,9 +150,9 @@ export function HomeFeaturedItems() {
             className={`
               mb-10 flex-1 text-xl font-medium
 
-              lg:text-3xl
+              md:flex
 
-              md:flex md:text-2xl
+              md:text-2xl lg:text-3xl
             `}
           >
             <span
@@ -162,9 +162,9 @@ export function HomeFeaturedItems() {
                 md:block
               `}
             >
-              Music
+              Featured
             </span>{" "}
-            Sellers
+            Stores
           </h2>
           <Link aria-label="Stores" href="/stores">
             <div
@@ -192,11 +192,11 @@ export function HomeFeaturedItems() {
           className={`
             grid grid-cols-2 gap-4
 
-            lg:grid-cols-4
+            sm:grid-cols-2
 
             md:grid-cols-3
 
-            sm:grid-cols-2
+            lg:grid-cols-4
           `}
         >
           {/* {someStores.map((store) => (

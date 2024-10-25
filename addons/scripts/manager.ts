@@ -3,8 +3,8 @@ import { defineCommand, runMain } from "citty";
 import consola from "consola";
 import superjson from "superjson";
 
-import { getRandomQuote } from "@/scripts/reliverse/quotes";
-import { defineAddon } from "@/scripts/utils";
+import { getRandomQuote } from "$/scripts/reliverse/quotes";
+import { defineAddon } from "$/scripts/utils";
 
 // Reliverse Addons: Reliverse CMS Devtools.
 // Please find more details about this folder

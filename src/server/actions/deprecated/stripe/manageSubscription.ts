@@ -75,6 +75,7 @@ export async function manageSubscription(
     await db
       .update(users)
       .set({
+        // @ts-expect-error TODO: fix
         mode: "seller",
       })
       .where(eq(users.id, user.id));

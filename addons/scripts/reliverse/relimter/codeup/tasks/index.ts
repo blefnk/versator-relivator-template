@@ -1,4 +1,4 @@
-import type { TCodeupUtils } from "@/scripts/reliverse/relimter/codeup/types";
+import type { TCodeupUtils } from "$/scripts/reliverse/relimter/codeup/types";
 import type { ActionContext } from "codeup";
 
 import { defineAction } from "codeup";

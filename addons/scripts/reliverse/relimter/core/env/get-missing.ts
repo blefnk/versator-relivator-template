@@ -1,7 +1,7 @@
 import { authProvider, debugEnabled } from "~/../reliverse.config";
 import consola from "consola";
 
-import { convertEmptyStringToUndefined } from "@/scripts/reliverse/relimter/core/env/helpers";
+import { convertEmptyStringToUndefined } from "$/scripts/reliverse/relimter/core/env/helpers";
 import { recommendedEnvVariables } from "~/env";
 
 const checkMissingVariables = (

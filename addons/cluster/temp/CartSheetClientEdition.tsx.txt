@@ -19,7 +19,7 @@ import {
 } from "~/components/Primitives";
 import { Button } from "~/components/Primitives/ui/Button";
 import { buttonVariants } from "~/components/Primitives";
-import { getCartAction } from "@/server/reliverse/actions/cart";
+import { getCartAction } from "$/server/reliverse/actions/cart";
 import { cn, formatPrice } from "~/utils";
 
 type CartItem = {

@@ -2,16 +2,15 @@ import type { ReactNode } from "react";
 
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
-import { notFound } from "next/navigation";
 
 // import { UnifiedBleverseFooter } from "#/layout/bleverse/unified-bleverse-footer";
 import { NextSSRPlugin } from "@uploadthing/react/next-ssr-plugin";
 import { Analytics as VercelAnalytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { hideTailwindIndicator } from "~/../reliverse.config";
+import type { Locale } from "~/../reliverse.i18n";
 import { defaultLocale, locales } from "~/../reliverse.i18n";
-import { NextIntlClientProvider } from "next-intl";
-import { getMessages, getTranslations } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 import { extractRouterConfig } from "uploadthing/server";
 
 import { config as reliverse } from "@reliverse/core";
@@ -29,16 +28,26 @@ import { ourFileRouter } from "~/server/helpers/uploadthing-core";
 // import { TRPCReactProvider } from "~/trpc/react";
 import { cn } from "~/utils/cn";
 
+// import { headers } from "next/headers";
+
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server";
+import { notFound } from "next/navigation";
+import { routing } from "~/i18n/routing";
+
 const baseMetadataURL = env.NEXT_PUBLIC_APP_URL || "http://localhost:3000";
 
 type RootLocaleLayoutProps = {
   children: ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 };
 
+// @see https://github.com/blefnk/relivator
 export async function generateMetadata({
-  params: { locale },
+  params,
 }: Omit<RootLocaleLayoutProps, "children">) {
+  const { locale } = await params;
+
   // We only need the getTranslations on async components
   // useTranslations works both on the server and the client side.
   const t = await getTranslations({ locale, namespace: "RootLocaleLayout" });
@@ -138,15 +147,35 @@ const fontFlag = localFont({
 // This file serves as the primary entry point for the app.
 export default async function RootLocaleLayout({
   children,
-  params: { locale },
+  params,
 }: RootLocaleLayoutProps) {
-  // @see https://github.com/blefnk/relivator
-  if (!locales.includes(locale)) {
-    return notFound();
-  }
+  const { locale } = await params;
+
+  // TODO: fix Next.js 15 Error: Route "/[locale]" used `headers().get('X-NEXT-INTL-LOCALE')`. `headers()` should be awaited before using its value. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+  // const { locale: paramsLocale } = await params;
+  // Await the headers to get the 'X-NEXT-INTL-LOCALE' value
+  // const headerList = await headers();
+  // const localeHeader = headerList.get("X-NEXT-INTL-LOCALE") || paramsLocale;
+  // Fallback to params locale if the header doesn't exist
+  // const locale = locales.includes(localeHeader as Locale)
+  // ? localeHeader
+  // : defaultLocale;
+
+  // Check if the locale is valid, otherwise return a 404
+  // if (!locales.includes(locale as Locale)) {
+  // return notFound();
+  // }
 
   // Providing all messages to the client side
-  // is the easiest way to handle "use client";
+  // const messages = await getMessages();
+
+  // Ensure that the incoming `locale` is valid
+  if (!routing.locales.includes(locale as any)) {
+    notFound();
+  }
+
+  // Providing all messages to the client
+  // side is the easiest way to get started
   const messages = await getMessages();
 
   return (

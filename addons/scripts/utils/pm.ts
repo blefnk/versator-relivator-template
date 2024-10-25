@@ -1,4 +1,4 @@
-import { getCurrentWorkingDirectory } from "@/../packageJson";
+import { getCurrentWorkingDirectory } from "$/../packageJson";
 import destr from "destr";
 import fs from "fs-extra";
 import { join } from "pathe";

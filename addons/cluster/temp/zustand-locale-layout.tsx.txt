@@ -22,7 +22,7 @@ import { Toaster } from "~/components/Wrappers/Toaster";
 import { siteConfig } from "~/app";
 import { defaultLocale, locales } from "~/config/navigation";
 import { TRPC } from "~/core/trpc/react";
-import { ourFileRouter } from "@/server/reliverse/api/uploadthing/core";
+import { ourFileRouter } from "$/server/reliverse/api/uploadthing/core";
 import { cn } from "~/utils";
 
 import "@radix-ui/themes/styles.css";

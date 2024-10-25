@@ -17,11 +17,11 @@ export default function useClipboard({
       clearTimeout(copyTimeout);
     }
 
-    setCopyTimeout(
-      setTimeout(() => {
-        setCopied(false);
-      }, timeout),
-    );
+    const timeoutId = setTimeout(() => {
+      setCopied(false);
+    }, timeout);
+
+    setCopyTimeout(timeoutId as unknown as NodeJS.Timeout);
     setCopied(value);
   };
 

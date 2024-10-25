@@ -94,9 +94,7 @@ export const useOptimisticBoard = (board: BoardWithColumns) => {
           const item = board.items[action.id];
 
           invariant(item);
-          // @ts-expect-error TODO: fix ts
           item.columnId = action.toColumnId;
-          // @ts-expect-error TODO: fix ts
           item.order = action.order;
 
           return state;

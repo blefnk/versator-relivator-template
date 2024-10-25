@@ -53,7 +53,6 @@ type DataTableProps<TData, TValue> = {
   searchableColumns?: DataTableSearchableColumn<TData>[];
 };
 
-// eslint-disable-next-line max-lines-per-function
 export function DataTable<TData, TValue>({
   columns,
   data,

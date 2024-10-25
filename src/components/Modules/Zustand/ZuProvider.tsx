@@ -12,14 +12,13 @@ import { initializeStore } from "~/components/Modules/Zustand/zu-store";
 
 // # Zustand
 // Current implementation of the Zustand is possibly outdated.
-// eslint-disable-next-line @stylistic/max-len
+
 // TODO: Remove Zustand in Relivator 1.3.0, move Zustand integration into @reliverse/addons to have manual selection with the `reliverse` command.
 // For new implementation @see <https://docs.pmnd.rs/zustand/guides/nextjs>
 const ZustandProvider = ({ children, ...props }: PropsWithChildren) => {
   const storeRef = useRef<StoreType>(null);
 
   if (!storeRef.current) {
-    // @ts-expect-error TODO: fix
     storeRef.current = initializeStore(props);
   }
 

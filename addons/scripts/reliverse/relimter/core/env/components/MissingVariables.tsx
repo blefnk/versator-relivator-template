@@ -3,7 +3,7 @@ import { authProvider, debugEnabled, hideEnvInfo } from "~/../reliverse.config";
 import {
   checkAuthConditions,
   getMissingVariables,
-} from "@/scripts/reliverse/relimter/core/env/get-missing";
+} from "$/scripts/reliverse/relimter/core/env/get-missing";
 import { config } from "@reliverse/core";
 import {
   Accordion,
@@ -54,7 +54,7 @@ export function EnvInfo({ hide = false, session = null }: EnvInfoProps) {
         <Accordion className="flex-1" type="single" collapsible>
           <AccordionItem value="item-1">
             <AccordionTrigger>
-              {/* eslint-disable-next-line @stylistic/max-len */}
+              {}
               {`Hello, and thank you so much for installing ${config.framework.name} ${config.framework.version}! To complete the installation – read this accordion.`}
             </AccordionTrigger>
             <AccordionContent>

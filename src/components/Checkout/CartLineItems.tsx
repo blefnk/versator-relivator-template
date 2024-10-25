@@ -49,9 +49,9 @@ export function CartLineItems({
                 "flex items-start justify-between gap-4",
                 isEditable
                   ? `
-                    flex-col
-
                     xs:flex-row
+
+                    flex-col
                   `
                   : "flex-row",
               )}

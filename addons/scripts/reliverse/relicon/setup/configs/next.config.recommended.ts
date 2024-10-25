@@ -1,6 +1,5 @@
 import createMDX from "@next/mdx";
 import createNextIntlPlugin from "next-intl/plugin";
-import remarkGfm from "remark-gfm";
 
 // The Reliverse Next Config comes with minimal and recommended configurations.
 // Run `pnpm reli:setup` to easily switch between them and set up other tools.
@@ -108,7 +107,7 @@ const withMDX = createMDX({
   // extension: /\.mdx?$/,
   options: {
     // providerImportSource: "@mdx-js/react",
-    remarkPlugins: [remarkGfm],
+    remarkPlugins: [],
   },
 });
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { createPost } from "@/actions/reliverse/post";
+import { createPost } from "$/actions/reliverse/post";
 import { useTranslations } from "next-intl";
 
 // Protected React Server Actions w/ tRPC

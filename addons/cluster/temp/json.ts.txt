@@ -1,4 +1,4 @@
-import type { ApptsConfig } from "@/reliverse/relicon/setup/types";
+import type { ApptsConfig } from "$/reliverse/relicon/setup/types";
 
 import { writeFile } from "fs/promises";
 

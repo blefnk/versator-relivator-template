@@ -62,9 +62,9 @@ export default function CheckoutLoading() {
               <div key={index} className="space-y-3">
                 <div
                   className={`
-                    flex flex-col items-start justify-between gap-4
+                    xs:flex-row flex flex-col items-start justify-between
 
-                    xs:flex-row
+                    gap-4
                   `}
                 >
                   <div className="flex items-center space-x-4">
@@ -133,9 +133,9 @@ export default function CheckoutLoading() {
             ))}
             <div
               className={`
-                flex flex-col items-center gap-2
+                xxs:flex-row flex flex-col items-center
 
-                xxs:flex-row
+                gap-2
               `}
             >
               {Array.from({

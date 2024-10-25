@@ -15,7 +15,6 @@ const TEMPLATES = {
 export async function sendEmails(
   to: string[],
 
-  // biome-ignore lint/style/useDefaultParameterLast: <explanation>
   props: unknown = {
     //
   },
@@ -24,7 +23,6 @@ export async function sendEmails(
   try {
     await resend.emails.send({
       from: "Resend <onboarding@resend.dev>",
-      // @ts-expect-error TODO: fix
       react: TEMPLATES[template](props),
       // @ts-expect-error TODO: fix
       subject: `Congrats, ${props.firstName}! You received the event ticket!`,

@@ -1,45 +1,29 @@
 import js from "@eslint/js";
 import reactCommunity from "@eslint-react/eslint-plugin";
-// @ts-expect-error missing types
 import nextPlugin from "@next/eslint-plugin-next";
 import stylistic from "@stylistic/eslint-plugin";
 import tanstack from "@tanstack/eslint-plugin-query";
-// @ts-expect-error missing types
 import barrel from "eslint-plugin-barrel-files";
-// @ts-expect-error missing types
 import drizzle from "eslint-plugin-drizzle";
-// @ts-expect-error missing types
 import eslintComments from "eslint-plugin-eslint-comments";
 import importX from "eslint-plugin-import-x";
 import jsonc from "eslint-plugin-jsonc";
-// @ts-expect-error missing types
 import jsxA11yPlugin from "eslint-plugin-jsx-a11y";
-// @ts-expect-error missing types
 import markdown from "eslint-plugin-markdown";
 import nodePlugin from "eslint-plugin-n";
-// @ts-expect-error missing types
 import noComments from "eslint-plugin-no-comments";
-// @ts-expect-error missing types
 import noRelative from "eslint-plugin-no-relative-import-paths";
 import perfectionist from "eslint-plugin-perfectionist";
-// @ts-expect-error missing types
 import promisePlugin from "eslint-plugin-promise";
-// @ts-expect-error missing types
 import reactJsxRuntime from "eslint-plugin-react/configs/jsx-runtime.js";
-// @ts-expect-error missing types
 import reactRecommended from "eslint-plugin-react/configs/recommended.js";
-// @ts-expect-error missing types
 import reactHooks from "eslint-plugin-react-hooks";
-// @ts-expect-error missing types
 import reactRefresh from "eslint-plugin-react-refresh";
 import tailwindReadable from "eslint-plugin-readable-tailwind";
 import * as regexp from "eslint-plugin-regexp";
 import sonarjs from "eslint-plugin-sonarjs";
-// @ts-expect-error missing types
 import eslintPluginSort from "eslint-plugin-sort";
-// @ts-expect-error missing types
 import sortExports from "eslint-plugin-sort-exports";
-// @ts-expect-error missing types
 import tailwindcss from "eslint-plugin-tailwindcss";
 import unicorn from "eslint-plugin-unicorn";
 import yaml from "eslint-plugin-yml";
@@ -1371,7 +1355,7 @@ export default tseslint.config(
             "style",
           ],
           ignoreCase: true,
-          internalPattern: ["@reliverse/**", "$/**", "#/**", "@/**", "~/**"],
+          internalPattern: ["@reliverse/**", "#/**", "@/**", "~/**"],
           maxLineLength: undefined,
           newlinesBetween: "always",
           order: "asc",

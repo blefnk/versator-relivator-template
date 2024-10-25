@@ -40,5 +40,5 @@ export function calculateOrderAmount(items: CartLineItem[]) {
   return {
     fee: feeInCents,
     total: totalInCents,
-  }; // eslint-disable-next-line @stylistic/max-len
+  };
 } // export const generateRandomString = (length: number): string => {// return Math.random().toString(36).substr(2, length);// };// export const sleep = (ms: number): Promise<void> =>// new Promise((resolve) => setTimeout(resolve, ms));// export const isEmail = (str: string): boolean =>// ^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(str);// export const isValidURL = (str: string): boolean => {// try {// new URL(str);// return true;// } catch {// return false;// }// };

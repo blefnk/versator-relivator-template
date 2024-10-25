@@ -1,7 +1,7 @@
 import type {
   AcademyDifficultyLevels,
   AcademyQuestion,
-} from "@/scripts/reliverse/academy/types";
+} from "$/scripts/reliverse/academy/types";
 
 import { select } from "@inquirer/prompts";
 import consola from "consola";
@@ -9,13 +9,13 @@ import pc from "picocolors";
 import tryToCatch from "try-to-catch";
 import { v4 as uuidv4 } from "uuid";
 
-import { updateAchievements } from "@/scripts/reliverse/academy/achievements";
+import { updateAchievements } from "$/scripts/reliverse/academy/achievements";
 import {
   readJsonFile,
   writeJsonFile,
-} from "@/scripts/reliverse/academy/fileHandler";
-import { updatePlayerScore } from "@/scripts/reliverse/academy/player";
-import { AcademyCategoryEnum } from "@/scripts/reliverse/academy/types";
+} from "$/scripts/reliverse/academy/fileHandler";
+import { updatePlayerScore } from "$/scripts/reliverse/academy/player";
+import { AcademyCategoryEnum } from "$/scripts/reliverse/academy/types";
 import { getErrorMessage } from "~/server/helpers/error-message";
 
 const academyProgressFilePath = "data/progress.json";
@@ -283,14 +283,12 @@ const playCategory = async (
   if (sessionPossiblePoints === 0 || sessionCorrectAnswers === 0) {
     consola.info(
       pc.dim(
-        // eslint-disable-next-line @stylistic/max-len
         "You did not answer any questions correctly, or you have already answered all questions in this category or difficulty level.",
       ),
     );
   } else {
     consola.info(
       pc.green(
-        // eslint-disable-next-line @stylistic/max-len
         `You have earned ${sessionPoints} out of ${sessionPossiblePoints} points in this session (${possiblePoints} available in ${category} ${difficulty}).`,
       ),
     );
@@ -303,7 +301,6 @@ const playCategory = async (
 
     consola.info(
       pc.blue(
-        // eslint-disable-next-line @stylistic/max-len
         `You answered ${sessionCorrectAnswers} out of ${sessionPossiblePoints / (possiblePoints / totalQuestions)} questions correctly in this session (${totalQuestions - remainingQuestions} available in ${category} ${difficulty}).`,
       ),
     );

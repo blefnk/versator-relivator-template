@@ -1,4 +1,7 @@
-import type { LocalePrefix, Pathnames } from "next-intl/routing";
+// !! DEPRECATED !!
+
+// import type { LocalePrefix, Pathnames } from "next-intl/routing";
+import type { Pathnames } from "next-intl/routing";
 
 // @see matcher in middleware.ts
 export const locales = [
@@ -15,7 +18,7 @@ export const locales = [
   "zh-CN",
 ] as const;
 
-export const localePrefix: LocalePrefix<typeof locales> = "as-needed";
+// export const localePrefix: LocalePrefix<typeof locales> = "always";
 
 export type Locale = (typeof locales)[number];
 

@@ -1,4 +1,3 @@
-/* eslint-disable @stylistic/max-len */
 import type { LucideProps } from "lucide-react";
 
 import { cn } from "~/utils/cn";

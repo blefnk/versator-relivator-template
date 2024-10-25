@@ -48,9 +48,9 @@ export default function StoresLoading() {
         className={`
           grid gap-4
 
-          lg:grid-cols-3
-
           sm:grid-cols-2
+
+          lg:grid-cols-3
         `}
         aria-labelledby="dashboard-stores-page-stores-heading"
       >

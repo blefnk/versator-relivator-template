@@ -5,9 +5,11 @@ import type { Locale } from "~/../reliverse.i18n";
 import type { FC, MouseEvent } from "react";
 import { Fragment, useState } from "react";
 
+import { usePathname, routing } from "~/i18n/routing";
+
 import Link from "next/link";
 
-import { labels, localeFlags, locales } from "~/../reliverse.i18n";
+import { labels, localeFlags } from "~/../reliverse.i18n";
 import { useLocale, useTranslations } from "next-intl";
 
 import { Button, buttonVariants } from "~/components/ui/button";
@@ -26,16 +28,24 @@ const NATIVE = "⚙️ Native";
 const LANGUAGE_LABEL = "Language";
 
 export function LocaleSwitcher() {
+  const pathname = usePathname();
   const locale = useLocale() as Locale;
-  const [translateLanguages, setTranslateLanguages] = useState(true);
+  const [translateLanguages, setTranslateLanguages] = useState(false);
 
-  const filteredLocales = locales.filter(
+  const filteredLocales = routing.locales.filter(
     (currentLocale) => currentLocale !== locale,
   );
 
   const toggleTranslation = (event_: MouseEvent) => {
     event_.preventDefault();
     setTranslateLanguages(!translateLanguages);
+  };
+
+  // Helper function to strip current locale from pathname
+  const getPathWithoutLocale = () => {
+    const regex = new RegExp(`^/(${routing.locales.join("|")})`);
+
+    return pathname.replace(regex, ""); // Remove the locale part from the current pathname
   };
 
   return (
@@ -58,7 +68,7 @@ export function LocaleSwitcher() {
       <DropdownMenuContent align="start">
         <DropdownMenuLabel>{LANGUAGE_LABEL}</DropdownMenuLabel>
         <DropdownMenuSeparator />
-        <DropdownMenuItem className="flex items-center justify-start font-twemoji">
+        <DropdownMenuItem className="font-twemoji flex items-center justify-start">
           <Button
             className="w-full text-left"
             type="button"
@@ -71,11 +81,14 @@ export function LocaleSwitcher() {
         <DropdownMenuSeparator />
         {filteredLocales.map((currentLocale, index) => (
           <Fragment key={index}>
-            <Link href={currentLocale} locale={currentLocale}>
+            <Link
+              href={`/${currentLocale}${getPathWithoutLocale()}`} // Correctly prepend the new locale
+              locale={currentLocale}
+            >
               <DropdownMenuItem
                 className={`
-                  flex cursor-pointer items-center justify-start font-twemoji
-                `}
+          font-twemoji flex cursor-pointer items-center justify-start
+        `}
               >
                 <LocaleNames
                   currentLocale={currentLocale}
@@ -132,11 +145,11 @@ const LocaleNames: FC<LocaleNamesProps> = ({
           className={`
             hidden
 
-            2xl:flex
+            md:flex
 
             lg:hidden
 
-            md:flex
+            2xl:flex
           `}
         >
           {localeLabels[currentLocale]}

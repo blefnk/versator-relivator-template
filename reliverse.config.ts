@@ -25,7 +25,7 @@ export const packageManager = "pnpm" as "bun" | "pnpm";
 export type DatabaseDialect = "mysql" | "postgresql" | "sqlite";
 
 export const databasePrefix =
-  process.env.NEXT_PUBLIC_DATABASE_PREFIX || "bleverse";
+  process.env.NEXT_PUBLIC_DATABASE_PREFIX || "relivator";
 
 export const databaseDialect = "postgresql";
 

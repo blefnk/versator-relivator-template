@@ -1,6 +1,6 @@
 import { revalidatePath, revalidateTag } from "next/cache";
 
-import { protectedAction, protectedBoardAction } from "@/server/reliverse/trpc";
+import { protectedAction, protectedBoardAction } from "$/server/reliverse/trpc";
 import { and, count, eq } from "drizzle-orm";
 import { isRedirectError } from "next/dist/client/components/redirect";
 import { AuthError } from "next-auth";

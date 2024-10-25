@@ -22,7 +22,6 @@ export async function fetchStargazers({
 
   if (!process.env.REMOTION_GITHUB_TOKEN) {
     consola.error(
-      // eslint-disable-next-line @stylistic/max-len
       "No REMOTION_GITHUB_TOKEN environment variable found. Using the GitHub REST API instead of GraphQL, which has a lower rate-limit and does not have GitHub display names.",
     );
 

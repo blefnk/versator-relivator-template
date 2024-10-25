@@ -7,8 +7,8 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/browser/reliverse/ui/CardUI";
-import { baseUrl } from "@/browser/shared/utils/url";
+} from "$/browser/reliverse/ui/CardUI";
+import { baseUrl } from "$/browser/shared/utils/url";
 
 import { authProvider } from "~/auth";
 import { authjs } from "~/auth/authjs";

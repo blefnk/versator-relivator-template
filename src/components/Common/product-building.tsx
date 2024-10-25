@@ -42,7 +42,6 @@ import {
 } from "~/server/actions/deprecated/cart";
 import { cn } from "~/utils/cn";
 
-/* eslint-disable max-lines-per-function */
 type ProductBuilderProps = {
   cartItems: CartItem[];
   pageCount: number;
@@ -290,9 +289,9 @@ export function ProductBuilder({
         className={`
           grid grid-cols-1 gap-6
 
-          lg:grid-cols-3
-
           sm:grid-cols-2
+
+          lg:grid-cols-3
 
           xl:grid-cols-4
         `}

@@ -3,7 +3,7 @@ import fs from "fs-extra";
 import * as path from "pathe";
 import pc from "picocolors";
 
-import { getRandomQuote } from "@/scripts/reliverse/quotes";
+import { getRandomQuote } from "$/scripts/reliverse/quotes";
 import { config } from "@reliverse/core";
 import { getCurrentDirname, getRootDirname } from "@reliverse/fs";
 
@@ -37,7 +37,6 @@ if (fs.existsSync(eslintCacheFilePath)) {
   );
 
   consola.info(
-    // eslint-disable-next-line @stylistic/max-len
     `${pc.dim("@reliverse/addons-relimter/eslint")} ⌛ Linting and fixing issues with ESLint can take a while on the first run, sometimes a few minutes if there are many problems to resolve. This is especially true when using the fix:putout-unstable command. Please be patient, as subsequent runs will be much faster.\n`,
   );
 }

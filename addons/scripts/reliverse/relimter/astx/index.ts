@@ -2,7 +2,7 @@ import { defineCommand, runMain } from "citty";
 import consola from "consola";
 import pc from "picocolors";
 
-import { defineAddon } from "@/scripts/utils";
+import { defineAddon } from "$/scripts/utils";
 
 const main = defineCommand({
   meta: {
@@ -29,7 +29,7 @@ const main = defineCommand({
       // TODO: Consider
       // case "<back>":
       // await import("..");
-      // await import("@/scripts/reliverse/relimter");
+      // await import("$/scripts/reliverse/relimter");
       // break;
       case "all":
         await import("./tasks");

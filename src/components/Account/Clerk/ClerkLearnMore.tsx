@@ -55,7 +55,6 @@ export function LearnMore({ cards }: { cards: Card[] }) {
               `}
             >
               {card.linkText}
-              {/* biome-ignore lint/a11y/noSvgWithoutTitle: <explanation> */}
               <svg
                 fill="none"
                 height="16"

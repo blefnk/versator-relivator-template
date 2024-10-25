@@ -1,4 +1,4 @@
-import type { PutoutConfig } from "@/scripts/reliverse/relicon/setup/types";
+import type { PutoutConfig } from "$/scripts/reliverse/relicon/setup/types";
 
 import { select } from "@clack/prompts";
 import consola from "consola";

@@ -64,7 +64,6 @@ export async function clerk(): Promise<User> {
 
   if (!authProvider) {
     consola.warn(
-      // eslint-disable-next-line @stylistic/max-len
       "Please set or correct authProvider in the `reliverse.config.ts` file to enable user authentication with real data. The app is currently using guest data.",
     );
 

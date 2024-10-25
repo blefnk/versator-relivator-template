@@ -172,7 +172,6 @@
     "react-hook-form": "^7.51.5",
     "react-medium-image-zoom": "^5.2.4",
     "react-wrap-balancer": "^1.1.1",
-    "remark-gfm": "^4.0.0",
     "resend": "^3.2.0",
     "semver": "^7.6.2",
     "slate": "^0.103.0",

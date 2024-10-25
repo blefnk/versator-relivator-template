@@ -9,13 +9,13 @@ import {
 } from "react";
 import { flushSync } from "react-dom";
 
-import type { MakeAction } from "@/server/reliverse/actions/auth";
+import type { MakeAction } from "$/server/reliverse/actions/auth";
 
 import {
   createColumn,
   moveItem,
   updateColumnName,
-} from "@/server/reliverse/actions/auth";
+} from "$/server/reliverse/actions/auth";
 import { Button } from "@radix-ui/themes";
 import consola from "consola";
 import { PlusIcon, Trash2Icon } from "lucide-react";
@@ -37,7 +37,7 @@ function genId(prefix: string) {
 }
 
 // import { addDependency } from "nypm";
-// {deleteColumn} from "@/server/reliverse/actions/auth";
+// {deleteColumn} from "$/server/reliverse/actions/auth";
 type ColumnProps = {
   props: {
     name: string;

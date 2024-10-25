@@ -8,8 +8,8 @@ import {
   CommandInput,
   CommandList,
   CommandSeparator,
-} from "@/components/ui/command";
-import { cn } from "@/utils";
+} from "$/components/ui/command";
+import { cn } from "$/utils";
 
 import { useComboboxDialog } from "~/components/Combobox/ComboboxContext";
 import ThemeCommands from "~/components/Combobox/ThemeCommands";

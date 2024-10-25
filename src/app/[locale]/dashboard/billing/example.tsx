@@ -126,11 +126,9 @@ export default async function BillingPage() {
               {/* @ts-expect-error TODO: Fix ts */}
               {(subscriptionPlan && subscriptionPlan.name) || "Starter"}
             </span>
-            .{/* @ts-expect-error TODO: fix */}
             {!userPlanInfo && userPlanInfo.isSubscribed
               ? " Upgrade to create more stores and products "
-              : // @ts-expect-error TODO: fix
-                userPlanInfo.isCanceled
+              : userPlanInfo.isCanceled
                 ? " the plan will be canceled on "
                 : " It renews on "}
             {userPlanInfo && userPlanInfo.stripeCurrentPeriodEnd

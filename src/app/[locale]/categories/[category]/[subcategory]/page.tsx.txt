@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
-import { getProductsAction } from "@/server/reliverse/actions/product";
-import { getStoresAction } from "@/server/reliverse/actions/store";
+import { getProductsAction } from "$/server/reliverse/actions/product";
+import { getStoresAction } from "$/server/reliverse/actions/store";
 import { getTranslations } from "next-intl/server";
 import { titleCase } from "string-ts";
 

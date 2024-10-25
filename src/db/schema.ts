@@ -1,10 +1,10 @@
+import type { AdapterAccountType } from "@auth/core/adapters";
 import type {
   CartItemSchema,
   CheckoutItemSchema,
 } from "~/server/validations/cart";
 import type { CartItem, CheckoutItem, StoredFile } from "~/types/store";
 import type { InferSelectModel } from "drizzle-orm";
-import type { AdapterAccountType } from "next-auth/adapters";
 import type Stripe from "stripe";
 
 import { databasePrefix } from "~/../reliverse.config";

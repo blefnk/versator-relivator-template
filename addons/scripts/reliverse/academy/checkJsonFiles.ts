@@ -1,4 +1,4 @@
-import type { AcademyQuestion } from "@/scripts/reliverse/academy/types";
+import type { AcademyQuestion } from "$/scripts/reliverse/academy/types";
 import type { JSONSchemaType } from "ajv";
 
 import { debugEnabled } from "~/../reliverse.config";

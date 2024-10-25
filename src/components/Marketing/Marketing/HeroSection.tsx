@@ -41,9 +41,9 @@ export function HeroSection() {
 
         dark:from-zinc-400 dark:via-zinc-300 dark:to-zinc-600
 
-        md:text-3xl
-
         sm:text-2xl
+
+        md:text-3xl
 
         xl:text-4xl
       `}

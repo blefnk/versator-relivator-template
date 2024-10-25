@@ -65,7 +65,6 @@ async function getFileInputsFromDirectory(
     const relativePath = join(basePath, entry.name);
 
     if (entry.isDirectory()) {
-      // eslint-disable-next-line unicorn/prefer-spread
       fileInputs = fileInputs.concat(
         await getFileInputsFromDirectory(fullPath, relativePath),
       );
@@ -211,7 +210,8 @@ async function moveFiles(
 // To use this script, Knip and Putout RulesDisabled versions will be activated.
 // This will overwrite your current configurations! But don't worry, we'll archive your current configs as well.
 async function main() {
-  const acceptanceMessage = pc.reset(`👋 Hi, and welcome! The @reliverse/disabler addon can zip project
+  const acceptanceMessage =
+    pc.reset(`👋 Hi, and welcome! The @reliverse/disabler addon can zip project
     folders you choose, allowing for faster builds when you don't need specific folders during development.
     You can extract these folders when needed. Currently, works only with src/app/[locale]/* folders.
     🔥 Please make a commit before using this script, as it is still experimental!\n
@@ -312,7 +312,6 @@ async function handleCreateArchive() {
       folder,
     );
 
-    // eslint-disable-next-line unicorn/prefer-spread
     fileInputs = fileInputs.concat(folderFileInputs);
   }
 

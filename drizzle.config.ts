@@ -3,6 +3,8 @@ import { defineConfig } from "drizzle-kit";
 
 config({ path: ".env" });
 
+const dbPrefix = process.env.NEXT_PUBLIC_DATABASE_PREFIX || "relivator";
+
 export default defineConfig({
   dbCredentials: {
     url: process.env.DATABASE_URL || "",
@@ -10,11 +12,11 @@ export default defineConfig({
   dialect: "postgresql",
   migrations: {
     schema: "public",
-    table: "drizzle/relivator/pgsql",
+    table: `drizzle/${dbPrefix}/pgsql`,
   },
-  out: "drizzle/relivator/pgsql",
+  out: `drizzle/${dbPrefix}/pgsql`,
   schema: "src/db/schema.ts",
   strict: true,
-  tablesFilter: ["relivator_*"],
+  tablesFilter: [`${dbPrefix}_*`],
   verbose: false,
 });

@@ -2,10 +2,14 @@ import type { Config } from "tailwindcss";
 
 import { fontFamily } from "tailwindcss/defaultTheme";
 import animate from "tailwindcss-animate";
-import { withUt } from "uploadthing/tw";
 
-const config = withUt({
-  content: ["./{addons,src}/**/*.{js,ts,jsx,tsx}"],
+const config = {
+  content: [
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
+    "./addons/**/*.{js,ts,jsx,tsx,mdx}",
+    "./cluster/**/*.{js,ts,jsx,tsx,mdx}",
+    "./node_modules/@uploadthing/react/dist**",
+  ],
   darkMode: ["class"],
   plugins: [animate],
   prefix: "",
@@ -14,7 +18,7 @@ const config = withUt({
       center: true,
       padding: "1rem",
       screens: {
-        "2xl": "1850px",
+        "2xl": "1700px",
         lg: "1100px",
         lgminus: "1130px",
         md: "800px",
@@ -120,6 +124,6 @@ const config = withUt({
       },
     },
   },
-}) satisfies Config;
+} satisfies Config;
 
 export default config;

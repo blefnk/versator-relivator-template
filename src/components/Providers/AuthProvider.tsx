@@ -51,7 +51,6 @@ export function AuthProvider({
               formButtonPrimary:
                 "bg-black border border-black border-solid hover:bg-white hover:text-black",
               formButtonReset:
-                // eslint-disable-next-line @stylistic/max-len
                 "bg-white border border-solid border-gray-200 hover:bg-transparent hover:border-black text-gray-500 hover:text-black",
               membersPageInviteButton:
                 "bg-black border border-black border-solid hover:bg-white hover:text-black",

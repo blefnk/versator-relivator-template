@@ -2,12 +2,12 @@ import { authProvider, debugEnabled } from "~/../reliverse.config";
 import consola from "consola";
 import pc from "picocolors";
 
-import loadEnv from "@/scripts/reliverse/relimter/core/env/env-loader";
+import loadEnv from "$/scripts/reliverse/relimter/core/env/env-loader";
 import {
   checkAuthConditions,
   getMissingVariables,
-} from "@/scripts/reliverse/relimter/core/env/get-missing";
-import { logMessages } from "@/scripts/reliverse/relimter/core/env/log-messages";
+} from "$/scripts/reliverse/relimter/core/env/get-missing";
+import { logMessages } from "$/scripts/reliverse/relimter/core/env/log-messages";
 
 export const checkMissingEnvVariables = async () => {
   await loadEnv();

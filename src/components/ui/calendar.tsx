@@ -27,9 +27,9 @@ function Calendar({
           `
             relative p-0 text-center text-sm
 
-            [&:has([aria-selected])]:bg-accent
+            focus-within:relative
 
-            focus-within:relative focus-within:z-20
+            focus-within:z-20 [&:has([aria-selected])]:bg-accent
           `,
           props.mode === "range"
             ? `
@@ -87,11 +87,9 @@ function Calendar({
       }}
       components={{
         // @ts-expect-error TODO: fix
-        // eslint-disable-next-line @eslint-react/no-nested-components
         IconLeft: ({ ...props_ }) => (
           <ChevronLeft className="size-4" {...props_} />
         ),
-        // eslint-disable-next-line @eslint-react/no-nested-components
         IconRight: ({ ...props_ }) => (
           <ChevronRight className="size-4" {...props_} />
         ),

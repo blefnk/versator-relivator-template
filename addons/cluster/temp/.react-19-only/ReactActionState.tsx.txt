@@ -4,7 +4,7 @@ import { useActionState, useOptimistic } from "react";
 
 import { redirect } from "next/navigation";
 
-import { Button } from "@/browser/reliverse/ui/Button";
+import { Button } from "$/browser/reliverse/ui/Button";
 import { RedirectType } from "next/dist/client/components/redirect";
 
 // TODO: This file is currently excluded in Million Lint config

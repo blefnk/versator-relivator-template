@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
+import { Button } from "$/components/ui/button";
 
 import { useComboboxDialog } from "~/components/Combobox/ComboboxContext";
 import ComboboxHandler from "~/components/Combobox/ComboboxHandler";

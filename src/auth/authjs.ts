@@ -38,7 +38,20 @@ const GuestSession = async (): Promise<User> => ({
 const NextSession = async (): Promise<User> => {
   try {
     const { auth } = NextAuth({
-      providers: [GitHub, Discord, Google],
+      providers: [
+        GitHub({
+          clientId: env.AUTH_GITHUB_ID || "",
+          clientSecret: env.AUTH_GITHUB_SECRET || "",
+        }),
+        Discord({
+          clientId: env.AUTH_DISCORD_ID || "",
+          clientSecret: env.AUTH_DISCORD_SECRET || "",
+        }),
+        Google({
+          clientId: env.AUTH_GOOGLE_ID || "",
+          clientSecret: env.AUTH_GOOGLE_SECRET || "",
+        }),
+      ],
     });
 
     const guest = await GuestSession();
@@ -64,7 +77,20 @@ const NextSession = async (): Promise<User> => {
 
 export const { auth, handlers, signIn, signOut } = NextAuth({
   adapter: DrizzleAdapter(db),
-  providers: [GitHub, Discord, Google],
+  providers: [
+    GitHub({
+      clientId: env.AUTH_GITHUB_ID || "",
+      clientSecret: env.AUTH_GITHUB_SECRET || "",
+    }),
+    Discord({
+      clientId: env.AUTH_DISCORD_ID || "",
+      clientSecret: env.AUTH_DISCORD_SECRET || "",
+    }),
+    Google({
+      clientId: env.AUTH_GOOGLE_ID || "",
+      clientSecret: env.AUTH_GOOGLE_SECRET || "",
+    }),
+  ],
 
   // providers: [GitHub, Discord, Google, Resend],
 });
@@ -76,7 +102,6 @@ export async function authjs(): Promise<User> {
 
   if (!authProvider) {
     consola.warn(
-      // eslint-disable-next-line @stylistic/max-len
       "Please set or correct authProvider in the `reliverse.config.ts` file to enable user authentication with real data. The app is currently using guest data.",
     );
 

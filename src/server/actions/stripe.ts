@@ -75,7 +75,7 @@ export async function getPlan(input: {
 }): Promise<null | UserPlan> {
   noStore();
   try {
-    const user = await clerkClient.users.getUser(input.userId);
+    const user = await (await clerkClient()).users.getUser(input.userId);
 
     if (!user) {
       throw new Error("User not found.");
@@ -181,6 +181,7 @@ export async function getStripeAccount(
         await tx
           .update(payments)
           .set({
+            // @ts-expect-error TODO: fix
             detailsSubmitted: account.details_submitted,
             stripeAccountCreatedAt: account.created
               ? new Date(account.created * 1000)
@@ -191,6 +192,7 @@ export async function getStripeAccount(
         await tx
           .update(stores)
           .set({
+            // @ts-expect-error TODO: fix
             stripeAccountId: account.id,
           })
           .where(eq(stores.id, input.storeId));
@@ -262,7 +264,7 @@ export async function getPaymentIntent(
   noStore();
 
   try {
-    const cartId = cookies().get("cartId")?.value;
+    const cartId = (await cookies()).get("cartId")?.value;
 
     const { isConnected, payment } = await getStripeAccount({
       retrieveAccount: false,
@@ -459,7 +461,7 @@ export async function createPaymentIntent(
       throw new Error("Stripe account not found.");
     }
 
-    const cartId = cookies().get("cartId")?.value;
+    const cartId = (await cookies()).get("cartId")?.value;
 
     if (!cartId) {
       throw new Error("Cart not found.");

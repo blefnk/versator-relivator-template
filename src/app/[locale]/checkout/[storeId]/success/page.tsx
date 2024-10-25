@@ -22,10 +22,10 @@ export const metadata: Metadata = {
 };
 
 type OrderSuccessPageProps = {
-  params: {
+  params: Promise<{
     storeId: string;
-  };
-  searchParams?: Record<string, string | string[] | undefined>;
+  }>;
+  searchParams?: Promise<Record<string, string | string[] | undefined>>;
 };
 
 // export default async function OrderSuccessPage({ params, searchParams }: OrderSuccessPageProps) {
@@ -34,7 +34,7 @@ export default async function OrderSuccessPage({
 }: OrderSuccessPageProps) {
   const t = await getTranslations();
 
-  const { storeId } = params;
+  const { storeId } = await params;
 
   // const { delivery_postal_code, payment_intent, payment_intent_client_secret, redirect_status } =
   // searchParams ??

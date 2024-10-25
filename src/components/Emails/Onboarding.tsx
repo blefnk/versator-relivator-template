@@ -8,11 +8,11 @@ export default function Onboarding() {
       <Separator className="mb-2" />
       <article
         className={`
-          prose pb-8
-
-          dark:prose-invert
+          prose dark:prose-invert
 
           lg:prose-xl
+
+          pb-8
         `}
       >
         This is the example component, which is overwritten by the file from the

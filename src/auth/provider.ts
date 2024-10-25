@@ -20,7 +20,7 @@ export { authProvider } from "~/../reliverse.config";
 // ===================================================
 //
 // TODO: shared re-export doesn't work unfortunately
-// eslint-disable-next-line @stylistic/max-len
+
 // error: 'server-only' cannot be imported from a Client Component module. It should only be used from a Server Component.
 //
 // import { authProvider } from "~/auth/provider";

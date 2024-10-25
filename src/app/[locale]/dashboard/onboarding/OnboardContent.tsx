@@ -1,6 +1,6 @@
 import { Separator } from "~/components/ui/separator";
 
-import Content from "./content.mdx";
+// import Content from "./content.mdx";
 
 export default function Onboarding() {
   return (
@@ -8,14 +8,14 @@ export default function Onboarding() {
       <Separator className="mb-2" />
       <article
         className={`
-          prose pb-8
-
-          dark:prose-invert
+          prose dark:prose-invert
 
           lg:prose-xl
+
+          pb-8
         `}
       >
-        <Content />
+        {/* <Content /> */}
       </article>
     </>
   );

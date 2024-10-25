@@ -76,7 +76,7 @@ if (env.NODE_ENV === "development") {
 
 // Navigation utilities configured for the defined locales.
 // export const { Link, redirect, usePathname, useRouter } =
-//   createSharedPathnamesNavigation({ locales }); // TODO: error when using `Next.js 15.3.0-canary.65`
+//   createSharedPathnamesNavigation({ locales }); // TODO: error when using `Next.js 15.3.0-canary.75`
 
 // TODO: Navigation utilities configured for the defined locales
 // export const { Link, redirect, usePathname, useRouter } =

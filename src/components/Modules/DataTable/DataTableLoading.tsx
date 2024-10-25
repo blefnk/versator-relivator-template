@@ -102,9 +102,9 @@ export function DataTableLoading({
           className={`
             flex flex-col items-center gap-4
 
-            lg:gap-8
+            sm:flex-row
 
-            sm:flex-row sm:gap-6
+            sm:gap-6 lg:gap-8
           `}
         >
           <div className="flex items-center space-x-2">

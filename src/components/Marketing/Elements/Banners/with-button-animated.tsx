@@ -40,9 +40,9 @@ export function BannerWithButtonAnimated({
   return (
     <div
       className={`
-        relative isolate flex items-center gap-x-6 overflow-hidden bg-zinc-50
-        px-6 py-2.5 animate-in fade-in slide-in-from-top-full duration-slow
-        animated-gradient
+        duration-slow animated-gradient relative isolate flex items-center gap-x-6
+        overflow-hidden bg-zinc-50 px-6 py-2.5 animate-in fade-in
+        slide-in-from-top-full
 
         sm:px-3.5 sm:before:flex-1
 
@@ -61,10 +61,10 @@ export function BannerWithButtonAnimated({
             flex-none rounded-full bg-zinc-900 px-3.5 py-1 text-sm font-semibold
             text-white shadow-sm
 
-            focus-visible:outline focus-visible:outline-2
-            focus-visible:outline-offset-2 focus-visible:outline-zinc-900
+            hover:bg-zinc-700 focus-visible:outline
+            focus-visible:outline-2 focus-visible:outline-offset-2
 
-            hover:bg-zinc-700
+            focus-visible:outline-zinc-900
           `}
           href={linkHref}
         >
@@ -92,8 +92,8 @@ const BackgroundDecor = () => (
   <>
     <div
       className={`
-        absolute left-[max(-7rem,calc(50%-52rem))] top-1/2 -z-10
-        -translate-y-1/2 transform-gpu blur-2xl animated-gradient
+        animated-gradient absolute left-[max(-7rem,calc(50%-52rem))] top-1/2
+        -z-10 -translate-y-1/2 transform-gpu blur-2xl
       `}
       aria-hidden="true"
     >
@@ -106,8 +106,8 @@ const BackgroundDecor = () => (
     </div>
     <div
       className={`
-        absolute left-[max(45rem,calc(50%+8rem))] top-1/2 -z-10 -translate-y-1/2
-        transform-gpu blur-2xl animated-gradient
+        animated-gradient absolute left-[max(45rem,calc(50%+8rem))] top-1/2 -z-10
+        -translate-y-1/2 transform-gpu blur-2xl
       `}
       aria-hidden="true"
     >

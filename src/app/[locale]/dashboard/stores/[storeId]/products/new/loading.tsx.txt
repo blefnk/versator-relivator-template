@@ -3,8 +3,8 @@ import {
   CardContent,
   CardFooter,
   CardHeader,
-} from "@/browser/reliverse/ui/CardUI";
-import { Skeleton } from "@/browser/reliverse/ui/Skeleton";
+} from "$/browser/reliverse/ui/CardUI";
+import { Skeleton } from "$/browser/reliverse/ui/Skeleton";
 
 export default function NewProductLoading() {
   return (

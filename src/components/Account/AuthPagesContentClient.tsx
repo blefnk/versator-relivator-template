@@ -107,9 +107,9 @@ export function AuthPagesContentClient({
           container -mt-14 flex min-h-screen max-w-xl flex-col items-center
           justify-center self-center
 
-          lg:max-w-none lg:grid-cols-2 lg:px-0
+          sm:max-w-lg lg:max-w-none lg:grid-cols-2
 
-          sm:max-w-lg
+          lg:px-0
         `,
         className,
       )}
@@ -127,9 +127,9 @@ export function AuthPagesContentClient({
               z-20 flex items-center bg-transparent text-lg font-medium
               text-zinc-800 transition-colors
 
-              dark:text-zinc-200
+              hover:bg-accent
 
-              hover:bg-accent hover:underline
+              hover:underline dark:text-zinc-200
 
               lg:hover:bg-primary-foreground/10
             `}
@@ -151,9 +151,9 @@ export function AuthPagesContentClient({
           className={`
             container top-1/2 col-span-1 flex items-center
 
-            lg:col-span-1 lg:p-8
+            md:top-0 md:col-span-2
 
-            md:top-0 md:col-span-2 md:flex md:translate-y-0
+            md:flex md:translate-y-0 lg:col-span-1 lg:p-8
           `}
         >
           <div className="mx-auto flex flex-col justify-center space-y-6">
@@ -172,9 +172,9 @@ export function AuthPagesContentClient({
                       mx-auto mt-8 !block px-8 text-center leading-normal
                       text-muted-foreground
 
-                      lg:mt-0
-
                       sm:leading-7
+
+                      lg:mt-0
                     `}
                     as="p"
                   >

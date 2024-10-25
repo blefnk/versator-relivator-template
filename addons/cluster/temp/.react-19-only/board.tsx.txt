@@ -3,7 +3,7 @@
 import { useRef } from "react";
 
 // import type { BoardWithColumns } from "~/data/other/boards";
-// import type { MakeAction } from "@/server/reliverse/actions/auth";
+// import type { MakeAction } from "$/server/reliverse/actions/auth";
 // import { useActionState, useRef, useState } from "react";
 // import { AlertDialog, Button, IconButton, Popover } from "@radix-ui/themes";
 // import { ArrowLeft, PaletteIcon, Trash2Icon } from "lucide-react";
@@ -18,7 +18,7 @@ import { useRef } from "react";
 //   deleteBoard,
 //   updateBoardColor,
 //   updateBoardName,
-// } from "@/server/reliverse/actions/auth";
+// } from "$/server/reliverse/actions/auth";
 // export function Board(props: {
 // board: BoardWithColumns;
 // }) {

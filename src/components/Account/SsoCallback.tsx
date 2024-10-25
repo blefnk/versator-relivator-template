@@ -7,12 +7,21 @@ import { useEffect } from "react";
 import { useClerk } from "@clerk/nextjs";
 
 import { SpinnerSVG } from "~/components/Common/Icons/SVG";
+import type { HandleOAuthCallbackParams } from "@clerk/types";
 
 export default function SSOCallback({ searchParams }: SSOCallbackPageProps) {
   const { handleRedirectCallback } = useClerk();
 
   useEffect(() => {
-    void handleRedirectCallback(searchParams);
+    const handleCallback = async () => {
+      try {
+        await handleRedirectCallback(searchParams as HandleOAuthCallbackParams);
+      } catch (error) {
+        console.error("Error handling redirect callback:", error);
+      }
+    };
+
+    handleCallback();
   }, [searchParams, handleRedirectCallback]);
 
   return (

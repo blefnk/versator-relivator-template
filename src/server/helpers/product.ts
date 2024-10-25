@@ -54,7 +54,7 @@ export async function getFeaturedProducts() {
           stripeAccountId: stores.stripeAccountId,
         })
         .from(products)
-        .limit(8) // eslint-disable-next-line @stylistic/max-len
+        .limit(8)
         .leftJoin(stores, eq(products.storeId, stores.id)) // .leftJoin(categories, eq(products.categoryId, categories.id))        // .groupBy(products.id, stores.stripeAccountId, categories.name)
         .groupBy(products.id, stores.stripeAccountId)
         .orderBy(

@@ -2,7 +2,6 @@ import childProcess from "child_process";
 
 // Run command capturing stdout. Trailing newlines are stripped (like the shell does).
 export const runc = (command: string, options = {}) =>
-  // eslint-disable-next-line sonarjs/os-command
   childProcess
     .execSync(command, {
       encoding: "utf8",
@@ -13,7 +12,6 @@ export const runc = (command: string, options = {}) =>
 
 // Run command without capturing stdout.
 export const run = (command: string, options = {}) =>
-  // eslint-disable-next-line sonarjs/os-command
   childProcess.execSync(command, {
     stdio: "inherit",
     ...options,

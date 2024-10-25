@@ -24,9 +24,9 @@ export function CarouselCards() {
           <CarouselItem
             key={index}
             className={`
-              lg:basis-1/3
-
               md:basis-1/2
+
+              lg:basis-1/3
             `}
           >
             <div className="p-1">

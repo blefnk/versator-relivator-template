@@ -5,7 +5,7 @@ import { auth } from "~/auth";
 import { eq } from "drizzle-orm";
 import { redirect } from "next/navigation";
 
-import { userPrivateMetadataSchema } from "@/server/reliverse/validations/auth";
+import { userPrivateMetadataSchema } from "$/server/reliverse/validations/auth";
 import { db } from "~/db";
 import { users } from "~/db/schema";
 import { env } from "~/env";

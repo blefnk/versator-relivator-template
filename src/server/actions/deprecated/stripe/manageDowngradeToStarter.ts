@@ -31,6 +31,7 @@ export async function manageDowngradeToStarter() {
     await db
       .update(users)
       .set({
+        // @ts-expect-error TODO: fix
         currentCartId: null,
         mode: "buyer",
         stripeCurrentPeriodEnd: null,

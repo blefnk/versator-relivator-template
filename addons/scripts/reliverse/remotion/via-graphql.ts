@@ -103,7 +103,6 @@ export const fetchViaGraphQl = async ({
   const json = (await response.json()) as GitHubApiResponse;
 
   if ("errors" in json) {
-    // @ts-expect-error TODO: fix
     if (json.errors[0].type === "RATE_LIMITED") {
       consola.error("Rate limit exceeded, waiting 1 minute...");
       await new Promise((resolve) => {
@@ -124,7 +123,6 @@ export const fetchViaGraphQl = async ({
 
   const { edges } = json.data.repository.stargazers;
 
-  // @ts-expect-error TODO: fix
   const lastCursor = edges.at(-1).cursor;
 
   const result: Stargazer[] = edges.map((edge) => ({

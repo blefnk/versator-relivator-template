@@ -29,7 +29,6 @@ const isFunction = (a: unknown): a is (...arguments_: any[]) => any =>
 // export const parseTransfer = (dt: DataTransfer) =>
 //   TransferSchema.parse(destr(dt.getData(CONTENT_TYPE)));
 
-// eslint-disable-next-line @typescript-eslint/no-unnecessary-type-parameters
 export function invariant<T>(
   condition: null | T | undefined,
   message?: (() => string) | string,

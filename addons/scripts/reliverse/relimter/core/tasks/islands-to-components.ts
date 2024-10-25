@@ -28,7 +28,6 @@ function kebabToPascal(name: string): string {
 }
 
 async function updateImportPaths(sourceDirectory: string, mappingFile: string) {
-  // eslint-disable-next-line unicorn/better-regex
   const importPathPattern = /import\s+{[^}]+}\s+from\s+['"]([^'"]+)['"];?/g;
 
   const paths: [string, string][] = [];
@@ -51,7 +50,6 @@ async function updateImportPaths(sourceDirectory: string, mappingFile: string) {
           .replace("~/", "~/components/")
           .replace("/components/", "/");
 
-        // @ts-expect-error TODO: Fix
         const newPathParts = newPath.split("/components/")[1].split("/");
 
         const pascalCaseParts = newPathParts.map(kebabToPascal);
@@ -63,7 +61,6 @@ async function updateImportPaths(sourceDirectory: string, mappingFile: string) {
         const originalPath = imp;
         let newPath = imp.replace("src/components/", "~/components/");
 
-        // @ts-expect-error TODO: Fix
         const newPathParts = newPath.split("/components/")[1].split("/");
 
         const pascalCaseParts = newPathParts.map(kebabToPascal);
@@ -197,7 +194,6 @@ async function getAllFilesAndDirectories(directory: string): Promise<string[]> {
   let items = entries.map((entry) => path.join(directory, entry.name));
 
   for (const folder of entries.filter((folder) => folder.isDirectory())) {
-    // eslint-disable-next-line unicorn/prefer-spread
     items = items.concat(
       await getAllFilesAndDirectories(path.join(directory, folder.name)),
     );

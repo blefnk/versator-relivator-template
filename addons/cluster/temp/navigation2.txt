@@ -42,7 +42,7 @@ export type Locale = (typeof locales)[number];
 // export const defaultLocale = "en-us";
 export const defaultLocale: Locale = "en" as const;
 
-// Navigation utilities configured for the defined locales. // TODO: error when using `Next.js 15.3.0-canary.65`
+// Navigation utilities configured for the defined locales. // TODO: error when using `Next.js 15.3.0-canary.75`
 // export const { Link, getPathname, redirect,
 // usePathname, useRouter } = createLocalizedPathnamesNavigation({ localePrefix, locales, pathnames });
 export const { Link, redirect, usePathname, useRouter } =

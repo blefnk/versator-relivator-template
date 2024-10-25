@@ -16,7 +16,7 @@ import { eq } from "drizzle-orm";
 import { headers } from "next/headers";
 import { z } from "zod";
 import { stripe } from "~/core/stripe/connect";
-import { checkoutItemSchema } from "@/server/reliverse/validations/cart";
+import { checkoutItemSchema } from "$/server/reliverse/validations/cart";
 import { db } from "~/db";
 import { env } from "~/env";
 // POST /api/webhooks/stripe

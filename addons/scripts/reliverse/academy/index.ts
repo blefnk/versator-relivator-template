@@ -2,16 +2,16 @@ import { input, select } from "@inquirer/prompts";
 import consola from "consola";
 import pc from "picocolors";
 
-import { displayAchievements } from "@/scripts/reliverse/academy/achievements";
-import { validateJsonSchema } from "@/scripts/reliverse/academy/checkJsonFiles";
-import { playGame } from "@/scripts/reliverse/academy/game";
-import { displayLeaderboard } from "@/scripts/reliverse/academy/leaders";
-import { addPlayer, findPlayer } from "@/scripts/reliverse/academy/player";
-import { openSettings } from "@/scripts/reliverse/academy/settings";
+import { displayAchievements } from "$/scripts/reliverse/academy/achievements";
+import { validateJsonSchema } from "$/scripts/reliverse/academy/checkJsonFiles";
+import { playGame } from "$/scripts/reliverse/academy/game";
+import { displayLeaderboard } from "$/scripts/reliverse/academy/leaders";
+import { addPlayer, findPlayer } from "$/scripts/reliverse/academy/player";
+import { openSettings } from "$/scripts/reliverse/academy/settings";
 import { getErrorMessage } from "~/server/helpers/error-message";
 
 // TODO: Move the implementation of this game to the separate package
-// import { decryptAll, hashAll } from "@/scripts/reliverse/academy/hash";
+// import { decryptAll, hashAll } from "$/scripts/reliverse/academy/hash";
 // const args = new Set(process.argv.slice(2));
 // const isHashMode = args.has("--hash");
 // const isDecryptMode = args.has("--decrypt");

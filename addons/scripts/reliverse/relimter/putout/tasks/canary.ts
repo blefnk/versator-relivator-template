@@ -41,7 +41,6 @@ async function togglePutoutTS(
     // Log messages based on flags
     if (!tsFlag) {
       consola.info(
-        // eslint-disable-next-line @stylistic/max-len
         `${pc.cyan("@reliverse/addons-relimter/putout")} ⌛ Please wait, Putout is processing ALL your files (TypeScript processor disabled)...`,
       );
 
@@ -52,7 +51,6 @@ async function togglePutoutTS(
       }
     } else {
       consola.info(
-        // eslint-disable-next-line @stylistic/max-len
         `${pc.cyan("@reliverse/addons-relimter/putout")} Please wait, Putout is processing ONLY files in the src directory (TypeScript processor enabled)`,
       );
 

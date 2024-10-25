@@ -31,15 +31,15 @@ import { cn } from "~/utils/cn";
 import { formatPrice } from "~/utils/number";
 
 type ProductPageProps = {
-  params: {
+  params: Promise<{
     productId: string;
-  };
+  }>;
 };
 
 export async function generateMetadata({
   params,
 }: ProductPageProps): Promise<Metadata> {
-  const productId = Number(params.productId);
+  const productId = Number((await params).productId);
 
   const product = await db.query.products.findFirst({
     columns: {
@@ -65,7 +65,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
 
   const t = await getTranslations();
 
-  const productId = Number(params.productId);
+  const productId = Number((await params).productId);
 
   const product = await db.query.products.findFirst({
     columns: {
@@ -106,6 +106,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
         .limit(4)
         .where(
           and(
+            // @ts-expect-error TODO: fix
             eq(products.storeId, product.storeId),
             not(eq(products.id, String(productId))),
           ),
@@ -122,12 +123,12 @@ export default async function ProductPage({ params }: ProductPageProps) {
             title: String(t("store.products.products")),
           },
           {
-            // @ts-expect-error TODO: Fix ts
             href: `/products?category=${product.category}`, // @ts-expect-error TODO: Fix ts
             title: titleCase(product.category || ""),
           },
           {
             href: `/product/${product.id}`,
+            // @ts-expect-error TODO: fix
             title: product.name,
           },
         ]}
@@ -159,8 +160,10 @@ export default async function ProductPage({ params }: ProductPageProps) {
           `}
         >
           <div className="space-y-2">
+            {/* @ts-expect-error TODO: fix */}
             <h2 className="line-clamp-1 text-2xl font-bold">{product.name}</h2>
             <p className="text-base text-muted-foreground">
+              {/* @ts-expect-error TODO: fix */}
               {formatPrice(product.price)}
             </p>
             {store ? (
@@ -213,6 +216,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
                 {t("store.products.description")}
               </AccordionTrigger>
               <AccordionContent>
+                {/* @ts-expect-error TODO: fix */}
                 {product.description && product.description.length > 0
                   ? product.description
                   : String(t("store.products.noDescription"))}
@@ -228,11 +232,14 @@ export default async function ProductPage({ params }: ProductPageProps) {
           <div className="space-y-2">
             <p>store.id: {store?.id}</p>
             <p>productId: {productId}</p>
+            {/* @ts-expect-error TODO: fix */}
             <p>product.storeId: {product.storeId}</p>
+            {/* @ts-expect-error TODO: fix */}
             <p>product.price: {product.price}</p>
             <p>store.name: {store?.name}</p>
-            {/* @ts-expect-error TODO: Fix ts */}
+            {/* @ts-expect-error TODO: fix */}
             <p>product.category: {product.category}</p>
+            {/* @ts-expect-error TODO: fix */}
             <p>product.name: {product.name}</p>
             <p>guestEmail: {guestEmail || "not set or not found in cookie"}</p>
           </div>

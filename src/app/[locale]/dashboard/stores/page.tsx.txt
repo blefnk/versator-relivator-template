@@ -6,10 +6,10 @@ import {
   Alert,
   AlertDescription,
   AlertTitle,
-} from "@/browser/reliverse/ui/Alert";
-import { buttonVariants } from "@/browser/reliverse/ui/Button";
-import { baseUrl } from "@/browser/shared/utils/url";
-import { getDashboardRedirectPath, getPlanFeatures } from "@/server";
+} from "$/browser/reliverse/ui/Alert";
+import { buttonVariants } from "$/browser/reliverse/ui/Button";
+import { baseUrl } from "$/browser/shared/utils/url";
+import { getDashboardRedirectPath, getPlanFeatures } from "$/server";
 import { RocketIcon } from "@radix-ui/react-icons";
 import { desc, eq, sql } from "drizzle-orm";
 import { StoreIcon } from "lucide-react";

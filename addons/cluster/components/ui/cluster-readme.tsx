@@ -1,4 +1,4 @@
-// !! export { Button } from "@/components/ui/button";
+// !! export { Button } from "$/components/ui/button";
 // eslint-disable-next-line @stylistic/max-len
 // Try not to modify the original shadcn components manually (only @reliverse/addons-relimter codemods scripts are allowed to modify them). If you want to change shadcn components, for example, the `Button`, then do it in this file. This way, you can safely make changes without losing your work when updates are released in the future. If you don't want to change anything about the Button, just leave this re-export as it is.
 // ?| README.md:

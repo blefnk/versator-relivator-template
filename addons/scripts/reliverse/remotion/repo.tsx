@@ -4,7 +4,6 @@ import { constants } from "./constants";
 
 import "./gh-styles.css";
 
-/* eslint-disable @stylistic/max-len */
 export function RepoHeader({
   name,
   org,
@@ -16,7 +15,7 @@ export function RepoHeader({
 }) {
   return (
     <div
-      className="d-flex mb-3 px-3 px-md-4 px-lg-5"
+      className="d-flex px-md-4 px-lg-5 mb-3 px-3"
       style={{
         backgroundColor: "white",
         boxShadow: "inset 0 -1px 0 var(--color-border-secondary)",
@@ -30,7 +29,7 @@ export function RepoHeader({
         top: 0,
       }}
     >
-      <div className="flex-auto min-width-0 width-fit mr-3">
+      <div className="min-width-0 width-fit mr-3 flex-auto">
         <h1
           className="d-flex flex-items-center break-word f3 text-normal"
           style={{
@@ -44,7 +43,6 @@ export function RepoHeader({
             whiteSpace: "nowrap",
           }}
         >
-          {/* biome-ignore lint/a11y/noSvgWithoutTitle: <explanation> */}
           <svg
             className="octicon octicon-repo color-text-secondary mrx"
             height="16"
@@ -71,7 +69,7 @@ export function RepoHeader({
             </Link>
           </span>
           <span
-            className="mx-1 flex-self-stretch color-text-secondary"
+            className="flex-self-stretch color-text-secondary mx-1"
             style={{
               fontSize: constants.fontSizeLG,
             }}
@@ -79,7 +77,7 @@ export function RepoHeader({
             /
           </span>
           <Link
-            className="mr-2 flex-self-stretch"
+            className="flex-self-stretch mr-2"
             href={`/${org}/${name}`}
             itemProp="name"
             style={{
@@ -96,7 +94,7 @@ export function RepoHeader({
         </h1>
       </div>
       <ul
-        className="pagehead-actions shrink-0 d-none d-md-inline"
+        className="pagehead-actions d-none d-md-inline shrink-0"
         style={{
           alignItems: "baseline",
           padding: "2px 0",

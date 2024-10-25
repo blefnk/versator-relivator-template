@@ -50,6 +50,7 @@ export async function updateNotification(input: UpdateNotificationSchema) {
       .update(notifications)
       .set({
         ...input,
+        // @ts-expect-error TODO: fix
         userId: user?.id,
       })
       .where(eq(notifications.token, input.token));

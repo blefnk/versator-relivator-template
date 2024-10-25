@@ -2,8 +2,8 @@ import {
   decryptAnswer,
   encryptAnswer,
   hashAnswer,
-} from "@/reliverse/academy/cryptoHandler";
-import { processFileAnswers } from "@/reliverse/academy/fileProcessor";
+} from "$/reliverse/academy/cryptoHandler";
+import { processFileAnswers } from "$/reliverse/academy/fileProcessor";
 import consola from "consola";
 
 import { errorMessage } from "~/utils";

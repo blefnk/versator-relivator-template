@@ -32,15 +32,15 @@ export function TailwindScreens() {
         className={`
           hidden
 
-          2xl:hidden
-
-          lg:hidden
+          sm:block
 
           md:hidden
 
-          sm:block
+          lg:hidden
 
           xl:hidden
+
+          2xl:hidden
         `}
       >
         sm
@@ -49,13 +49,13 @@ export function TailwindScreens() {
         className={`
           hidden
 
-          2xl:hidden
+          md:block
 
           lg:hidden
 
-          md:block
-
           xl:hidden
+
+          2xl:hidden
         `}
       >
         md
@@ -64,11 +64,11 @@ export function TailwindScreens() {
         className={`
           hidden
 
-          2xl:hidden
-
           lg:block
 
           xl:hidden
+
+          2xl:hidden
         `}
       >
         lg
@@ -77,9 +77,9 @@ export function TailwindScreens() {
         className={`
           hidden
 
-          2xl:hidden
-
           xl:block
+
+          2xl:hidden
         `}
       >
         xl

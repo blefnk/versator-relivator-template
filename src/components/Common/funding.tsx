@@ -17,11 +17,11 @@ export function FundingPlatforms() {
       className={`
         mx-auto my-4 grid justify-center gap-4
 
-        lg:grid-cols-4
+        sm:grid-cols-2
 
         md:grid-cols-2
 
-        sm:grid-cols-2
+        lg:grid-cols-4
       `}
     >
       <FundingPlatform
@@ -91,9 +91,9 @@ function FundingPlatform({
       className={`
         overflow-hidden rounded-lg border bg-background p-2 text-left
 
-        dark:hover:bg-zinc-900
-
         hover:bg-zinc-50
+
+        dark:hover:bg-zinc-900
       `}
       href={link}
       rel="noopener noreferrer"

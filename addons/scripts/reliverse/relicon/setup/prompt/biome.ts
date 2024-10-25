@@ -1,4 +1,4 @@
-import type { BiomeConfig } from "@/scripts/reliverse/relicon/setup/types";
+import type { BiomeConfig } from "$/scripts/reliverse/relicon/setup/types";
 
 import { select } from "@clack/prompts";
 import consola from "consola";

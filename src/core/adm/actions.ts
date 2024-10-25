@@ -51,6 +51,7 @@ export async function changeUserPrivileges({
     const success = await db
       .update(users)
       .set({
+        // @ts-expect-error TODO: fix
         role,
       })
       .where(eq(users.id, userId));

@@ -18,7 +18,6 @@ export default async function DashboardPage() {
     },
     {
       description:
-        // eslint-disable-next-line @stylistic/max-len
         "Leverage customizable session tokens, public metadata, and Middleware to create a custom onboarding experience.",
       href: "https://clerk.com/docs/guides/add-onboarding-flow?utm_source=vercel-template&utm_medium=partner&utm_term=onboarding",
       linkText: "Onboarding flow",
@@ -26,7 +25,6 @@ export default async function DashboardPage() {
     },
     {
       description:
-        // eslint-disable-next-line @stylistic/max-len
         "Production instances are meant to support high volumes of traffic and by default, have a more strict security posture.",
       href: "https://clerk.com/docs/deployments/overview?utm_source=vercel-template&utm_medium=partner&utm_term=deploy-to-prod",
       linkText: "Production",

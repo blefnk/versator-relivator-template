@@ -6,6 +6,5 @@ import { Button } from "~/components/ui/button";
 import { cn } from "~/utils/cn";
 
 export function ClientButton({ className, ...props }: ButtonProps) {
-  // biome-ignore lint/style/useSelfClosingElements: <explanation>
   return <Button className={cn(className)} {...props}></Button>;
 }

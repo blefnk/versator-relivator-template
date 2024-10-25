@@ -47,11 +47,11 @@ export default function HomePage() {
       <HomeHeroSection />
       <Shell
         className={`
+          lg:20
+
           px-10
 
           2xl:px-32
-
-          lg:20
         `}
       >
         <HomeFeaturedItems />

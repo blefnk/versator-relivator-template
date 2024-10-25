@@ -4,9 +4,9 @@
 import { type MetadataRoute } from "next";
 import { absoluteUrl } from "~/utils";
 
-import { getProductsAction } from "@/server/reliverse/actions/product";
-import { getStoresAction } from "@/server/reliverse/actions/store";
-import { productCategories } from "@/server/reliverse/config/products";
+import { getProductsAction } from "$/server/reliverse/actions/product";
+import { getStoresAction } from "$/server/reliverse/actions/store";
+import { productCategories } from "$/server/reliverse/config/products";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const storesTransaction = await getStoresAction({

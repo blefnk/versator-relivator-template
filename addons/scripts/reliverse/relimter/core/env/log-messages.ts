@@ -17,7 +17,6 @@ export const logMessages = (
 
   if (authProvider === "clerk" && missingClerkVariables.length > 0) {
     consola.info(
-      // eslint-disable-next-line @stylistic/max-len
       `${pc.bold("Clerk is specified as the authProvider (in the `reliverse.config.ts` file), but its keys are missing:")} ${pc.blue(missingClerkVariables.join(", "))}\n`,
     );
 
@@ -26,7 +25,6 @@ export const logMessages = (
 
   if (authProvider === "authjs" && missingAuthjsVariables.length > 0) {
     consola.info(
-      // eslint-disable-next-line @stylistic/max-len
       `${pc.bold("Auth.js (or nothing) is specified as the authProvider (in the `reliverse.config.ts` file),")} \n${pc.bold("so NextAuth.js library will be used as your auth provider, but its keys are missing:")} \n${pc.blue(missingAuthjsVariables.join(", "))}. \n${pc.italic("It's okay to specify only GitHub, Google, or Discord variables to unlock NextAuth.js features.")}\n`,
     );
 
@@ -60,13 +58,11 @@ const showInstructions = (): void => {
     "The application will continue to function, but features related to the missing variables will be disabled.",
   );
   consola.info(
-    // eslint-disable-next-line @stylistic/max-len
     `${pc.italic("To suppress this warning, set ")}${pc.cyan("hideEnvInfo")}${pc.italic(" to true (in the `reliverse.config.ts` file), but it is not recommended.")}\n`,
   );
   consola.info(
     pc.bold(
       pc.cyan(
-        // eslint-disable-next-line @stylistic/max-len
         `If you don't want to specify any of this, you can modify the required provider variables in the src/env.js file > recommendedEnvVariables. \nIt is recommended to restart the terminal after fixing your env vars. You can hover over a ⚠ icon in VSCode's terminal and click on Relaunch.\n${pc.magenta("You have rerun the script, but there are no changes here? Please restart your terminal and then try running the pnpm lint:env script again.")}\n`,
       ),
     ),

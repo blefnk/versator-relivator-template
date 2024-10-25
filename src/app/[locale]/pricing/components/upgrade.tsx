@@ -129,9 +129,9 @@ const PricingTableContent = ({
         className={`
           grid grid-cols-1 gap-8 overflow-x-auto
 
-          lg:grid-cols-4
-
           md:grid-cols-2
+
+          lg:grid-cols-4
         `}
       >
         <PricingPlan
@@ -140,7 +140,6 @@ const PricingTableContent = ({
           currency={currency}
           features={["30 days support"]}
           mapPlanId="starter"
-          // @ts-expect-error TODO: Fix ts
           price={`${currency}${isMonthly ? prices.free.monthly[currency] : prices.free.yearly[currency]}`}
           stripeCustomerId="cus_123456789"
           stripePriceId="starter"
@@ -157,7 +156,6 @@ const PricingTableContent = ({
           isCurrentPlan={false}
           isSubscribed={false}
           mapPlanId="premium"
-          // @ts-expect-error TODO: Fix ts
           price={`${currency}${isMonthly ? prices.premium.monthly[currency] : prices.premium.yearly[currency]}`}
           stripeCustomerId="cus_123456789"
           stripePriceId={priceIdPremium}
@@ -173,7 +171,6 @@ const PricingTableContent = ({
           isCurrentPlan={false}
           isSubscribed={false}
           mapPlanId="enterprise"
-          // @ts-expect-error TODO: Fix ts
           price={`${currency}${isMonthly ? prices.enterprise.monthly[currency] : prices.enterprise.yearly[currency]}`}
           stripeCustomerId="cus_123456789"
           stripePriceId={priceIdEnterprise}

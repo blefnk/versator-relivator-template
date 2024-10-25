@@ -66,11 +66,8 @@ export async function getPlan(
     if (plan) {
       return {
         ...plan,
-
-        // @ts-expect-error TODO: fix
         isActive: isSubscribed && !isCanceled,
         isCanceled,
-        // @ts-expect-error TODO: fix
         isSubscribed,
         stripeCurrentPeriodEnd:
           userPrivateMetadata.stripeCurrentPeriodEnd || "",

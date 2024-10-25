@@ -167,9 +167,9 @@ export function ProductImageCarousel({
                   group relative aspect-square size-full max-w-[100px]
                   rounded-none shadow-sm
 
-                  focus-visible:ring-foreground
-
                   hover:bg-transparent
+
+                  focus-visible:ring-foreground
                 `,
                 index === selectedIndex && "ring-1 ring-foreground",
               )}

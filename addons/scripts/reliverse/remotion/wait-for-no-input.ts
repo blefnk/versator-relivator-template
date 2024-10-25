@@ -11,7 +11,6 @@ export const waitForNoInput = (signal: AbortSignal, ms: number) => {
   }
 
   return Promise.race<void>([
-    // eslint-disable-next-line promise/param-names
     new Promise<void>((_, reject) => {
       signal.addEventListener("abort", () => {
         reject(new Error("stale"));

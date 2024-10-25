@@ -1,7 +1,7 @@
 import { defineCommand, runMain } from "citty";
 import consola from "consola";
 
-import { defineAddon } from "@/scripts/utils";
+import { defineAddon } from "$/scripts/utils";
 
 // ▶️ pnpm tsx eslint.setup.ts
 // TODO: Move this code to a separate package
@@ -58,7 +58,6 @@ const main = defineCommand({
 
       case "Switch between default and recommended config":
         consola.info(
-          // eslint-disable-next-line @stylistic/max-len
           "💡 Run `pnpm reli:setup` to switch between `default` (almost every rules disabled) and `recommended` ESLint configs",
         );
         break;
@@ -105,7 +104,6 @@ function withArgument() {
 
     case "--preset":
       consola.info(
-        // eslint-disable-next-line @stylistic/max-len
         "💡 Run `pnpm reli:setup` to switch between `default` (almost every rules disabled) and `recommended` ESLint configs",
       );
       break;

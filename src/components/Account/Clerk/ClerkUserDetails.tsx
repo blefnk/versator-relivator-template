@@ -84,7 +84,7 @@ export function UserDetails() {
   return (
     <div
       className={`
-        relative rounded-lg border border-[#EDEDED] bg-[#F1F1F2] p-16 background
+        background relative rounded-lg border border-[#EDEDED] bg-[#F1F1F2] p-16
       `}
     >
       <div

@@ -40,7 +40,7 @@ export default function HomeHeroSection() {
               variant: "secondary",
             }),
           )}
-          href="/products"
+          href="/dashboard"
         >
           <Store className="mr-2 size-4" />
           {t("landing.sell-now")}

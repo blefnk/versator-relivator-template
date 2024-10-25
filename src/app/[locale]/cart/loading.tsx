@@ -43,9 +43,9 @@ export default function CartLoading() {
                 <div key={index} className="space-y-3">
                   <div
                     className={`
-                      flex flex-col items-start justify-between gap-4
+                      xs:flex-row flex flex-col items-start justify-between
 
-                      xs:flex-row
+                      gap-4
                     `}
                   >
                     <div className="flex items-center space-x-4">
@@ -73,9 +73,9 @@ export default function CartLoading() {
                     </div>
                     <div
                       className={`
-                        flex w-full items-center justify-between space-x-1
+                        xs:w-auto xs:justify-normal flex w-full items-center
 
-                        xs:w-auto xs:justify-normal
+                        justify-between space-x-1
                       `}
                     >
                       <div className="flex items-center space-x-1">

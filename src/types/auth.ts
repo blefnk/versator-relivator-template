@@ -2,6 +2,10 @@ import type { HandleOAuthCallbackParams } from "@clerk/types";
 import type { userPrivateMetadataSchema } from "~/server/validations/deprecated/auth";
 import type { z } from "zod";
 
+export type SSOCallbackPageProps = {
+  searchParams: Promise<HandleOAuthCallbackParams>;
+};
+
 // TODO: Implement
 // @see https://fusejs.org/
 // type UserSource = {
@@ -9,9 +13,6 @@ import type { z } from "zod";
 //   id: string;
 //   name: string;
 // };
-export type SSOCallbackPageProps = {
-  searchParams: HandleOAuthCallbackParams;
-};
 
 // User-Related Types
 // export type PlanProps = "enterprise" | "professional" | "starter";

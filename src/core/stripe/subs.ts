@@ -36,5 +36,5 @@ export const storeSubscriptionPlans: SubscriptionPlanTypes[] = [
     features: ["Create up to 3 stores", "Create up to 35 products per store"],
     price: 24,
     stripePriceId: ENTERPRISE,
-  }, // eslint-disable-next-line @stylistic/max-len
+  },
 ]; // description: "Usage-based plan crafted for high-volume sales, with unlimited features.",// features: [//   "20 Products (per store)",//   "2 Stores Max",//   "Basic Analytics",//   "Community Support",// ],// features: [//   "40 Products (per store)",//   "3 Stores Max",//   "Advanced Analytics",//   "Email Support",// ],// features: [//   "Custom Store Count",//   "Custom Products",//   "Unlimited Analytics",//   "Email Support",// ],

@@ -69,13 +69,13 @@ export function BannerWithButton({
             flex-none rounded-full bg-zinc-900 px-3.5 py-1 text-sm font-semibold
             text-white shadow-sm
 
-            dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-300
+            hover:bg-zinc-700 focus-visible:outline focus-visible:outline-2
+            focus-visible:outline-offset-2
+
+            focus-visible:outline-zinc-900 dark:bg-zinc-100
+            dark:text-zinc-900 dark:hover:bg-zinc-300
+
             dark:focus-visible:outline-zinc-100
-
-            focus-visible:outline focus-visible:outline-2
-            focus-visible:outline-offset-2 focus-visible:outline-zinc-900
-
-            hover:bg-zinc-700
           `}
           href={linkHref}
         >

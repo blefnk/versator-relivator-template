@@ -12,9 +12,9 @@ const Grid = forwardRef<HTMLDivElement, GridProps>(
   ({ children, className, columns = 2, gap = 4, ...props }, ref) => {
     const gridClass = cn(
       `
-        grid
+        grid-cols-
 
-        grid-cols-${columns}
+        grid${columns}
 
         gap-${gap}
       `,

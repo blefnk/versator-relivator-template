@@ -5,7 +5,7 @@ import { useActionState, useEffect } from "react";
 import {
   signInWithCredentials,
   signInWithGithub,
-} from "@/server/reliverse/actions/auth";
+} from "$/server/reliverse/actions/auth";
 import consola from "consola";
 import { Columns4, Github } from "lucide-react";
 import { signIn } from "next-auth/webauthn";

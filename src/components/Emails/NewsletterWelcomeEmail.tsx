@@ -30,7 +30,7 @@ const newsletterImages = [
     credit: "Sora Shimazaki",
     creditUrl:
       "https://pexels.com/photo/crop-unrecognizable-man-using-laptop-in-darkness-5926397",
-    description: // eslint-disable-next-line @stylistic/max-len
+    description:
       "Development is an ever-evolving field. It's not just about coding, but also about the innovations and community that drive it. So we decided to create a newsletter to share our passion with others who love development as much as we do! © blefnk",
     src: `${env.NEXT_PUBLIC_APP_URL}/images/newsletter/developer-one.webp`,
   },
@@ -38,7 +38,7 @@ const newsletterImages = [
     alt: "Coding session: data codes through eyeglasses",
     credit: "Kevin Ku",
     creditUrl: "https://pexels.com/photo/data-codes-through-eyeglasses-577585",
-    description: // eslint-disable-next-line @stylistic/max-len
+    description:
       "We'll be keeping you up-to-date with the latest development news, trends, and more. Stay up-to-date with the latest innovations and best practices. Stay tuned for more! © blefnk",
     src: `${env.NEXT_PUBLIC_APP_URL}/images/newsletter/developer-two.webp`,
   },

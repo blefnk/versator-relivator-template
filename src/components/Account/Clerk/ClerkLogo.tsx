@@ -1,9 +1,6 @@
-/* eslint-disable @stylistic/max-len */
-/* eslint-disable @eslint-react/dom/no-unsafe-target-blank */
 export function ClerkLogo() {
   return (
     <a href="https://clerk.com/docs" rel="noopener" target="_blank">
-      {/* biome-ignore lint/a11y/noSvgWithoutTitle: <explanation> */}
       <svg
         fill="none"
         height="24"

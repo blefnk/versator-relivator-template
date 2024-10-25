@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { baseUrl } from "@/browser/shared/utils/url";
+import { baseUrl } from "$/browser/shared/utils/url";
 
 // TODO: finish implementing functions in this file
 // import { create, all } from 'mathjs';

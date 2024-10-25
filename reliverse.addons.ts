@@ -35,7 +35,6 @@ async function main() {
       ] as const,
       default: "runner",
       message:
-        // eslint-disable-next-line @stylistic/max-len
         "Welcome to @reliverse/addons! It is not fully finished yet, but you can already test the future Addons Manager. Please commit your current code to GitHub or a similar platform. So, what would you like to do?",
     });
 
@@ -44,7 +43,7 @@ async function main() {
     }
 
     if (selection === "runner") {
-      await import("@/scripts/manager");
+      await import("$/scripts/manager");
     }
 
     if (selection === "disabler-addon") {
@@ -52,7 +51,7 @@ async function main() {
     }
 
     if (selection === "disabler-pages") {
-      await import("@/scripts/reliverse/disabler");
+      await import("$/scripts/reliverse/disabler");
     }
   } catch (error) {
     if (!(error as any).message.includes("User force closed")) {

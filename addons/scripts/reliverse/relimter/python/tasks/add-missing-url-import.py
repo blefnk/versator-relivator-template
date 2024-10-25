@@ -15,7 +15,7 @@ import os
 src_dir = "src"
 
 # The import statement to add
-import_statement = 'import { baseUrl } from "@/browser/shared/utils/url";\n'
+import_statement = 'import { baseUrl } from "$/browser/shared/utils/url";\n'
 
 
 def add_import_statement(file_path):

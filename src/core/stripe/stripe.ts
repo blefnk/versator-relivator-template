@@ -177,6 +177,7 @@ export async function getOrCreateCustomerId({
   const updatedUser = await db
     .update(users)
     .set({
+      // @ts-expect-error TODO: fix
       stripeCustomerId: customer.id,
 
       // stripePriceId: env.STRIPE_STARTER_SUBSCRIPTION_PRICE_ID,

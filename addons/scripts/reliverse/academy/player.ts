@@ -1,4 +1,4 @@
-import type { AcademyPlayer } from "@/scripts/reliverse/academy/types";
+import type { AcademyPlayer } from "$/scripts/reliverse/academy/types";
 
 import tryToCatch from "try-to-catch";
 import { v4 as uuidv4 } from "uuid";
@@ -6,7 +6,7 @@ import { v4 as uuidv4 } from "uuid";
 import {
   readJsonFile,
   writeJsonFile,
-} from "@/scripts/reliverse/academy/fileHandler";
+} from "$/scripts/reliverse/academy/fileHandler";
 import { getErrorMessage } from "~/server/helpers/error-message";
 
 const playersFilePath = "data/players.json";
@@ -50,7 +50,7 @@ export const savePlayer = async (player: AcademyPlayer): Promise<void> => {
     const players = await getPlayers();
     const playerIndex = players.findIndex((p) => p.id === player.id);
 
-    if (playerIndex > -1) {
+    if (playerIndex !== -1) {
       players[playerIndex] = player;
       await savePlayers(players);
     } else {

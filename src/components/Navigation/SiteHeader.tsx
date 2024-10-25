@@ -19,8 +19,8 @@ export async function SiteHeader() {
   return (
     <header
       className={`
-        sticky top-0 z-40 mb-2 flex h-16 w-full items-center justify-between border-b
-        bg-background/90 px-10 backdrop-blur-sm duration-slow animate-in
+        duration-slow sticky top-0 z-40 mb-2 flex h-16 w-full items-center justify-between
+        border-b bg-background/90 px-10 backdrop-blur-sm animate-in
         fade-in slide-in-from-top-full
       `}
     >

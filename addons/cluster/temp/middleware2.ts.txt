@@ -1,4 +1,4 @@
-import { Locale } from "~/navigation";
+import { Locale } from "~/i18n/routing";
 import { MiddlewareConfig, NextRequest } from "next/server";
 
 import { NextResponse } from "next/server";
@@ -6,7 +6,7 @@ import createIntlMiddleware from "next-intl/middleware";
 
 import { au authConfig } from "~/auth/config";
 import { env } from "~/env";
-import { defaultLocale, localePrefix, locales } from "~/navigation";
+import { defaultLocale, localePrefix, locales } from "~/i18n/routing";
 
 export const runtime = "nodejs";
 

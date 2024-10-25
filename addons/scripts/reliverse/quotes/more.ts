@@ -1,4 +1,3 @@
-/* eslint-disable @stylistic/max-len */
 export const advancedTsLearningQuotes = [
   "TS: The bigint type lets you represent integers that are too large to be represented by number type (https://typescriptlang.org/docs/handbook/release-notes/typescript-3-2.html#bigint)",
   "TS: The infer keyword lets you infer the type of a generic type parameter inside a conditional type (https://typescriptlang.org/docs/handbook/2/conditional-types.html#inferring-within-conditional-types)",

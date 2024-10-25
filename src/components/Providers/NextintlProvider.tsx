@@ -35,7 +35,6 @@ export function NextIntlProvider({
           return nestedMessages.default;
         }
 
-        // @ts-expect-error TODO: fix key
         return nestedMessages[key];
       }}
       onError={noop}

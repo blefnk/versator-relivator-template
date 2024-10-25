@@ -62,9 +62,9 @@ const CommandDialog = ({
 
           [&_[cmdk-input]]:h-12
 
-          [&_[cmdk-item]_svg]:size-5
-
           [&_[cmdk-item]]:p-2
+
+          [&_[cmdk-item]_svg]:size-5
         `}
       >
         {children}
@@ -84,9 +84,9 @@ const CommandInput = forwardRef<
         `
           flex h-10 w-full rounded-lg bg-transparent py-3 text-sm outline-none
 
-          disabled:cursor-not-allowed disabled:opacity-50
+          placeholder:text-muted-foreground disabled:cursor-not-allowed
 
-          placeholder:text-muted-foreground
+          disabled:opacity-50
         `,
         className,
       )}

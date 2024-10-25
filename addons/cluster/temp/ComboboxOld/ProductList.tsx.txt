@@ -1,6 +1,6 @@
 import { useRouter } from "next/navigation";
 
-import { CommandGroup, CommandItem } from "@/components/ui/command";
+import { CommandGroup, CommandItem } from "$/components/ui/command";
 
 import type { Product } from "~/db/schema";
 

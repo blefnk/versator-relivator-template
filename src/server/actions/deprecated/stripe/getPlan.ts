@@ -29,9 +29,8 @@ export async function getPlan(input: {
   userId: string;
 }): Promise<null | UserPlan> {
   noStore();
-
   try {
-    const user = await clerkClient.users.getUser(input.userId);
+    const user = await (await clerkClient()).users.getUser(input.userId);
 
     if (!user) {
       throw new Error("User not found.");

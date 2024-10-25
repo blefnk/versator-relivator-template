@@ -9,10 +9,8 @@ export function getPlanByPriceId({ priceId }: { priceId: string }) {
 }
 
 export function getPlanLimits({ planId }: { planId?: Plan["id"] }) {
-  // @ts-expect-error disable ts error during migration
   const { features } = pricingConfig.plans[planId ?? "free"];
 
-  // @ts-expect-error disable ts error during migration
   const [storeLimit, productLimit] = features.map((feature) => {
     const [value] = feature.match(/\d+/) || [];
 

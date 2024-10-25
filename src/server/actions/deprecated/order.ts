@@ -55,7 +55,7 @@ export async function getOrderLineItemsAction(
             safeParsedItems.data.find(
               // @ts-expect-error TODO: fix
               (checkoutItem) => checkoutItem.productId === item.id,
-            ) && // @ts-expect-error TODO: fix
+            ) &&
             safeParsedItems.data.find(
               // @ts-expect-error TODO: fix
               (checkoutItem) => checkoutItem.productId === item.id,
@@ -102,7 +102,6 @@ export async function getOrderLineItemsAction(
         where: eq(payments.storeId, input.storeId),
       });
 
-      // @ts-expect-error TODO: fix
       if (!payment && payment.stripeAccountId) {
         return lineItems;
       }
@@ -130,7 +129,6 @@ export async function getOrderLineItemsAction(
           (accumulator, item) => accumulator + item.quantity,
           0,
         ),
-        // @ts-expect-error TODO: fix
         storeId: payment.storeId,
         stripePaymentIntentId: input.paymentIntent.id,
         stripePaymentIntentStatus: input.paymentIntent.status,
@@ -162,6 +160,7 @@ export async function getOrderLineItemsAction(
         await db
           .update(products)
           .set({
+            // @ts-expect-error TODO: fix id type
             inventory: product.inventory - item.quantity,
           }) // @ts-expect-error TODO: fix id type
           .where(eq(products.id, item.productId));

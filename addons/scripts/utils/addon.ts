@@ -17,7 +17,7 @@ import {
   findPackageManagerRunner,
   findPackageManagerType,
   readPackageJson,
-} from "@/scripts/utils/pm";
+} from "$/scripts/utils/pm";
 import { getRootDirname } from "@reliverse/fs";
 
 export const defineAddon = (
@@ -26,7 +26,6 @@ export const defineAddon = (
   action: string,
   keys: string,
 ) => {
-  // eslint-disable-next-line @stylistic/max-len
   return `${emoji} ${pc.dim(title)} Choose ${pc.cyan(action)} by pressing ${pc.cyan(`${keys} (or press <Cmd/Ctrl+C> to exit)`)}\n`;
 };
 

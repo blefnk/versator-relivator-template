@@ -7,13 +7,13 @@ import {
   useState,
 } from "react";
 
-import type { MakeAction } from "@/server/reliverse/actions/auth";
+import type { MakeAction } from "$/server/reliverse/actions/auth";
 
 import {
   createItem,
   deleteItem,
   moveItem,
-} from "@/server/reliverse/actions/auth";
+} from "$/server/reliverse/actions/auth";
 import { Button, TextArea } from "@radix-ui/themes";
 import consola from "consola";
 import { Trash2Icon } from "lucide-react";

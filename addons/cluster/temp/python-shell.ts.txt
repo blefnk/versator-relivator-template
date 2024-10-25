@@ -1,6 +1,6 @@
 import type { Options } from "python-shell";
 
-import { defineTask } from "@/shared/utils";
+import { defineTask } from "$/shared/utils";
 import consola from "consola";
 import { PythonShell } from "python-shell";
 

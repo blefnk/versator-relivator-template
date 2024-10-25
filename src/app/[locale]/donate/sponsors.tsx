@@ -41,7 +41,6 @@ export function Sponsors() {
       location: "Lviv, Ukraine",
       socialMedia: [{ platform: "YouTube", username: "mfpiano" }],
       sponsor:
-        // eslint-disable-next-line @stylistic/max-len
         "It just works. Although Relivator is primarily a multi-vendor online store template, I asked @blefnk to make some changes for me, and he helped me out. Relivator turned out to be perfect for selling my sheet music! It's a really cool template. Thank you!",
       sponsorLevel: 3,
       title: "Music Composer & Piano Teacher",
@@ -60,7 +59,6 @@ export function Sponsors() {
         },
       ],
       sponsor:
-        // eslint-disable-next-line @stylistic/max-len
         "Just found this repo today by chance. Amazing work, mate. I would love to send you some $ to sponsor you and the project. Just from what I have seen so far, there has been a huge amount of work put into this 🤯. Thanks for sharing such an insane product with the community! 🦾 I can see how much work you have put into this project. It is actually insane that one person created this. Much respect to you, bro. I appreciate people like you who share their knowledge and talent with others and ask nothing in return ❤️. Unfortunately, many people in this world don’t respect the amount of effort and dedication it takes, and they are only interested in how they can benefit from others' work.",
       sponsorLevel: 2,
       title: "Web Developer",
@@ -79,7 +77,6 @@ export function Sponsors() {
         },
       ],
       sponsor:
-        // eslint-disable-next-line @stylistic/max-len
         "Great work with Relivator and getting everything done for 1.2.6! I've been referencing how you've stitched together some tools and deeply appreciate the work you've done so far. Please accept this donation as a token of my appreciation. You've got a lot of repositories and content to manage, so remember to stay focused and not stretch yourself too much!",
       sponsorLevel: 2,
       title: "GovTech and CivicTech Developer",
@@ -98,7 +95,6 @@ export function Sponsors() {
         },
       ],
       sponsor:
-        // eslint-disable-next-line @stylistic/max-len
         "Enjoy your two boosts for your server from me. The early access looks pretty good. Oh god, this project is just amazing, and I appreciate everything! I want to do everything I can to support your work. This is how I can support and contribute to this project the best I can :3",
       sponsorLevel: 1,
       title: "Web Developer",
@@ -117,7 +113,6 @@ export function Sponsors() {
         },
       ],
       sponsor:
-        // eslint-disable-next-line @stylistic/max-len
         "I learned a lot from using the Relivator project! I see the hard work that was put into it. It's truly an amazing open-source starter; I have built my startup using it. @blefnk, your hard work is impressive; it's astonishing how you manage it all alone.",
       sponsorLevel: 1,
       title: "Web Developer",

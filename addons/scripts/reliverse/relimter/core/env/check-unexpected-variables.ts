@@ -54,7 +54,6 @@ export const checkUnexpectedEnvVariables = async (
       consola.error(
         pc.bold(
           pc.red(
-            // eslint-disable-next-line @stylistic/max-len
             `Some environment variables in your ${pc.bgCyan(filePath)} file are either unexpected or not registered in the src/env.js file. Please refer to the .env.example file for guidance.\nIt is highly recommended to restart the terminal after fixing your env variables. You might also see a ⚠ icon in VSCode's terminal; hover over it and click on Relaunch.`,
           ),
         ),

@@ -2,7 +2,7 @@ import { disableDonateButton } from "~/../reliverse.config";
 import { Coffee } from "lucide-react";
 
 import { buttonVariants } from "~/components/ui/button";
-import { Link } from "~/navigation";
+import { Link } from "~/i18n/routing";
 import { cn } from "~/utils/cn";
 
 // import { isDevelopment } from "std-env";

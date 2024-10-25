@@ -3,8 +3,8 @@ import consola from "consola";
 import pc from "picocolors";
 import task from "tasuku";
 
-import { patchGitignore } from "@/scripts/reliverse/relimter/core/tasks/patch-gitignore-file";
-import { sortArgs } from "@/scripts/utils";
+import { patchGitignore } from "$/scripts/reliverse/relimter/core/tasks/patch-gitignore-file";
+import { sortArgs } from "$/scripts/utils";
 
 ("tasuku");
 
@@ -54,7 +54,7 @@ const main = defineCommand({
             value: "gitignore",
           },
         ],
-        // eslint-disable-next-line @stylistic/max-len
+
         message: `Choose optimizations to apply (press ${pc.cyan("<space>")} to select | ${pc.cyan("<enter>")} to apply\n`,
         type: "multiselect",
       });
@@ -79,7 +79,6 @@ const main = defineCommand({
 
 if (scriptStatus === "unstable") {
   consola.success(
-    // eslint-disable-next-line @stylistic/max-len
     "Canceled. This script is still under development and may not work as expected. Please wait for the stable version.",
   );
   process.exit(0);

@@ -1,4 +1,3 @@
-/* eslint-disable max-lines-per-function */
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -30,9 +29,9 @@ export const metadata: Metadata = {
 };
 
 type CheckoutPageProps = {
-  params: {
+  params: Promise<{
     storeId: string;
-  };
+  }>;
 };
 
 export default async function CheckoutPage({ params }: CheckoutPageProps) {
@@ -40,7 +39,7 @@ export default async function CheckoutPage({ params }: CheckoutPageProps) {
 
   const appName = siteConfig.name;
 
-  const { storeId } = params;
+  const { storeId } = await params;
 
   const store = await db
     .select({
@@ -58,12 +57,10 @@ export default async function CheckoutPage({ params }: CheckoutPageProps) {
   }
 
   const { isConnected } = await getStripeAccountAction({
-    // @ts-expect-error TODO: fix id type
-    storeId,
+    storeId: parseInt(storeId),
   });
 
-  // @ts-expect-error TODO: fix id type
-  const cartLineItems = await getCartAction(storeId);
+  const cartLineItems = await getCartAction(parseInt(storeId));
 
   const paymentIntent = createPaymentIntent({
     items: cartLineItems,
@@ -90,7 +87,6 @@ export default async function CheckoutPage({ params }: CheckoutPageProps) {
   }
 
   // Component for displaying total quantity
-  // eslint-disable-next-line @eslint-react/no-nested-components
   const TotalQuantity = () => {
     try {
       totalQuantity = cartLineItems.reduce(

@@ -70,10 +70,10 @@ export function ProductsCombobox() {
       }
     };
 
-    window.addEventListener("keydown", handleKeyDown);
+    globalThis.addEventListener("keydown", handleKeyDown);
 
     return () => {
-      window.removeEventListener("keydown", handleKeyDown);
+      globalThis.removeEventListener("keydown", handleKeyDown);
     };
   }, []);
 
@@ -158,6 +158,7 @@ export function ProductsCombobox() {
                 className="capitalize"
                 heading={group.name}
               >
+                {/* // @ts-expect-error TODO: fix */}
                 {group.products.map((item) => {
                   return (
                     <CommandItem

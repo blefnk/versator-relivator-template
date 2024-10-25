@@ -67,8 +67,8 @@ export async function getStripeAccountAction(
         await tx
           .update(payments)
           .set({
-            detailsSubmitted: account.details_submitted,
             // @ts-expect-error disable ts error during migration
+            detailsSubmitted: account.details_submitted,
             stripeAccountCreatedAt: account.created,
           })
           // @ts-expect-error disable ts error during migration

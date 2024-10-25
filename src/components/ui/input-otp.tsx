@@ -72,7 +72,7 @@ const InputOTPSlot = forwardRef<
         >
           <div
             className={`
-            h-4 w-px animate-caret-blink bg-foreground duration-1000
+            animate-caret-blink h-4 w-px bg-foreground duration-1000
           `}
           />
         </div>

@@ -1,6 +1,5 @@
 import createMDX from "@next/mdx";
 import createNextIntlPlugin from "next-intl/plugin";
-import remarkGfm from "remark-gfm";
 
 // The Reliverse Next Config comes with minimal and recommended configurations.
 // Run `pnpm reli:setup` to easily switch between them and set up other tools.
@@ -8,13 +7,36 @@ import remarkGfm from "remark-gfm";
 // P.S. The *.mjs extension is no longer necessary because the package.json type module is used.
 await import("./src/env.js");
 
+const withNextIntl = createNextIntlPlugin();
+
 // Everything starts here; this is the main Next.js configuration file.
 // @see https://nextjs.org/docs/app/building-the-application/configuring
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    mdxRs: true,
+  eslint: {
+    // Warning: This allows production builds to successfully
+    // complete even if your project has ESLint errors.
+    // TODO: remove when Vercel will stop throwing the following error:
+    // ESLint: Cannot find module 'ajv/lib/refs/json-schema-draft-04.json'
+    ignoreDuringBuilds: true, // use this instead 👉 bun appts
+  },
 
+  // typescript: {
+  // Dangerously allow production builds to successfully
+  // complete even if your project has type errors.
+  // ignoreBuildErrors: true,
+  // },
+
+  // output: "export",
+  // trailingSlash: true,
+  // distDir: "exported",
+  // basePath: "/relivator",
+  // Optional: Prevent automatic `/me` -> `/me/`, instead preserve `href`
+  // skipTrailingSlashRedirect: true,
+
+  // mdxRs: true,
+
+  experimental: {
     // The React Compiler currently uses Webpack/Babel only,
     // so it may slightly slow down the build.
     // reactCompiler: false, // next@canary only
@@ -92,8 +114,8 @@ const nextConfig = {
     // })),
   },
 
+  // Configure `pageExtensions` to include markdown and MDX files
   pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
-  typescript: { ignoreBuildErrors: true },
 
   // ?| Uncomment the following to enable Adobe React Spectrum.
   // Note: `next dev --turbo` is not supported yet by this library.
@@ -108,15 +130,16 @@ const nextConfig = {
 // @see https://nextjs.org/docs/app/building-the-application/configuring/mdx
 const withMDX = createMDX({
   // extension: /\.mdx?$/,
-  options: {
-    // providerImportSource: "@mdx-js/react",
-    remarkPlugins: [remarkGfm],
-  },
+  // options: {
+  // providerImportSource: "@mdx-js/react",
+  // remarkPlugins: [remarkGfm],
+  // remarkPlugins: [],
+  // },
 });
 
 // Create a configuration wrapper required to change the default next-intl config location.
 // @see https://next-intl-docs.vercel.app/docs/getting-started/app-router/with-i18n-routing
-const withIntl = createNextIntlPlugin("./src/i18n.ts");
+// const withIntl = createNextIntlPlugin("./src/i18n.ts");
 
 // =======================================================================
 // !| ADVANCED CONFIGURATION
@@ -130,7 +153,7 @@ const withIntl = createNextIntlPlugin("./src/i18n.ts");
 // const withAnalyzer = bundleAnalyzer({ enabled: process.env.ANALYZE === "true", openAnalyzer: false });
 
 // !| Next.js Configuration Chaining:
-const chainedNextConfig = withIntl(withMDX(nextConfig));
+const chainedNextConfig = withNextIntl(withMDX(nextConfig));
 
 // ?| Uncomment the following to enable the Million Lint & Million Compiler.
 // import MillionLint from "@million/lint";

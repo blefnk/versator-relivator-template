@@ -1,12 +1,12 @@
 import type {
   AcademyPlayer,
   Achievement,
-} from "@/scripts/reliverse/academy/types";
+} from "$/scripts/reliverse/academy/types";
 
 import consola from "consola";
 import pc from "picocolors";
 
-import { getPlayerById, savePlayer } from "@/scripts/reliverse/academy/player";
+import { getPlayerById, savePlayer } from "$/scripts/reliverse/academy/player";
 import { getErrorMessage } from "~/server/helpers/error-message";
 
 export const achievements: Achievement[] = [

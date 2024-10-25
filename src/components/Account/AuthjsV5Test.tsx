@@ -17,10 +17,7 @@ const UpdateForm = () => {
   const { data: session } = useSession();
   const [name, setName] = useState(`New ${session?.user?.name}` || "");
 
-  if (
-    !session && // @ts-expect-error TODO: fix
-    session.user
-  ) {
+  if (!session && session.user) {
     return null;
   }
 

@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 
-import { buttonVariants } from "@/browser/reliverse/ui/Button";
-import { Card } from "@/browser/reliverse/ui/CardUI";
-import { Separator } from "@/browser/reliverse/ui/Separator";
-import { baseUrl } from "@/browser/shared/utils/url";
-import { getDashboardRedirectPath, getPlanFeatures } from "@/server";
+import { buttonVariants } from "$/browser/reliverse/ui/Button";
+import { Card } from "$/browser/reliverse/ui/CardUI";
+import { Separator } from "$/browser/reliverse/ui/Separator";
+import { baseUrl } from "$/browser/shared/utils/url";
+import { getDashboardRedirectPath, getPlanFeatures } from "$/server";
 import { CheckIcon } from "@radix-ui/react-icons";
 import { desc, eq, sql } from "drizzle-orm";
 

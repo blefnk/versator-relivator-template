@@ -7,7 +7,7 @@
 
 import { NextRequest } from "next/server";
 import createIntlMiddleware from "next-intl/middleware";
-import { defaultLocale, localePrefix, locales } from "~/navigation";
+import { defaultLocale, localePrefix, locales } from "~/i18n/routing";
 
 // todo: Instead of using this, we need to specify
 // todo: only disallowed routes, e.g `/dashboard(.*)`

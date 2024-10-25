@@ -1,4 +1,3 @@
-import type { NextAuthConfig } from "next-auth";
 import type { Provider } from "next-auth/providers/index";
 
 import { DrizzleAdapter } from "@auth/drizzle-adapter";
@@ -86,7 +85,7 @@ const providers = [
 // @see https://authjs.dev/ref/adapter/drizzle
 // @see https://next-auth.js.org/configuration/options
 // @see https://next-auth.js.org/configuration/callbacks
-export const authOptions: NextAuthConfig = {
+export const authOptions = {
   adapter: DrizzleAdapter(db),
   callbacks: {
     session: ({ session, user }) => ({

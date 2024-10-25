@@ -9,7 +9,7 @@ export const authSchema = z.object({
     .min(8, {
       message: "Password must be at least 8 characters long",
     })
-    .max(100) // eslint-disable-next-line regexp/optimal-lookaround-quantifier
+    .max(100)
     .regex(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!#$%&*@^])(?=.{8,})/, {
       message:
         "Password must contain at least 8 characters,\

@@ -283,7 +283,7 @@ async function processFiles(): Promise<{
 async function main(): Promise<void> {
   const shouldFixComments = await confirm({
     default: false,
-    message: // eslint-disable-next-line @stylistic/max-len
+    message:
       "🔥 This comments transformer script is still in development, so please make a git commit, because the script may break your codebase unintentionally.\nAre you sure you want to run it?",
   });
 

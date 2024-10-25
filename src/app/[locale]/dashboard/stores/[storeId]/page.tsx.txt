@@ -3,7 +3,7 @@ import { revalidatePath } from "next/cache";
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 
-import { buttonVariants } from "@/browser/reliverse/ui/Button";
+import { buttonVariants } from "$/browser/reliverse/ui/Button";
 import {
   Card,
   CardContent,
@@ -11,10 +11,10 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/browser/reliverse/ui/CardUI";
-import { Input } from "@/browser/reliverse/ui/Input";
-import { Label } from "@/browser/reliverse/ui/Label";
-import { Textarea } from "@/browser/reliverse/ui/Text-Area";
+} from "$/browser/reliverse/ui/CardUI";
+import { Input } from "$/browser/reliverse/ui/Input";
+import { Label } from "$/browser/reliverse/ui/Label";
+import { Textarea } from "$/browser/reliverse/ui/Text-Area";
 import consola from "consola";
 import { and, eq, not } from "drizzle-orm";
 

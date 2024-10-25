@@ -6,8 +6,8 @@ import {
   CardContent,
   CardHeader,
   CardTitle,
-} from "@/browser/reliverse/ui/CardUI";
-import { baseUrl } from "@/browser/shared/utils/url";
+} from "$/browser/reliverse/ui/CardUI";
+import { baseUrl } from "$/browser/shared/utils/url";
 import { eq } from "drizzle-orm";
 import { Activity, CreditCard, DollarSign, Users } from "lucide-react";
 

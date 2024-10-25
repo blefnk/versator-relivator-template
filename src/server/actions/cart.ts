@@ -28,7 +28,7 @@ export async function getCart(input?: {
 }): Promise<CartLineItemSchema[]> {
   noStore();
 
-  const cartId = cookies().get("cartId")?.value;
+  const cartId = (await cookies()).get("cartId")?.value;
 
   if (!cartId) return [];
 
@@ -94,7 +94,7 @@ export async function getCart(input?: {
 export async function getUniqueStoreIds() {
   noStore();
 
-  const cartId = cookies().get("cartId")?.value;
+  const cartId = (await cookies()).get("cartId")?.value;
 
   if (!cartId) return [];
 
@@ -156,7 +156,7 @@ export async function addToCart(rawInput: z.infer<typeof cartItemSchema>) {
     }
 
     const cookieStore = cookies();
-    const cartId = cookieStore.get("cartId")?.value;
+    const cartId = (await cookieStore).get("cartId")?.value;
 
     if (!cartId) {
       const cart = await db
@@ -167,7 +167,7 @@ export async function addToCart(rawInput: z.infer<typeof cartItemSchema>) {
         .returning({ insertedId: carts.id });
 
       // Note: .set() is only available in a Server Action or Route Handler
-      cookieStore.set("cartId", String(cart[0]?.insertedId));
+      (await cookieStore).set("cartId", String(cart[0]?.insertedId));
 
       revalidatePath("/");
 
@@ -183,9 +183,9 @@ export async function addToCart(rawInput: z.infer<typeof cartItemSchema>) {
 
     // TODO: Find a better way to deal with expired carts
     if (!cart) {
-      cookieStore.set({
+      (await cookieStore).get({
+        // expires: new Date(0),
         name: "cartId",
-        expires: new Date(0),
         value: "",
       });
 
@@ -205,7 +205,7 @@ export async function addToCart(rawInput: z.infer<typeof cartItemSchema>) {
         })
         .returning({ insertedId: carts.id });
 
-      cookieStore.set("cartId", String(newCart[0]?.insertedId));
+      (await cookieStore).set("cartId", String(newCart[0]?.insertedId));
 
       revalidatePath("/");
 
@@ -252,7 +252,7 @@ export async function updateCartItem(rawInput: z.infer<typeof cartItemSchema>) {
   try {
     const input = cartItemSchema.parse(rawInput);
 
-    const cartId = cookies().get("cartId")?.value;
+    const cartId = (await cookies()).get("cartId")?.value;
 
     if (!cartId) {
       throw new Error("cartId not found, please try again.");
@@ -306,7 +306,7 @@ export async function deleteCart() {
   noStore();
 
   try {
-    const cartId = cookies().get("cartId")?.value;
+    const cartId = (await cookies()).get("cartId")?.value;
 
     if (!cartId) {
       throw new Error("cartId not found, please try again.");
@@ -334,7 +334,7 @@ export async function deleteCartItem(
   noStore();
 
   try {
-    const cartId = cookies().get("cartId")?.value;
+    const cartId = (await cookies()).get("cartId")?.value;
 
     if (!cartId) {
       throw new Error("cartId not found, please try again.");
@@ -371,7 +371,7 @@ export async function deleteCartItems(
   noStore();
 
   try {
-    const cartId = cookies().get("cartId")?.value;
+    const cartId = (await cookies()).get("cartId")?.value;
 
     if (!cartId) {
       throw new Error("cartId not found, please try again.");

@@ -1,6 +1,5 @@
 "use client";
 
-/* eslint-disable max-lines-per-function */
 import type { Product } from "~/db/schema";
 import type { FileWithPreview } from "~/types/store";
 import type { z } from "zod";

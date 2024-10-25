@@ -69,9 +69,9 @@ export function MainMenu({ items }: MainMenuProps) {
                   className={`
                     grid gap-3 p-6
 
-                    lg:w-[500px] lg:grid-cols-[.75fr_1fr]
+                    md:w-[400px] lg:w-[500px]
 
-                    md:w-[400px]
+                    lg:grid-cols-[.75fr_1fr]
                   `}
                 >
                   <li className="row-span-3">
@@ -126,9 +126,9 @@ export function MainMenu({ items }: MainMenuProps) {
                       className={`
                         grid w-[400px] gap-3 p-4
 
-                        lg:w-[600px]
+                        md:w-[500px]
 
-                        md:w-[500px] md:grid-cols-2
+                        md:grid-cols-2 lg:w-[600px]
                       `}
                     >
                       {item.items.map((subItem) => (
@@ -188,9 +188,9 @@ const ListItem = ({
             block select-none space-y-1 rounded-lg p-3 leading-none no-underline
             outline-none transition-colors
 
-            focus:bg-accent focus:text-accent-foreground
-
             hover:bg-accent hover:text-accent-foreground
+
+            focus:bg-accent focus:text-accent-foreground
           `,
           className,
         )}

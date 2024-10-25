@@ -7,8 +7,8 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/browser/reliverse/ui/CardUI";
-import { baseUrl } from "@/browser/shared/utils/url";
+} from "$/browser/reliverse/ui/CardUI";
+import { baseUrl } from "$/browser/shared/utils/url";
 import { and, eq } from "drizzle-orm";
 
 import { ProductUpdForm } from "~/components/Forms";

@@ -1,15 +1,15 @@
 import { redirect } from "next/navigation";
 
 type ProductPreviewPageProps = {
-  params: {
+  params: Promise<{
     productId: string;
-  };
+  }>;
 };
 
-export default function ProductPreviewPage({
+export default async function ProductPreviewPage({
   params,
 }: ProductPreviewPageProps) {
-  const productId = Number(params.productId);
+  const productId = Number((await params).productId);
 
   redirect(`/product/${productId}`);
 }

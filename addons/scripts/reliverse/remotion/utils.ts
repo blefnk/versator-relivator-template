@@ -12,7 +12,6 @@ export function getProgress(
     return totalStars;
   }
 
-  // @ts-expect-error - TS doesn't know that the table is sorted
   return table[frame][2];
 }
 

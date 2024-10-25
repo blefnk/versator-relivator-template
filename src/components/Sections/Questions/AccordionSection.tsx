@@ -28,11 +28,8 @@ export function AccordionSection() {
       {items.map((item) => {
         const summaryKey = `faq.${item}.summary` as TranslationKeys;
         const detailsKey = `faq.${item}.details` as TranslationKeys;
-
-        // const itemId = uuid(); // Generate a unique id for each item
         const itemId = item;
 
-        // Generate a unique id for each item
         return (
           <AccordionItem key={itemId} value={`item-${itemId}`}>
             <AccordionTrigger>
@@ -40,45 +37,12 @@ export function AccordionSection() {
             </AccordionTrigger>
             <AccordionContent>
               {itemId !== 3 ? (
-                <Balancer
-                  className={`
-                    text-gray-500
-
-                    dark:text-gray-400
-                  `}
-                  as="p"
-                >
-                  {t(detailsKey)}
+                <Balancer className="text-gray-500 dark:text-gray-400">
+                  <p>{t(detailsKey)}</p>
                 </Balancer>
               ) : (
-                <Balancer
-                  className={`
-                    text-gray-500
-
-                    dark:text-gray-400
-                  `}
-                  as="p"
-                >
-                  {t(detailsKey)}
-                  {/*
-                    {t(detailsKey).includes("Donate to Relivator") ? (
-                      <>
-                        {t(detailsKey).split("Donate to Relivator")[0]}
-                        <Link
-                          variant="link"
-                          href="/donate"
-                          className={`
-                          text-blue-500 underline
-                        `}
-                        >
-                          Donate to Relivator
-                        </Link>
-                        {t(detailsKey).split("Donate to Relivator")[1]}
-                      </>
-                    ) : (
-                      t(detailsKey)
-                    )}
-                   */}
+                <Balancer className="text-gray-500 dark:text-gray-400">
+                  <p>{t(detailsKey)}</p>
                   <FundingPlatforms />
                 </Balancer>
               )}

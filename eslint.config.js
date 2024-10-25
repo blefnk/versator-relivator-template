@@ -1,48 +1,48 @@
 import js from "@eslint/js";
-import reactCommunity from "@eslint-react/eslint-plugin";
+// import reactCommunity from "@eslint-react/eslint-plugin";
 // @ts-expect-error missing types
 import nextPlugin from "@next/eslint-plugin-next";
 import stylistic from "@stylistic/eslint-plugin";
-import tanstack from "@tanstack/eslint-plugin-query";
+// import tanstack from "@tanstack/eslint-plugin-query";
 // @ts-expect-error missing types
-import barrel from "eslint-plugin-barrel-files";
+// import barrel from "eslint-plugin-barrel-files";
 // @ts-expect-error missing types
-import drizzle from "eslint-plugin-drizzle";
+// import drizzle from "eslint-plugin-drizzle";
 // @ts-expect-error missing types
-import eslintComments from "eslint-plugin-eslint-comments";
-import importX from "eslint-plugin-import-x";
+// import eslintComments from "eslint-plugin-eslint-comments";
+// import importX from "eslint-plugin-import-x";
 import jsonc from "eslint-plugin-jsonc";
 // @ts-expect-error missing types
-import jsxA11yPlugin from "eslint-plugin-jsx-a11y";
+// import jsxA11yPlugin from "eslint-plugin-jsx-a11y";
 // @ts-expect-error missing types
-import markdown from "eslint-plugin-markdown";
-import nodePlugin from "eslint-plugin-n";
+// import markdown from "eslint-plugin-markdown";
+// import nodePlugin from "eslint-plugin-n";
 // @ts-expect-error missing types
-import noComments from "eslint-plugin-no-comments";
+// import noComments from "eslint-plugin-no-comments";
 // @ts-expect-error missing types
-import noRelative from "eslint-plugin-no-relative-import-paths";
-import perfectionist from "eslint-plugin-perfectionist";
+// import noRelative from "eslint-plugin-no-relative-import-paths";
+// import perfectionist from "eslint-plugin-perfectionist";
 // @ts-expect-error missing types
-import promisePlugin from "eslint-plugin-promise";
+// import promisePlugin from "eslint-plugin-promise";
 // @ts-expect-error missing types
-import reactJsxRuntime from "eslint-plugin-react/configs/jsx-runtime.js";
+// import reactJsxRuntime from "eslint-plugin-react/configs/jsx-runtime.js";
 // @ts-expect-error missing types
-import reactRecommended from "eslint-plugin-react/configs/recommended.js";
+// import reactRecommended from "eslint-plugin-react/configs/recommended.js";
 // @ts-expect-error missing types
-import reactHooks from "eslint-plugin-react-hooks";
+// import reactHooks from "eslint-plugin-react-hooks";
 // @ts-expect-error missing types
-import reactRefresh from "eslint-plugin-react-refresh";
-import tailwindReadable from "eslint-plugin-readable-tailwind";
-import * as regexp from "eslint-plugin-regexp";
-import sonarjs from "eslint-plugin-sonarjs";
+// import reactRefresh from "eslint-plugin-react-refresh";
+// import tailwindReadable from "eslint-plugin-readable-tailwind";
+// import * as regexp from "eslint-plugin-regexp";
+// import sonarjs from "eslint-plugin-sonarjs";
 // @ts-expect-error missing types
-import eslintPluginSort from "eslint-plugin-sort";
+// import eslintPluginSort from "eslint-plugin-sort";
 // @ts-expect-error missing types
-import sortExports from "eslint-plugin-sort-exports";
+// import sortExports from "eslint-plugin-sort-exports";
 // @ts-expect-error missing types
 import tailwindcss from "eslint-plugin-tailwindcss";
-import unicorn from "eslint-plugin-unicorn";
-import yaml from "eslint-plugin-yml";
+// import unicorn from "eslint-plugin-unicorn";
+// import yaml from "eslint-plugin-yml";
 import globals from "globals";
 import tseslint from "typescript-eslint";
 
@@ -79,7 +79,7 @@ export default tseslint.config(
     ignores: [
       "**/.{git,next,astro,turbo,million,output}/",
       "**/{node_modules,build,dist,drizzle}/",
-      "**/{cluster,public}/",
+      "**/{cluster,public,docs}/",
       "pnpm-lock.yaml",
     ],
   },
@@ -88,12 +88,13 @@ export default tseslint.config(
     extends: [
       ...tseslint.configs.strictTypeChecked,
       ...tseslint.configs.stylisticTypeChecked,
-      sonarjs.configs.recommended,
-      nodePlugin.configs["flat/recommended-module"],
-      reactCommunity.configs["recommended-type-checked"],
-      eslintPluginSort.configs["flat/recommended"],
-      unicorn.configs["flat/recommended"],
-      regexp.configs["flat/recommended"],
+
+      // sonarjs.configs.recommended,
+      // nodePlugin.configs["flat/recommended-module"],
+      // reactCommunity.configs["recommended-type-checked"],
+      // eslintPluginSort.configs["flat/recommended"],
+      // unicorn.configs["flat/recommended"],
+      // regexp.configs["flat/recommended"],
     ],
     files: ["**/*.{js,ts,tsx}"],
     languageOptions: {
@@ -120,59 +121,70 @@ export default tseslint.config(
       reportUnusedDisableDirectives: "warn",
     },
     plugins: {
-      ...reactRecommended.plugins,
+      // ...reactRecommended.plugins,
       "@next/next": nextPlugin,
       "@stylistic": stylistic,
-      "@tanstack/query": tanstack,
+
+      // "@tanstack/query": tanstack,
       "@typescript-eslint": tseslint.plugin,
-      "barrel-files": { rules: barrel.rules },
-      drizzle: drizzle,
-      "eslint-comments": eslintComments,
-      "import-x": importX,
-      "jsx-a11y": {
-        rules: jsxA11yPlugin.rules,
-      },
-      "no-relative-import-paths": noRelative,
-      perfectionist: perfectionist,
-      promise: promisePlugin,
-      "react/jsx-runtime": reactJsxRuntime,
-      "react-hooks": reactHooks,
-      "react-refresh": reactRefresh,
-      "readable-tailwind": tailwindReadable,
-      sort: eslintPluginSort,
-      "sort-exports": sortExports,
+
+      // "barrel-files": { rules: barrel.rules },
+      // drizzle: drizzle,
+      // "eslint-comments": eslintComments,
+      // "import-x": importX,
+      // "jsx-a11y": {
+      // 	rules: jsxA11yPlugin.rules,
+      // },
+      // "no-relative-import-paths": noRelative,
+      // perfectionist: perfectionist,
+      // promise: promisePlugin,
+      // "react/jsx-runtime": reactJsxRuntime,
+      // "react-hooks": reactHooks,
+      // "react-refresh": reactRefresh,
+      // "readable-tailwind": tailwindReadable,
+      // sort: eslintPluginSort,
+      // "sort-exports": sortExports,
       tailwindcss: tailwindcss,
     },
     rules: {
       // @see https://eslint.org/docs/latest/use/configure
-      ...perfectionist.configs["recommended-natural"].rules,
+      // ...perfectionist.configs["recommended-natural"].rules,
       ...stylisticConfig.rules,
-      ...importX.configs.recommended.rules,
-      ...jsxA11yPlugin.configs.recommended.rules,
+      // ...importX.configs.recommended.rules,
+      // ...jsxA11yPlugin.configs.recommended.rules,
       ...nextPlugin.configs.recommended.rules,
-      ...promisePlugin.configs.recommended.rules,
-      ...reactHooks.configs.recommended.rules,
-      ...reactJsxRuntime.rules,
-      ...reactRecommended.rules,
-      ...tailwindReadable.configs.error.rules,
-      ...tailwindReadable.configs.warning.rules,
+
+      // ...promisePlugin.configs.recommended.rules,
+      // ...reactHooks.configs.recommended.rules,
+      // ...reactJsxRuntime.rules,
+      // ...reactRecommended.rules,
+      // ...tailwindReadable.configs.error.rules,
+      // ...tailwindReadable.configs.warning.rules,
       ...tailwindcss.configs.recommended.rules,
 
-      // @see https://eslint-react.xyz/rules/overview
-      "@eslint-react/dom/no-dangerously-set-innerhtml": "off",
-      "@eslint-react/hooks-extra/ensure-custom-hooks-using-other-hooks": "off",
-      "@eslint-react/hooks-extra/no-direct-set-state-in-use-effect": "off",
-      "@eslint-react/hooks-extra/no-redundant-custom-hook": "off",
-      "@eslint-react/no-array-index-key": "off",
-      "@eslint-react/no-duplicate-key": "off",
-      "@eslint-react/no-leaked-conditional-rendering": "off",
-      "@eslint-react/no-unstable-context-value": "off",
-      "@eslint-react/no-unstable-default-props": "off",
-      "@eslint-react/prefer-destructuring-assignment": "off",
-      "@eslint-react/prefer-read-only-props": "off",
+      // "@eslint-react/dom/no-dangerously-set-innerhtml": "off",
+
+      // // @see https://eslint-react.xyz/rules/overview
+      // "@eslint-react/dom/no-missing-button-type": "off",
+      // "@eslint-react/hooks-extra/ensure-custom-hooks-using-other-hooks": "off",
+      // "@eslint-react/hooks-extra/no-direct-set-state-in-use-effect": "off",
+      // "@eslint-react/hooks-extra/no-redundant-custom-hook": "off",
+      // "@eslint-react/hooks-extra/prefer-use-state-lazy-initialization": "off",
+      // "@eslint-react/no-array-index-key": "off",
+      // "@eslint-react/no-duplicate-key": "off",
+      // "@eslint-react/no-leaked-conditional-rendering": "off",
+      // "@eslint-react/no-unstable-context-value": "off",
+      // "@eslint-react/no-unstable-default-props": "off",
+      // "@eslint-react/prefer-destructuring-assignment": "off",
+      // "@eslint-react/prefer-read-only-props": "off",
+
+      // "@eslint-react/web-api/no-leaked-event-listener": "off",
 
       // @see https://nextjs.org/docs/app/building-your-application/configuring/eslint#eslint-plugin
+      "@next/next/no-page-custom-font": "off",
       "@next/next/no-duplicate-head": "off",
+      "@typescript-eslint/use-unknown-in-catch-callback-variable": "off",
+
       "@next/next/no-html-link-for-pages": "off",
 
       // @see https://eslint.style/rules
@@ -192,6 +204,7 @@ export default tseslint.config(
           singleValue: false,
         },
       ],
+
       "@stylistic/arrow-parens": ["warn", "always"],
 
       // { requireForBlockBody: true },
@@ -266,6 +279,7 @@ export default tseslint.config(
           SwitchCase: 1,
         },
       ],
+
       "@stylistic/indent-binary-ops": ["off", 2],
 
       // @see https://eslint.style/rules
@@ -312,6 +326,7 @@ export default tseslint.config(
         },
       ],
       "@stylistic/linebreak-style": ["warn", "unix"],
+
       "@stylistic/lines-around-comment": [
         "warn",
         {
@@ -345,7 +360,7 @@ export default tseslint.config(
       // @see https://eslint.style/rules/default/max-len
       "@stylistic/max-len": [
         // @see https://github.com/eslint/eslint/issues/11325
-        "warn",
+        "off",
         {
           // TODO: change to 80 in 1.3.0 GA release (@see https://github.com/prettier/prettier/issues)
           code: 120,
@@ -430,7 +445,7 @@ export default tseslint.config(
           ],
         },
       ],
-      "@stylistic/no-mixed-spaces-and-tabs": "error",
+      "@stylistic/no-mixed-spaces-and-tabs": "off",
       "@stylistic/no-multi-spaces": "warn",
       "@stylistic/no-multiple-empty-lines": [
         "warn",
@@ -574,7 +589,7 @@ export default tseslint.config(
           before: false,
         },
       ],
-      "@stylistic/semi-style": ["warn", "last"],
+      "@stylistic/semi-style": ["off", "last"], // TODO: set to "warn"
       "@stylistic/space-before-blocks": ["warn", "always"],
       "@stylistic/space-before-function-paren": [
         "warn",
@@ -641,12 +656,14 @@ export default tseslint.config(
       "@stylistic/type-generic-spacing": "off",
       "@stylistic/wrap-iife": ["warn", "outside"],
       "@stylistic/wrap-regex": "off",
+
       "@stylistic/yield-star-spacing": ["off", "both"],
 
-      // @see https://tanstack.com/query/latest/docs/eslint/eslint-plugin-query
-      "@tanstack/query/exhaustive-deps": "error",
-      "@tanstack/query/no-rest-destructuring": "error",
-      "@tanstack/query/stable-query-client": "error",
+      // // @see https://tanstack.com/query/latest/docs/eslint/eslint-plugin-query
+      // "@tanstack/query/exhaustive-deps": "error",
+      // "@tanstack/query/no-rest-destructuring": "error",
+
+      // "@tanstack/query/stable-query-client": "error",
 
       // @see https://typescript-eslint.io/rules
       "@typescript-eslint/array-type": [
@@ -698,7 +715,7 @@ export default tseslint.config(
       "@typescript-eslint/interface-name-prefix": "off",
       "@typescript-eslint/method-signature-style": ["off", "method"],
       "@typescript-eslint/naming-convention": [
-        "error",
+        "off",
         {
           custom: {
             match: true,
@@ -716,11 +733,14 @@ export default tseslint.config(
       "@typescript-eslint/no-base-to-string": "off",
       "@typescript-eslint/no-confusing-non-null-assertion": "off",
       "@typescript-eslint/no-confusing-void-expression": "off",
+      "@typescript-eslint/no-deprecated": "off",
       "@typescript-eslint/no-duplicate-enum-values": "off",
       "@typescript-eslint/no-duplicate-type-constituents": "off",
       "@typescript-eslint/no-dynamic-delete": "off",
       "@typescript-eslint/no-empty-function": "off",
+      "@typescript-eslint/no-empty-object-type": "off",
       "@typescript-eslint/no-explicit-any": "off",
+      "@typescript-eslint/no-extraneous-class": "off",
       "@typescript-eslint/no-floating-promises": "off",
       "@typescript-eslint/no-for-in-array": "off",
       "@typescript-eslint/no-implied-eval": "off",
@@ -756,11 +776,13 @@ export default tseslint.config(
       "@typescript-eslint/no-unnecessary-type-arguments": "off",
       "@typescript-eslint/no-unnecessary-type-assertion": "off",
       "@typescript-eslint/no-unnecessary-type-constraint": "off",
+      "@typescript-eslint/no-unnecessary-type-parameters": "off",
       "@typescript-eslint/no-unsafe-argument": "off",
       "@typescript-eslint/no-unsafe-assignment": "off",
       "@typescript-eslint/no-unsafe-call": "off",
       "@typescript-eslint/no-unsafe-declaration-merging": "off",
       "@typescript-eslint/no-unsafe-enum-comparison": "off",
+      "@typescript-eslint/no-unsafe-function-type": "off",
       "@typescript-eslint/no-unsafe-member-access": "off",
       "@typescript-eslint/no-unsafe-return": "off",
       "@typescript-eslint/no-unused-expressions": [
@@ -795,6 +817,7 @@ export default tseslint.config(
         },
       ],
       "@typescript-eslint/prefer-optional-chain": "off",
+      "@typescript-eslint/prefer-promise-reject-errors": "off",
       "@typescript-eslint/prefer-readonly": "off",
       "@typescript-eslint/prefer-reduce-type-parameter": "off",
       "@typescript-eslint/prefer-regexp-exec": "off",
@@ -816,6 +839,7 @@ export default tseslint.config(
       "@typescript-eslint/return-await": "off",
       "@typescript-eslint/strict-boolean-expressions": "off",
       "@typescript-eslint/switch-exhaustiveness-check": "off",
+
       "@typescript-eslint/triple-slash-reference": [
         "error",
         {
@@ -827,1029 +851,1089 @@ export default tseslint.config(
 
       // We don't use classes (!) This rule adds about 23s to the lint time
       "@typescript-eslint/unbound-method": "off",
-      "@typescript-eslint/unified-signatures": "off",
 
-      // Alternative: https://npmjs.com/package/eslint-plugin-no-barrel-files
-      "barrel-files/avoid-barrel-files": "warn",
+      // "@typescript-eslint/unified-signatures": "off",
 
-      // @see https://npmjs.com/package/eslint-plugin-barrel-files
-      "barrel-files/avoid-importing-barrel-files": "off",
-      "barrel-files/avoid-namespace-import": "off",
-      "barrel-files/avoid-re-export-all": "off",
+      // // Alternative: https://npmjs.com/package/eslint-plugin-no-barrel-files
+      // "barrel-files/avoid-barrel-files": "off",
 
-      // @see https://eslint.org/docs/latest/rules
-      complexity: [
-        "off",
-        {
-          max: 20,
-        },
-      ],
-      "consistent-function-scoping": "off",
-      "constructor-super": "off",
-      curly: ["off", "all"],
+      // // @see https://npmjs.com/package/eslint-plugin-barrel-files
+      // "barrel-files/avoid-importing-barrel-files": "off",
 
-      // @see https://orm.drizzle.team/docs/eslint-plugin
-      "drizzle/enforce-delete-with-where": [
-        "off",
-        {
-          drizzleObjectName: ["db", "ctx.db"],
-        },
-      ],
-      "drizzle/enforce-update-with-where": [
-        "off",
-        {
-          drizzleObjectName: ["db", "ctx.db"],
-        },
-      ],
+      // "barrel-files/avoid-namespace-import": "off",
 
-      // @see https://eslint.org/docs/latest/rules
-      "error-message": "off",
+      // "barrel-files/avoid-re-export-all": "off",
 
-      // @see https://mysticatea.github.io/eslint-plugin-eslint-comments/rules
-      "eslint-comments/disable-enable-pair": [
-        "off",
-        {
-          allowWholeFile: false,
-        },
-      ],
-      "eslint-comments/no-aggregating-enable": "error",
-      "eslint-comments/no-duplicate-disable": "error",
-      "eslint-comments/no-unlimited-disable": "error",
-      "eslint-comments/no-unused-disable": "error",
-      "eslint-comments/no-unused-enable": "error",
-      "eslint-comments/no-use": [
-        "error",
-        {
-          allow: [
-            "eslint-disable",
-            "eslint-disable-line",
-            "eslint-disable-next-line",
-            "eslint-enable",
-            "global",
-          ],
-        },
-      ],
-      "eslint-comments/require-description": [
-        "off",
-        {
-          ignore: [],
-        },
-      ],
+      // // @see https://eslint.org/docs/latest/rules
+      // complexity: [
+      // 	"off",
+      // 	{
+      // 		max: 20,
+      // 	},
+      // ],
 
-      // @see https://eslint.org/docs/latest/rules
-      "filename-case": "off",
-      "for-direction": "off",
-      "getter-return": "off",
-      "id-denylist": [
-        "off",
-        "any",
-        "Boolean",
-        "callback",
-        "cb",
-        "data",
-        "e",
-        "err",
-        "number",
-        "Number",
-        "string",
-        "String",
-        "undefined",
-        "Undefined",
-      ],
-      "id-match": "error",
-      "import-style": "off",
-      // @see https://github.com/un-ts/eslint-plugin-import-x
-      "import-x/consistent-type-specifier-style": ["error", "prefer-top-level"],
-      "import-x/default": "off",
-      "import-x/export": "error",
-      "import-x/first": "off",
-      "import-x/named": "off",
-      "import-x/namespace": "off",
-      "import-x/newline-after-import": "warn",
-      "import-x/no-absolute-path": "error",
-      "import-x/no-amd": "error",
-      "import-x/no-anonymous-default-export": "off",
-      "import-x/no-cycle": [
-        "off",
-        {
-          ignoreExternal: true,
-          maxDepth: 3,
-        },
-      ],
-      "import-x/no-default-export": "off",
-      "import-x/no-extraneous-dependencies": [
-        "off",
-        {
-          devDependencies: true,
-          optionalDependencies: false,
-          peerDependencies: true,
-        },
-      ],
-      "import-x/no-mutable-exports": "error",
-      "import-x/no-named-as-default": "off",
-      "import-x/no-named-as-default-member": "off",
-      "import-x/no-named-default": "error",
-      "import-x/no-named-export": "off",
-      "import-x/no-relative-packages": "off",
-      "import-x/no-self-import": "off",
-      "import-x/no-unresolved": "off",
-      "import-x/no-useless-path-segments": [
-        "error",
-        {
-          commonjs: true,
-        },
-      ],
-      "import-x/order": "off",
-      "import-x/prefer-default-export": "off",
+      // "consistent-function-scoping": "off",
+      // "constructor-super": "off",
 
-      // @see https://github.com/jsx-eslint/eslint-plugin-jsx-a11y
-      "jsx-a11y/alt-text": [
-        "error",
-        {
-          area: ["Area"],
-          elements: ["img", "object", "area", 'input[type="image"]'],
-          img: ["Image"],
-          'input[type="image"]': ["InputImage"],
-          object: ["Object"],
-        },
-      ],
-      "jsx-a11y/aria-props": "error",
-      "jsx-a11y/aria-proptypes": "error",
-      "jsx-a11y/aria-unsupported-elements": "error",
-      "jsx-a11y/click-events-have-key-events": "off",
-      "jsx-a11y/no-noninteractive-element-interactions": "off",
-      "jsx-a11y/role-has-required-aria-props": "error",
-      "jsx-a11y/role-supports-aria-props": "error",
-      "max-depth": ["warn", 10],
-      "max-lines": ["off", 700],
-      "max-lines-per-function": [
-        "warn",
-        {
-          IIFEs: true,
-          max: 200,
-          skipBlankLines: true,
-          skipComments: true,
-        },
-      ],
-      "max-statements": [
-        "warn",
-        100,
-        {
-          ignoreTopLevelFunctions: false,
-        },
-      ],
+      // curly: ["off", "all"],
 
-      // @see https://github.com/eslint-community/eslint-plugin-n#-rules
-      "n/exports-style": ["off", "module.exports"],
-      "n/no-extraneous-import": "off",
-      "n/no-missing-import": "off",
-      "n/no-process-exit": "off",
-      "n/no-unpublished-import": "off",
-      "n/no-unsupported-features/es-syntax": "off",
-      "n/no-unsupported-features/node-builtins": "off",
+      // // @see https://orm.drizzle.team/docs/eslint-plugin
+      // "drizzle/enforce-delete-with-where": [
+      // 	"off",
+      // 	{
+      // 		drizzleObjectName: ["db", "ctx.db"],
+      // 	},
+      // ],
 
-      // @see https://eslint.org/docs/latest/rules
-      "no-abusive-eslint-disable": "off",
-      "no-anonymous-default-export": "off",
-      "no-array-reduce": "off",
-      "no-async-promise-executor": "off",
-      "no-await-in-promise-methods": "off",
+      // "drizzle/enforce-update-with-where": [
+      // 	"off",
+      // 	{
+      // 		drizzleObjectName: ["db", "ctx.db"],
+      // 	},
+      // ],
+
+      // // @see https://eslint.org/docs/latest/rules
+      // "error-message": "off",
+
+      // // @see https://mysticatea.github.io/eslint-plugin-eslint-comments/rules
+      // "eslint-comments/disable-enable-pair": [
+      // 	"off",
+      // 	{
+      // 		allowWholeFile: false,
+      // 	},
+      // ],
+
+      // "eslint-comments/no-aggregating-enable": "error",
+      // "eslint-comments/no-duplicate-disable": "error",
+      // "eslint-comments/no-unlimited-disable": "error",
+      // "eslint-comments/no-unused-disable": "error",
+      // "eslint-comments/no-unused-enable": "error",
+      // "eslint-comments/no-use": [
+      // 	"error",
+      // 	{
+      // 		allow: [
+      // 			"eslint-disable",
+      // 			"eslint-disable-line",
+      // 			"eslint-disable-next-line",
+      // 			"eslint-enable",
+      // 			"global",
+      // 		],
+      // 	},
+      // ],
+
+      // "eslint-comments/require-description": [
+      // 	"off",
+      // 	{
+      // 		ignore: [],
+      // 	},
+      // ],
+
+      // // @see https://eslint.org/docs/latest/rules
+      // "filename-case": "off",
+
+      // "for-direction": "off",
+      // "getter-return": "off",
+      // "id-denylist": [
+      // 	"off",
+      // 	"any",
+      // 	"Boolean",
+      // 	"callback",
+      // 	"cb",
+      // 	"data",
+      // 	"e",
+      // 	"err",
+      // 	"number",
+      // 	"Number",
+      // 	"string",
+      // 	"String",
+      // 	"undefined",
+      // 	"Undefined",
+      // ],
+      // "id-match": "error",
+      // "import-style": "off",
+      // // @see https://github.com/un-ts/eslint-plugin-import-x
+      // "import-x/consistent-type-specifier-style": ["error", "prefer-top-level"],
+      // "import-x/default": "off",
+      // "import-x/export": "error",
+      // "import-x/first": "off",
+      // "import-x/named": "off",
+      // "import-x/namespace": "off",
+      // "import-x/newline-after-import": "warn",
+      // "import-x/no-absolute-path": "error",
+      // "import-x/no-amd": "error",
+      // "import-x/no-anonymous-default-export": "off",
+      // "import-x/no-cycle": [
+      // 	"off",
+      // 	{
+      // 		ignoreExternal: true,
+      // 		maxDepth: 3,
+      // 	},
+      // ],
+      // "import-x/no-default-export": "off",
+      // "import-x/no-extraneous-dependencies": [
+      // 	"off",
+      // 	{
+      // 		devDependencies: true,
+      // 		optionalDependencies: false,
+      // 		peerDependencies: true,
+      // 	},
+      // ],
+      // "import-x/no-mutable-exports": "error",
+      // "import-x/no-named-as-default": "off",
+      // "import-x/no-named-as-default-member": "off",
+      // "import-x/no-named-default": "error",
+      // "import-x/no-named-export": "off",
+      // "import-x/no-relative-packages": "off",
+      // "import-x/no-self-import": "off",
+      // "import-x/no-unresolved": "off",
+      // "import-x/no-useless-path-segments": [
+      // 	"error",
+      // 	{
+      // 		commonjs: true,
+      // 	},
+      // ],
+      // "import-x/order": "off",
+
+      // "import-x/prefer-default-export": "off",
+
+      // // @see https://github.com/jsx-eslint/eslint-plugin-jsx-a11y
+      // "jsx-a11y/alt-text": [
+      // 	"error",
+      // 	{
+      // 		area: ["Area"],
+      // 		elements: ["img", "object", "area", 'input[type="image"]'],
+      // 		img: ["Image"],
+      // 		'input[type="image"]': ["InputImage"],
+      // 		object: ["Object"],
+      // 	},
+      // ],
+
+      // "jsx-a11y/aria-props": "error",
+      // "jsx-a11y/aria-proptypes": "error",
+      // "jsx-a11y/aria-unsupported-elements": "error",
+      // "jsx-a11y/click-events-have-key-events": "off",
+      // "jsx-a11y/label-has-associated-control": "off",
+      // "jsx-a11y/no-noninteractive-element-interactions": "off",
+      // "jsx-a11y/no-static-element-interactions": "off",
+      // "jsx-a11y/role-has-required-aria-props": "error",
+      // "jsx-a11y/role-supports-aria-props": "error",
+      // "max-depth": ["warn", 10],
+      // "max-lines": ["off", 700],
+
+      // "max-lines-per-function": [
+      // 	"off",
+      // 	{
+      // 		IIFEs: true,
+      // 		max: 200,
+      // 		skipBlankLines: true,
+      // 		skipComments: true,
+      // 	},
+      // ],
+      // "max-statements": [
+      // 	"warn",
+      // 	100,
+      // 	{
+      // 		ignoreTopLevelFunctions: false,
+      // 	},
+      // ],
+
+      // // @see https://github.com/eslint-community/eslint-plugin-n#-rules
+      // "n/exports-style": ["off", "module.exports"],
+
+      // "n/no-extraneous-import": "off",
+      // "n/no-missing-import": "off",
+      // "n/no-missing-require": "off",
+      // "n/no-process-exit": "off",
+      // "n/no-unpublished-import": "off",
+
+      // "n/no-unsupported-features/es-syntax": "off",
+      // "n/no-unsupported-features/node-builtins": "off",
+
+      // // @see https://eslint.org/docs/latest/rules
+      // "no-abusive-eslint-disable": "off",
+
+      // "no-anonymous-default-export": "off",
+      // "no-array-reduce": "off",
+      // "no-async-promise-executor": "off",
+      // "no-await-in-promise-methods": "off",
       "no-case-declarations": "off",
-      "no-compare-neg-zero": "off",
-      "no-cond-assign": "off",
-      "no-console": [
-        "off",
-        {
-          allow: ["log", "warn", "error", "info", "trace", "clear"],
-        },
-      ],
-      "no-const-assign": "off",
+
+      // "no-compare-neg-zero": "off",
+      // "no-cond-assign": "off",
+      // "no-console": [
+      // 	"off",
+      // 	{
+      // 		allow: ["log", "warn", "error", "info", "trace", "clear"],
+      // 	},
+      // ],
+      // "no-const-assign": "off",
       "no-constant-binary-expression": "off",
       "no-constant-condition": "off",
-      "no-control-regex": "off",
-      "no-delete-var": "off",
-      "no-document-cookie": "off",
-      "no-dupe-args": "off",
-      "no-dupe-else-if": "off",
-      "no-dupe-keys": "off",
-      "no-duplicate-case": "off",
+
+      // "no-control-regex": "off",
+      // "no-delete-var": "off",
+      // "no-document-cookie": "off",
+      // "no-dupe-args": "off",
+      // "no-dupe-else-if": "off",
+      // "no-dupe-keys": "off",
+      // "no-duplicate-case": "off",
       "no-empty": "off",
-      "no-empty-file": "off",
+
+      // "no-empty-file": "off",
       "no-empty-pattern": "off",
-      "no-empty-static-block": "off",
-      "no-ex-assign": "off",
-      "no-fallthrough": [
-        "error",
-        {
-          commentPattern: ".*intentional fallthrough.*",
-        },
-      ],
-      "no-func-assign": "off",
-      "no-global-assign": "off",
-      "no-import-assign": "off",
-      "no-invalid-regexp": "off",
-      "no-invalid-remove-event-listener": "off",
-      "no-irregular-whitespace": "off",
-      "no-keyword-prefix": "off",
-      "no-lonely-if": "error",
-      "no-magic-numbers": [
-        "off",
-        {
-          detectObjects: true,
-          enforceConst: true,
-          ignore: [-1, 0, 1],
-          ignoreArrayIndexes: true,
-        },
-      ],
-      "no-new-native-nonconstructor": "off",
-      "no-nonoctal-decimal-escape": "off",
-      "no-obj-calls": "off",
-      "no-object-as-default-parameter": "off",
-      "no-octal": "off",
-      "no-prototype-builtins": "off",
-      "no-redeclare": "off",
-      "no-relative-import-paths/no-relative-import-paths": [
-        "error",
-        {
-          allowSameFolder: true,
-          prefix: "~",
-          rootDir: "src",
-        },
-      ],
 
-      // @see https://eslint.org/docs/latest/rules
-      "no-restricted-exports": [
-        "error",
-        {
-          restrictedNamedExports: ["default", "then"],
-        },
-      ],
-      "no-restricted-globals": [
-        "error",
-        {
-          name: "isFinite",
-          message:
-            "Use Number.isFinite instead https://github.com/airbnb/javascript#standard-library--isfinite",
-        },
-        {
-          name: "fetch",
-          message: "Please use https://github.com/unjs/ofetch instead.",
-        },
-        {
-          name: "crypto",
-          message:
-            "Please use uncrypto instead (https://unjs.io/packages/uncrypto)",
-        },
-        {
-          name: "isNaN",
-          message:
-            "Use Number.isNaN instead https://github.com/airbnb/javascript#standard-library--isnan",
-        },
-      ],
-      "no-restricted-imports": [
-        "off",
+      // "no-empty-static-block": "off",
+      // "no-ex-assign": "off",
+      // "no-fallthrough": [
+      // 	"error",
+      // 	{
+      // 		commentPattern: ".*intentional fallthrough.*",
+      // 	},
+      // ],
+      // "no-func-assign": "off",
+      // "no-global-assign": "off",
+      // "no-import-assign": "off",
+      // "no-invalid-regexp": "off",
+      // "no-invalid-remove-event-listener": "off",
+      // "no-irregular-whitespace": "off",
+      // "no-keyword-prefix": "off",
+      // "no-lonely-if": "error",
+      // "no-magic-numbers": [
+      // 	"off",
+      // 	{
+      // 		detectObjects: true,
+      // 		enforceConst: true,
+      // 		ignore: [-1, 0, 1],
+      // 		ignoreArrayIndexes: true,
+      // 	},
+      // ],
+      // "no-new-native-nonconstructor": "off",
+      // "no-nonoctal-decimal-escape": "off",
+      // "no-obj-calls": "off",
+      // "no-object-as-default-parameter": "off",
+      // "no-octal": "off",
+      // "no-prototype-builtins": "off",
 
-        // {
-        //   name: "next/link",
-        //   message:
-        //     "Please import from '~/navigation' OR from '@/components/ui/link' instead.",
-        // },
-        // {
-        //   name: "next/navigation",
-        //   importNames: [
-        //     "redirect",
-        //     "permanentRedirect",
-        //     "useRouter",
-        //     "usePathname",
-        //   ],
-        //   message: "Please import from '~/navigation' instead.",
-        // },
-        {
-          name: "inquirer",
-          message:
-            "This is the legacy version of Inquirer.js. While it still receives maintenance, it is not actively developed. For the new Inquirer, see @inquirer/prompts – https://npmjs.com/package/@inquirer/prompts",
-        },
-        {
-          name: "process",
-          importNames: ["env"],
-          message: "Please use `import { env } from '~/env'` instead.",
-        },
+      // "no-redeclare": "off",
+      // "no-relative-import-paths/no-relative-import-paths": [
+      // 	"error",
+      // 	{
+      // 		allowSameFolder: true,
+      // 		prefix: "~",
+      // 		rootDir: "src",
+      // 	},
+      // ],
 
-        // {
-        //   name: "react",
-        //   importNames: ["default"],
-        //   message: "Named imports should be used instead.",
-        // },
-        {
-          name: "lodash",
-          message:
-            "Don't use lodash, use radash instead (in case you still need it, use lodash/{module} import).",
-        },
-        {
-          name: "fs",
-          message:
-            "Please use fs-extra instead (https://npmjs.com/package/fs-extra)\n\nJust use: import fs from 'fs-extra'",
-        },
-        {
-          name: "path",
-          message: "Please use pathe instead (https://unjs.io/packages/pathe)",
-        },
-      ],
-      "no-restricted-properties": [
-        "off",
-        {
-          message:
-            "Use `import { env } from '~/env'` instead to ensure validated types.",
-          object: "process",
-          property: "env",
-        },
-        {
-          message: "Please use destr instead (https://github.com/unjs/destr)",
-          object: "JSON",
-          property: "parse",
-        },
-        {
-          message: "arguments.callee is deprecated",
-          object: "arguments",
-          property: "callee",
-        },
-        {
-          message: "Please use Number.isFinite instead",
-          object: "global",
-          property: "isFinite",
-        },
-        {
-          message: "Please use Number.isFinite instead",
-          object: "self",
-          property: "isFinite",
-        },
-        {
-          message: "Please use Number.isFinite instead",
-          object: "window",
-          property: "isFinite",
-        },
-        {
-          message: "Please use Number.isNaN instead",
-          object: "global",
-          property: "isNaN",
-        },
-        {
-          message: "Please use Number.isNaN instead",
-          object: "self",
-          property: "isNaN",
-        },
-        {
-          message: "Please use Number.isNaN instead",
-          object: "window",
-          property: "isNaN",
-        },
-        {
-          message: "Use the exponentiation operator (**) instead",
-          object: "Math",
-          property: "pow",
-        },
-      ],
-      "no-restricted-syntax": [
-        "off",
-        {
-          message: "Potential circular dependency found",
-          selector: "ImportDeclaration[source.value='.']",
-        },
-        {
-          message:
-            "Please import and use `consola` library instead (https://unjs.io/packages/consola) (use Cmd/Ctrl+Shift+P to replace all `console.*` with `consola.*`)",
-          selector:
-            "CallExpression[callee.object.name=console][callee.property.name=/^(log|info|warn|error|trace)$/]",
-        },
-        {
-          message:
-            "Unexpected `consola.log` statement. Remove it or use `info|warn|error|trace|success|...` instead.",
-          selector:
-            "CallExpression[callee.object.name=consola][callee.property.name=/^(log)$/]",
-        },
-      ],
-      "no-self-assign": "off",
-      "no-setter-return": "off",
-      "no-shadow": [
-        "off",
-        {
-          allow: ["params"],
-          builtinGlobals: false,
-          hoist: "functions",
-          ignoreOnInitialization: false,
-        },
-      ],
-      "no-shadow-restricted-names": "off",
-      "no-sparse-arrays": "off",
-      "no-thenable": "off",
-      "no-this-assignment": "off",
-      "no-this-before-super": "off",
-      "no-throw-literal": "off",
-      "no-undef": "off",
-      "no-unexpected-multiline": "off",
-      "no-unnecessary-polyfills": "off",
-      "no-unreachable": "off",
-      "no-unsafe-finally": "off",
-      "no-unsafe-negation": "off",
-      "no-unsafe-optional-chaining": [
-        "error",
-        {
-          disallowArithmeticOperators: true,
-        },
-      ],
-      "no-unused-expressions": "off",
-      "no-unused-properties": "off",
-      "no-unused-vars": "off",
-      "no-use-before-define": [
-        "off",
-        {
-          allowNamedExports: false,
-          classes: false,
-          functions: false,
-          variables: false,
-        },
-      ],
-      "no-useless-backreference": "off",
-      "no-useless-catch": "off",
-      "no-useless-escape": "off",
-      "no-useless-rename": [
-        "off",
-        {
-          ignoreDestructuring: false,
-          ignoreExport: false,
-          ignoreImport: false,
-        },
-      ],
-      "no-useless-switch-case": "off",
-      "no-var": "error",
-      "no-warning-comments": [
-        // TODO: consider using "start" option instead (with "todo", "hack", "hacky", "temp", "temporary")
-        "off",
-        {
-          // `location: "start"` helper
-          decoration: ["/", "*", "=", "!", "#"],
-          location: "anywhere",
-          terms: ["fixme", "xxx"],
-        },
-      ],
-      "no-with": "off",
-      "object-shorthand": "off",
-      "perfectionist/sort-exports": [
-        "warn",
-        {
-          ignoreCase: true,
-          order: "asc",
-          type: "natural",
-        },
-      ],
+      // // @see https://eslint.org/docs/latest/rules
+      // "no-restricted-exports": [
+      // 	"error",
+      // 	{
+      // 		restrictedNamedExports: ["default", "then"],
+      // 	},
+      // ],
 
-      // @see https://perfectionist.dev/rules
-      "perfectionist/sort-imports": [
-        "warn",
-        {
-          // TODO: When using Bun, we need to set 'environment' to 'bun'.
-          customGroups: {
-            type: {
-              next: ["next", "next/*", "next/*/*"],
-              react: ["react", "react-*"],
-            },
-            value: {
-              "@type": ["@reliverse/types/**"],
-              config: ["@reliverse/config", "@reliverse/config/**"],
-              directives: [
-                // TODO: implement the following: '"use client";',
-                // '"use server";', '("use server");', '("use client");',
-                "server-only",
-              ],
-              files: [
-                "react-icons/**",
-                "*.css",
-                "*.png",
-                "*.jpg",
-                "*.jpeg",
-                "*.json",
-                "@reliverse/**/*.css",
-                "@reliverse/**/*.png",
-                "@reliverse/**/*.jpg",
-                "@reliverse/**/*.jpeg",
-                "@reliverse/**/*.json",
-              ],
-              next: ["next", "next/*", "next/*/*"],
-              react: ["react", "react-*"],
-            },
-          },
-          environment: "node",
-          groups: [
-            "directives",
-            [
-              "type",
-              "parent-type",
-              "sibling-type",
-              "index-type",
-              "internal-type",
-              "@type",
-            ],
-            "react",
-            "next",
-            ["builtin", "external"],
-            "config",
-            "internal",
-            ["parent", "sibling", "index"],
-            "side-effect",
-            "side-effect-style",
-            "object",
-            "unknown",
-            "style",
-          ],
-          ignoreCase: true,
-          internalPattern: ["@reliverse/**", "$/**", "#/**", "@/**", "~/**"],
-          maxLineLength: undefined,
-          newlinesBetween: "always",
-          order: "asc",
-          type: "natural",
-        },
-      ],
-      "perfectionist/sort-jsx-props": [
-        // TODO: fix (`pnpm check:eslint`: 14226.536 ms)
-        "warn",
-        {
-          customGroups: {
-            id: ["key", "id", "name"],
-            animate: "animate",
-            breakpoints: ["xs", "sm", "md", "lg", "xl", "2xl"],
-            callback: "on*",
-            className: "className",
-            exit: "exit",
-            initial: "initial",
-            transition: "transition",
-          },
-          groups: [
-            "id",
-            "initial",
-            "exit",
-            "animate",
-            "transition",
-            "className",
-            "unknown",
-            "multiline",
-            "callback",
-            "shorthand",
-          ],
-          order: "asc",
-          type: "natural",
-        },
-      ],
+      // "no-restricted-globals": [
+      // 	"off",
+      // 	{
+      // 		name: "isFinite",
+      // 		message:
+      // 			"Use Number.isFinite instead https://github.com/airbnb/javascript#standard-library--isfinite",
+      // 	},
+      // 	{
+      // 		name: "fetch",
+      // 		message: "Please use https://github.com/unjs/ofetch instead.",
+      // 	},
+      // 	{
+      // 		name: "crypto",
+      // 		message:
+      // 			"Please use uncrypto instead (https://unjs.io/packages/uncrypto)",
+      // 	},
+      // 	{
+      // 		name: "isNaN",
+      // 		message:
+      // 			"Use Number.isNaN instead https://github.com/airbnb/javascript#standard-library--isnan",
+      // 	},
+      // ],
+      // "no-restricted-imports": [
+      // 	"off",
 
-      // @see https://perfectionist.dev/rules
-      "perfectionist/sort-object-types": [
-        "warn",
-        {
-          customGroups: {
-            _: [
-              "_",
-              "top",
-              "type",
-              "order",
-              "meta",
-              "ignoreCase",
-              "partitionByComment",
-              "partitionByNewLine",
-              "styledComponents",
-              "ignorePattern",
-              "groups",
-              "eslint",
-              "customGroups",
-              "bottom",
-            ],
-            db: ["userId", "productId", "storeId", "createdById"],
-            bottom: ["createdAt", "updatedAt"],
-            callback: "on*",
-            eslint: ["files", "extends"],
-            meta: ["slug", "title", "description"],
-            top: ["id", "db", "name", "_"],
-          },
-          groupKind: "mixed",
-          groups: ["multiline", "unknown", "callback"],
-          ignoreCase: true,
-          order: "asc",
-          partitionByNewLine: false,
-          type: "natural",
-        },
-      ],
-      "perfectionist/sort-objects": [
-        "warn",
-        {
-          // TODO: fix (`pnpm check:eslint`: 61297.924 ms)
-          customGroups: {
-            _: [
-              "_",
-              "top",
-              "type",
-              "order",
-              "meta",
-              "ignoreCase",
-              "partitionByComment",
-              "partitionByNewLine",
-              "styledComponents",
-              "ignorePattern",
-              "groups",
-              "eslint",
-              "customGroups",
-              "bottom",
-            ],
-            db: ["userId", "productId", "storeId", "createdById"],
-            bottom: ["createdAt", "updatedAt"],
-            eslint: ["files", "extends"],
-            meta: ["slug", "title", "description"],
-            top: ["id", "db", "name", "_"],
-          },
-          groups: ["top", "unknown"],
-          ignoreCase: true,
-          ignorePattern: [],
-          order: "asc",
-          partitionByComment: false,
-          partitionByNewLine: false,
-          styledComponents: true,
-          type: "natural",
-        },
-      ],
-      "perfectionist/sort-union-types": [
-        "warn",
-        {
-          groups: [],
-          ignoreCase: true,
-          order: "asc",
-          type: "natural",
-        },
-      ],
-      "prefer-blob-reading-methods": "off",
-      "prefer-const": [
-        "error",
-        {
-          destructuring: "any",
-          ignoreReadBeforeAssign: true,
-        },
-      ],
-      "prefer-destructuring": [
-        "off",
-        {
-          AssignmentExpression: {
-            array: true,
-            object: false,
-          },
-          VariableDeclarator: {
-            array: false,
-            object: true,
-          },
-        },
-        {
-          enforceForRenamedProperties: false,
-        },
-      ],
-      "prefer-dom-node-text-content": "off",
-      "prefer-event-target": "off",
-      "prefer-logical-operator-over-ternary": "off",
-      "prefer-template": "error",
-      "prefer-top-level-await": "off",
+      // 	// {
+      // 	//   name: "next/link",
+      // 	//   message:
+      // 	//     "Please import from '~/navigation' OR from '@/components/ui/link' instead.",
+      // 	// },
+      // 	// {
+      // 	//   name: "next/navigation",
+      // 	//   importNames: [
+      // 	//     "redirect",
+      // 	//     "permanentRedirect",
+      // 	//     "useRouter",
+      // 	//     "usePathname",
+      // 	//   ],
+      // 	//   message: "Please import from '~/navigation' instead.",
+      // 	// },
+      // 	{
+      // 		name: "inquirer",
+      // 		message:
+      // 			"This is the legacy version of Inquirer.js. While it still receives maintenance, it is not actively developed. For the new Inquirer, see @inquirer/prompts – https://npmjs.com/package/@inquirer/prompts",
+      // 	},
+      // 	{
+      // 		name: "process",
+      // 		importNames: ["env"],
+      // 		message: "Please use `import { env } from '~/env'` instead.",
+      // 	},
 
-      // @see https://eslint.org/docs/latest/rules
-      "promise/always-return": "off",
-      "promise/catch-or-return": "off",
-      "react/jsx-no-target-blank": [
-        "error",
-        {
-          allowReferrer: true,
-          enforceDynamicLinks: "always",
-          forms: true,
-          links: true,
-          warnOnSpreadAttributes: false,
-        },
-      ],
+      // 	// {
+      // 	//   name: "react",
+      // 	//   importNames: ["default"],
+      // 	//   message: "Named imports should be used instead.",
+      // 	// },
+      // 	{
+      // 		name: "lodash",
+      // 		message:
+      // 			"Don't use lodash, use radash instead (in case you still need it, use lodash/{module} import).",
+      // 	},
+      // 	{
+      // 		name: "fs",
+      // 		message:
+      // 			"Please use fs-extra instead (https://npmjs.com/package/fs-extra)\n\nJust use: import fs from 'fs-extra'",
+      // 	},
+      // 	{
+      // 		name: "path",
+      // 		message: "Please use pathe instead (https://unjs.io/packages/pathe)",
+      // 	},
+      // ],
+      // "no-restricted-properties": [
+      // 	"off",
+      // 	{
+      // 		message:
+      // 			"Use `import { env } from '~/env'` instead to ensure validated types.",
+      // 		object: "process",
+      // 		property: "env",
+      // 	},
+      // 	{
+      // 		message: "Please use destr instead (https://github.com/unjs/destr)",
+      // 		object: "JSON",
+      // 		property: "parse",
+      // 	},
+      // 	{
+      // 		message: "arguments.callee is deprecated",
+      // 		object: "arguments",
+      // 		property: "callee",
+      // 	},
+      // 	{
+      // 		message: "Please use Number.isFinite instead",
+      // 		object: "global",
+      // 		property: "isFinite",
+      // 	},
+      // 	{
+      // 		message: "Please use Number.isFinite instead",
+      // 		object: "self",
+      // 		property: "isFinite",
+      // 	},
+      // 	{
+      // 		message: "Please use Number.isFinite instead",
+      // 		object: "window",
+      // 		property: "isFinite",
+      // 	},
+      // 	{
+      // 		message: "Please use Number.isNaN instead",
+      // 		object: "global",
+      // 		property: "isNaN",
+      // 	},
+      // 	{
+      // 		message: "Please use Number.isNaN instead",
+      // 		object: "self",
+      // 		property: "isNaN",
+      // 	},
+      // 	{
+      // 		message: "Please use Number.isNaN instead",
+      // 		object: "window",
+      // 		property: "isNaN",
+      // 	},
+      // 	{
+      // 		message: "Use the exponentiation operator (**) instead",
+      // 		object: "Math",
+      // 		property: "pow",
+      // 	},
+      // ],
+      // "no-restricted-syntax": [
+      // 	"off",
+      // 	{
+      // 		message: "Potential circular dependency found",
+      // 		selector: "ImportDeclaration[source.value='.']",
+      // 	},
+      // 	{
+      // 		message:
+      // 			"Please import and use `consola` library instead (https://unjs.io/packages/consola) (use Cmd/Ctrl+Shift+P to replace all `console.*` with `consola.*`)",
+      // 		selector:
+      // 			"CallExpression[callee.object.name=console][callee.property.name=/^(log|info|warn|error|trace)$/]",
+      // 	},
+      // 	{
+      // 		message:
+      // 			"Unexpected `consola.log` statement. Remove it or use `info|warn|error|trace|success|...` instead.",
+      // 		selector:
+      // 			"CallExpression[callee.object.name=consola][callee.property.name=/^(log)$/]",
+      // 	},
+      // ],
+      // "no-self-assign": "off",
+      // "no-setter-return": "off",
+      // "no-shadow": [
+      // 	"off",
+      // 	{
+      // 		allow: ["params"],
+      // 		builtinGlobals: false,
+      // 		hoist: "functions",
+      // 		ignoreOnInitialization: false,
+      // 	},
+      // ],
+      // "no-shadow-restricted-names": "off",
+      // "no-sparse-arrays": "off",
+      // "no-thenable": "off",
+      // "no-this-assignment": "off",
+      // "no-this-before-super": "off",
+      // "no-throw-literal": "off",
+      // "no-undef": "off",
+      // "no-unexpected-multiline": "off",
+      // "no-unnecessary-polyfills": "off",
+      // "no-unreachable": "off",
+      // "no-unsafe-finally": "off",
+      // "no-unsafe-negation": "off",
+      // "no-unsafe-optional-chaining": [
+      // 	"error",
+      // 	{
+      // 		disallowArithmeticOperators: true,
+      // 	},
+      // ],
+      // "no-unused-expressions": "off",
+      // "no-unused-properties": "off",
+      // "no-unused-vars": "off",
+      // "no-use-before-define": [
+      // 	"off",
+      // 	{
+      // 		allowNamedExports: false,
+      // 		classes: false,
+      // 		functions: false,
+      // 		variables: false,
+      // 	},
+      // ],
+      // "no-useless-backreference": "off",
+      // "no-useless-catch": "off",
+      // "no-useless-escape": "off",
+      // "no-useless-rename": [
+      // 	"off",
+      // 	{
+      // 		ignoreDestructuring: false,
+      // 		ignoreExport: false,
+      // 		ignoreImport: false,
+      // 	},
+      // ],
+      // "no-useless-switch-case": "off",
+      // "no-var": "error",
+      // "no-warning-comments": [
+      // 	// TODO: consider using "start" option instead (with "todo", "hack", "hacky", "temp", "temporary")
+      // 	"off",
+      // 	{
+      // 		// `location: "start"` helper
+      // 		decoration: ["/", "*", "=", "!", "#"],
+      // 		location: "anywhere",
+      // 		terms: ["fixme", "xxx"],
+      // 	},
+      // ],
+      // "no-with": "off",
 
-      // @see https://github.com/jsx-eslint/eslint-plugin-react
-      "react/no-invalid-html-attribute": "error",
-      "react/no-unescaped-entities": "off",
-      "react/no-unknown-property": "off",
-      // TODO: https://github.com/shadcn-ui/ui/issues/120
-      "react/prop-types": "off",
+      // "object-shorthand": "off",
+      // "perfectionist/sort-exports": [
+      // 	"warn",
+      // 	{
+      // 		ignoreCase: true,
+      // 		order: "asc",
+      // 		type: "natural",
+      // 	},
+      // ],
 
-      // "react-compiler/react-compiler": "error",
-      "react/react-in-jsx-scope": "off",
-      // TODO: fix error in eslint console (@see https://npmjs.com/package/eslint-plugin-react-compiler)
-      "react-hooks/exhaustive-deps": "off",
+      // // @see https://perfectionist.dev/rules
+      // "perfectionist/sort-imports": [
+      // 	"warn",
+      // 	{
+      // 		// TODO: When using Bun, we need to set 'environment' to 'bun'.
+      // 		customGroups: {
+      // 			type: {
+      // 				next: ["next", "next/*", "next/*/*"],
+      // 				react: ["react", "react-*"],
+      // 			},
+      // 			value: {
+      // 				"@type": ["@reliverse/types/**"],
+      // 				config: ["@reliverse/config", "@reliverse/config/**"],
+      // 				directives: [
+      // 					// TODO: implement the following: '"use client";',
+      // 					// '"use server";', '("use server");', '("use client");',
+      // 					"server-only",
+      // 				],
+      // 				files: [
+      // 					"react-icons/**",
+      // 					"*.css",
+      // 					"*.png",
+      // 					"*.jpg",
+      // 					"*.jpeg",
+      // 					"*.json",
+      // 					"@reliverse/**/*.css",
+      // 					"@reliverse/**/*.png",
+      // 					"@reliverse/**/*.jpg",
+      // 					"@reliverse/**/*.jpeg",
+      // 					"@reliverse/**/*.json",
+      // 				],
+      // 				next: ["next", "next/*", "next/*/*"],
+      // 				react: ["react", "react-*"],
+      // 			},
+      // 		},
+      // 		environment: "node",
+      // 		groups: [
+      // 			"directives",
+      // 			[
+      // 				"type",
+      // 				"parent-type",
+      // 				"sibling-type",
+      // 				"index-type",
+      // 				"internal-type",
+      // 				"@type",
+      // 			],
+      // 			"react",
+      // 			"next",
+      // 			["builtin", "external"],
+      // 			"config",
+      // 			"internal",
+      // 			["parent", "sibling", "index"],
+      // 			"side-effect",
+      // 			"side-effect-style",
+      // 			"object",
+      // 			"unknown",
+      // 			"style",
+      // 		],
+      // 		ignoreCase: true,
+      // 		internalPattern: ["@reliverse/**", "$/**", "#/**", "@/**", "~/**"],
+      // 		maxLineLength: undefined,
+      // 		newlinesBetween: "always",
+      // 		order: "asc",
+      // 		type: "natural",
+      // 	},
+      // ],
 
-      // @see https://npmjs.com/package/eslint-plugin-react-hooks
-      "react-hooks/rules-of-hooks": "off",
+      // "perfectionist/sort-jsx-props": [
+      // 	// TODO: fix (`pnpm check:eslint`: 14226.536 ms)
+      // 	"warn",
+      // 	{
+      // 		customGroups: {
+      // 			id: ["key", "id", "name"],
+      // 			animate: "animate",
+      // 			breakpoints: ["xs", "sm", "md", "lg", "xl", "2xl"],
+      // 			callback: "on*",
+      // 			className: "className",
+      // 			exit: "exit",
+      // 			initial: "initial",
+      // 			transition: "transition",
+      // 		},
+      // 		groups: [
+      // 			"id",
+      // 			"initial",
+      // 			"exit",
+      // 			"animate",
+      // 			"transition",
+      // 			"className",
+      // 			"unknown",
+      // 			"multiline",
+      // 			"callback",
+      // 			"shorthand",
+      // 		],
+      // 		order: "asc",
+      // 		type: "natural",
+      // 	},
+      // ],
 
-      // @see https://github.com/ArnaudBarre/eslint-plugin-react-refresh
-      "react-refresh/only-export-components": [
-        "off",
-        {
-          allowConstantExport: true,
-          allowExportNames: ["generateMetadata", "viewport"],
-        },
-      ],
+      // // @see https://perfectionist.dev/rules
+      // "perfectionist/sort-object-types": [
+      // 	"warn",
+      // 	{
+      // 		customGroups: {
+      // 			_: [
+      // 				"_",
+      // 				"top",
+      // 				"type",
+      // 				"order",
+      // 				"meta",
+      // 				"ignoreCase",
+      // 				"partitionByComment",
+      // 				"partitionByNewLine",
+      // 				"styledComponents",
+      // 				"ignorePattern",
+      // 				"groups",
+      // 				"eslint",
+      // 				"customGroups",
+      // 				"bottom",
+      // 			],
+      // 			db: ["userId", "productId", "storeId", "createdById"],
+      // 			bottom: ["createdAt", "updatedAt"],
+      // 			callback: "on*",
+      // 			eslint: ["files", "extends"],
+      // 			meta: ["slug", "title", "description"],
+      // 			top: ["id", "db", "name", "_"],
+      // 		},
+      // 		groupKind: "mixed",
+      // 		groups: ["multiline", "unknown", "callback"],
+      // 		ignoreCase: true,
+      // 		order: "asc",
+      // 		partitionByNewLine: false,
+      // 		type: "natural",
+      // 	},
+      // ],
 
-      // @see https://github.com/schoero/eslint-plugin-readable-tailwind
-      "readable-tailwind/multiline": ["off"],
-      "readable-tailwind/no-unnecessary-whitespace": ["error"],
-      "readable-tailwind/sort-classes": ["error"],
-      "regexp/strict": "off",
+      // "perfectionist/sort-objects": [
+      // 	"warn",
+      // 	{
+      // 		// TODO: fix (`pnpm check:eslint`: 61297.924 ms)
+      // 		customGroups: {
+      // 			_: [
+      // 				"_",
+      // 				"top",
+      // 				"type",
+      // 				"order",
+      // 				"meta",
+      // 				"ignoreCase",
+      // 				"partitionByComment",
+      // 				"partitionByNewLine",
+      // 				"styledComponents",
+      // 				"ignorePattern",
+      // 				"groups",
+      // 				"eslint",
+      // 				"customGroups",
+      // 				"bottom",
+      // 			],
+      // 			db: ["userId", "productId", "storeId", "createdById"],
+      // 			bottom: ["createdAt", "updatedAt"],
+      // 			eslint: ["files", "extends"],
+      // 			meta: ["slug", "title", "description"],
+      // 			top: ["id", "db", "name", "_"],
+      // 		},
+      // 		groups: ["top", "unknown"],
+      // 		ignoreCase: true,
+      // 		ignorePattern: [],
+      // 		order: "asc",
+      // 		partitionByComment: false,
+      // 		partitionByNewLine: false,
+      // 		styledComponents: true,
+      // 		type: "natural",
+      // 	},
+      // ],
+      // "perfectionist/sort-union-types": [
+      // 	"warn",
+      // 	{
+      // 		groups: [],
+      // 		ignoreCase: true,
+      // 		order: "asc",
+      // 		type: "natural",
+      // 	},
+      // ],
+      // "prefer-blob-reading-methods": "off",
+      // "prefer-const": [
+      // 	"error",
+      // 	{
+      // 		destructuring: "any",
+      // 		ignoreReadBeforeAssign: true,
+      // 	},
+      // ],
+      // "prefer-destructuring": [
+      // 	"off",
+      // 	{
+      // 		AssignmentExpression: {
+      // 			array: true,
+      // 			object: false,
+      // 		},
+      // 		VariableDeclarator: {
+      // 			array: false,
+      // 			object: true,
+      // 		},
+      // 	},
+      // 	{
+      // 		enforceForRenamedProperties: false,
+      // 	},
+      // ],
+      // "prefer-dom-node-text-content": "off",
+      // "prefer-event-target": "off",
+      // "prefer-logical-operator-over-ternary": "off",
 
-      // @see https://github.com/SonarSource/eslint-plugin-sonarjs#rules (errors in: rules-of-hooks, no-fallthrough)
-      "sonarjs/cognitive-complexity": "off",
-      "sonarjs/constructor-for-side-effects": "off",
-      "sonarjs/default-param-last": "off",
-      "sonarjs/deprecation": "off",
-      "sonarjs/different-types-comparison": "off",
-      "sonarjs/function-return-type": "off",
-      "sonarjs/hashing": "off",
-      "sonarjs/hook-use-state": "off",
-      "sonarjs/jsx-no-constructed-context-values": "off",
-      "sonarjs/jsx-no-useless-fragment": "off",
-      "sonarjs/link-with-target-blank": "off",
-      "sonarjs/new-cap": "off",
-      "sonarjs/no-array-index-key": "off",
-      "sonarjs/no-base-to-string": "off",
-      "sonarjs/no-clear-text-protocols": "off",
-      "sonarjs/no-commented-code": "off",
-      "sonarjs/no-dead-store": "off",
-      "sonarjs/no-duplicate-string": "off",
-      "sonarjs/no-globals-shadowing": "off",
-      "sonarjs/no-gratuitous-expressions": "off",
-      "sonarjs/no-identical-expressions": "off",
-      "sonarjs/no-ignored-exceptions": "off",
-      "sonarjs/no-invalid-await": "off",
-      "sonarjs/no-misused-promises": "off",
-      "sonarjs/no-nested-assignment": "off",
-      "sonarjs/no-nested-conditional": "off",
-      "sonarjs/no-nested-functions": "off",
-      "sonarjs/no-nested-template-literals": "off",
-      "sonarjs/no-redeclare": "off",
-      "sonarjs/no-redundant-jump": "off",
-      "sonarjs/no-redundant-optional": "off",
-      "sonarjs/no-redundant-type-constituents": "off",
-      "sonarjs/no-unknown-property": "off",
-      "sonarjs/no-unstable-nested-components": "off",
-      "sonarjs/no-unused-expressions": "off",
-      "sonarjs/no-useless-intersection": "off",
-      "sonarjs/null-dereference": "off",
-      "sonarjs/prefer-for-of": "off",
-      "sonarjs/prefer-nullish-coalescing": "off",
-      "sonarjs/pseudo-random": "off",
-      "sonarjs/redundant-type-aliases": "off",
-      "sonarjs/rules-of-hooks": "off",
-      "sonarjs/slow-regex": "off",
-      "sonarjs/sonar-jsx-no-leaked-render": "off",
-      "sonarjs/sonar-no-fallthrough": "off",
-      "sonarjs/sonar-no-unused-vars": "off",
-      "sonarjs/sonar-prefer-optional-chain": "off",
-      "sonarjs/sonar-prefer-read-only-props": "off",
-      "sonarjs/sonar-prefer-regexp-exec": "off",
-      "sonarjs/table-header": "off",
-      "sonarjs/todo-tag": "off",
-      "sonarjs/unused-import": "off",
-      "sonarjs/void-use": "off",
+      // "prefer-template": "error",
+      // "prefer-top-level-await": "off",
 
-      // @see https://github.com/mskelton/eslint-plugin-sort#list-of-supported-rules
-      "sort/destructuring-properties": "off",
-      "sort/export-members": "off",
-      "sort/exports": [
-        "off",
-        {
-          caseSensitive: false,
-          groups: [
-            {
-              order: 50,
-              type: "default",
-            },
-            {
-              order: 10,
-              type: "sourceless",
-            },
-            {
-              order: 30,
-              regex: "^~",
-            },
-            {
-              order: 20,
-              type: "dependency",
-            },
-            {
-              order: 40,
-              type: "other",
-            },
-          ],
-          natural: true,
-          typeOrder: "first",
-        },
-      ],
-      "sort/import-members": "off",
-      "sort/imports": "off",
-      "sort/object-properties": "off",
-      "sort/string-enums": "off",
-      "sort/string-unions": "off",
-      "sort/type-properties": "off",
+      // // @see https://eslint.org/docs/latest/rules
+      // "promise/always-return": "off",
 
-      // @see https://github.com/jrdrg/eslint-plugin-sort-exports#usage
-      "sort-exports/sort-exports": [
-        "off",
-        {
-          disableAutofixer: true,
-          ignoreCase: true,
-          sortDir: "asc",
-          sortExportKindFirst: "type",
-        },
-      ],
-      "sort-imports": "off",
-      "sort-keys": "off",
+      // "promise/catch-or-return": "off",
 
-      // @see https://github.com/francoismassart/eslint-plugin-tailwindcss#supported-rules
-      "tailwindcss/classnames-order": "off",
+      // "promise/param-names": "off",
+      // "react/jsx-no-target-blank": [
+      // 	"error",
+      // 	{
+      // 		allowReferrer: true,
+      // 		enforceDynamicLinks: "always",
+      // 		forms: true,
+      // 		links: true,
+      // 		warnOnSpreadAttributes: false,
+      // 	},
+      // ],
+
+      // // @see https://github.com/jsx-eslint/eslint-plugin-react
+      // "react/no-invalid-html-attribute": "error",
+
+      // "react/no-unescaped-entities": "off",
+
+      // "react/no-unknown-property": "off",
+      // // TODO: https://github.com/shadcn-ui/ui/issues/120
+      // "react/prop-types": "off",
+
+      // // "react-compiler/react-compiler": "error",
+      // "react/react-in-jsx-scope": "off",
+
+      // // TODO: fix error in eslint console (@see https://npmjs.com/package/eslint-plugin-react-compiler)
+      // "react-hooks/exhaustive-deps": "off",
+
+      // // @see https://npmjs.com/package/eslint-plugin-react-hooks
+      // "react-hooks/rules-of-hooks": "off",
+
+      // // @see https://github.com/ArnaudBarre/eslint-plugin-react-refresh
+      // "react-refresh/only-export-components": [
+      // 	"off",
+      // 	{
+      // 		allowConstantExport: true,
+      // 		allowExportNames: ["generateMetadata", "viewport"],
+      // 	},
+      // ],
+
+      // // @see https://github.com/schoero/eslint-plugin-readable-tailwind
+      // "readable-tailwind/multiline": ["off"],
+
+      // "readable-tailwind/no-unnecessary-whitespace": ["error"],
+
+      // "readable-tailwind/sort-classes": ["error"],
+      // "regexp/strict": "off",
+
+      // // @see https://github.com/SonarSource/eslint-plugin-sonarjs#rules (errors in: rules-of-hooks, no-fallthrough)
+      // "sonarjs/cognitive-complexity": "off",
+
+      // "sonarjs/constructor-for-side-effects": "off",
+      // "sonarjs/default-param-last": "off",
+      // "sonarjs/deprecation": "off",
+      // "sonarjs/different-types-comparison": "off",
+      // "sonarjs/function-return-type": "off",
+      // "sonarjs/hashing": "off",
+      // "sonarjs/hook-use-state": "off",
+      // "sonarjs/jsx-no-constructed-context-values": "off",
+      // "sonarjs/jsx-no-useless-fragment": "off",
+      // "sonarjs/label-has-associated-control": "off",
+      // "sonarjs/link-with-target-blank": "off",
+      // "sonarjs/mouse-events-a11y": "off",
+      // "sonarjs/new-cap": "off",
+      // "sonarjs/no-array-index-key": "off",
+      // "sonarjs/no-async-constructor": "off",
+      // "sonarjs/no-base-to-string": "off",
+      // "sonarjs/no-clear-text-protocols": "off",
+      // "sonarjs/no-commented-code": "off",
+      // "sonarjs/no-dead-store": "off",
+      // "sonarjs/no-duplicate-string": "off",
+      // "sonarjs/no-globals-shadowing": "off",
+      // "sonarjs/no-gratuitous-expressions": "off",
+      // "sonarjs/no-identical-expressions": "off",
+      // "sonarjs/no-ignored-exceptions": "off",
+      // "sonarjs/no-ignored-return": "off",
+      // "sonarjs/no-invalid-await": "off",
+      // "sonarjs/no-misused-promises": "off",
+      // "sonarjs/no-nested-assignment": "off",
+      // "sonarjs/no-nested-conditional": "off",
+      // "sonarjs/no-nested-functions": "off",
+      // "sonarjs/no-nested-template-literals": "off",
+      // "sonarjs/no-redeclare": "off",
+      // "sonarjs/no-redundant-jump": "off",
+      // "sonarjs/no-redundant-optional": "off",
+      // "sonarjs/no-redundant-type-constituents": "off",
+      // "sonarjs/no-selector-parameter": "off",
+      // "sonarjs/no-undefined-argument": "off",
+      // "sonarjs/no-unknown-property": "off",
+      // "sonarjs/no-unstable-nested-components": "off",
+      // "sonarjs/no-unused-expressions": "off",
+      // "sonarjs/no-useless-intersection": "off",
+      // "sonarjs/null-dereference": "off",
+      // "sonarjs/prefer-for-of": "off",
+      // "sonarjs/prefer-nullish-coalescing": "off",
+      // "sonarjs/prefer-string-starts-ends-with": "off",
+      // "sonarjs/pseudo-random": "off",
+      // "sonarjs/public-static-readonly": "off",
+      // "sonarjs/redundant-type-aliases": "off",
+      // "sonarjs/rules-of-hooks": "off",
+      // "sonarjs/slow-regex": "off",
+      // "sonarjs/sonar-jsx-no-leaked-render": "off",
+      // "sonarjs/sonar-no-fallthrough": "off",
+      // "sonarjs/sonar-no-unused-vars": "off",
+      // "sonarjs/sonar-prefer-optional-chain": "off",
+      // "sonarjs/sonar-prefer-read-only-props": "off",
+      // "sonarjs/sonar-prefer-regexp-exec": "off",
+
+      // "sonarjs/table-header": "off",
+      // "sonarjs/todo-tag": "off",
+      // "sonarjs/unused-import": "off",
+      // "sonarjs/void-use": "off",
+
+      // // @see https://github.com/mskelton/eslint-plugin-sort#list-of-supported-rules
+      // "sort/destructuring-properties": "off",
+
+      // "sort/export-members": "off",
+      // "sort/exports": [
+      // 	"off",
+      // 	{
+      // 		caseSensitive: false,
+      // 		groups: [
+      // 			{
+      // 				order: 50,
+      // 				type: "default",
+      // 			},
+      // 			{
+      // 				order: 10,
+      // 				type: "sourceless",
+      // 			},
+      // 			{
+      // 				order: 30,
+      // 				regex: "^~",
+      // 			},
+      // 			{
+      // 				order: 20,
+      // 				type: "dependency",
+      // 			},
+      // 			{
+      // 				order: 40,
+      // 				type: "other",
+      // 			},
+      // 		],
+      // 		natural: true,
+      // 		typeOrder: "first",
+      // 	},
+      // ],
+      // "sort/import-members": "off",
+      // "sort/imports": "off",
+
+      // "sort/object-properties": "off",
+      // "sort/string-enums": "off",
+      // "sort/string-unions": "off",
+
+      // "sort/type-properties": "off",
+
+      // // @see https://github.com/jrdrg/eslint-plugin-sort-exports#usage
+      // "sort-exports/sort-exports": [
+      // 	"off",
+      // 	{
+      // 		disableAutofixer: true,
+      // 		ignoreCase: true,
+      // 		sortDir: "asc",
+      // 		sortExportKindFirst: "type",
+      // 	},
+      // ],
+
+      // "sort-imports": "off",
+      // "sort-keys": "off",
+
+      // // @see https://github.com/francoismassart/eslint-plugin-tailwindcss#supported-rules
+      // "tailwindcss/classnames-order": "off",
 
       // Adds ~15s to the lint time (!)
       "tailwindcss/no-custom-classname": "off",
 
-      // @see https://github.com/sindresorhus/eslint-plugin-unicorn
-      "unicorn/catch-error-name": [
-        "off",
-        {
-          name: "e",
-        },
-      ],
-      "unicorn/consistent-destructuring": "off",
-      "unicorn/consistent-function-scoping": "off",
-      "unicorn/empty-brace-spaces": "off",
-      "unicorn/filename-case": [
-        "off",
-        {
-          case: "pascalCase",
-          ignore: [
-            String.raw`.*\.(jsx|tsx)$`,
-            // TODO: remove in GA branch of 1.3.0 version
-            String.raw`.*\.(js|ts|cjs|cts|mjs|mts|d\.ts)$`,
-            // TODO: decide in 1.3.x
-            String.raw`^(layout|page|loading|not-found|error|global-error)\.(jsx|tsx)$`,
-            String.raw`^(template|default|icon|apple-icon|opengraph-image)\.(jsx|tsx)$`,
-          ],
-        },
-      ],
-      "unicorn/import-style": "off",
-      "unicorn/no-abusive-eslint-disable": "off",
-      "unicorn/no-anonymous-default-export": "off",
-      "unicorn/no-array-callback-reference": "off",
-      "unicorn/no-array-reduce": "off",
-      "unicorn/no-await-expression-member": "off",
-      "unicorn/no-empty-file": "off",
-      "unicorn/no-negated-condition": "off",
-      "unicorn/no-nested-ternary": "off",
-      "unicorn/no-null": [
-        "off",
-        {
-          checkStrictEquality: true,
-        },
-      ],
-      "unicorn/no-object-as-default-parameter": "off",
-      "unicorn/no-process-exit": "off",
-      "unicorn/no-unused-properties": "warn",
-      "unicorn/no-useless-switch-case": "off",
-      "unicorn/numeric-separators-style": [
-        "off",
-        {
-          onlyIfContainsSeparator: true,
-        },
-      ],
-      "unicorn/prefer-array-flat-map": "off",
-      "unicorn/prefer-code-point": "off",
-      "unicorn/prefer-date-now": "off",
-      "unicorn/prefer-logical-operator-over-ternary": "off",
-      "unicorn/prefer-module": "off",
-      "unicorn/prefer-native-coercion-functions": "off",
-      "unicorn/prefer-node-protocol": "off",
-      "unicorn/prefer-optional-catch-binding": "off",
-      "unicorn/prefer-string-raw": "off",
-      "unicorn/prefer-string-replace-all": "off",
-      "unicorn/prefer-string-slice": "off",
-      "unicorn/prefer-switch": "off",
-      "unicorn/prefer-ternary": "off",
-      "unicorn/prefer-top-level-await": "off",
-      "unicorn/prevent-abbreviations": [
-        "off",
-        {
-          // TODO: consider limiting to a single option, in this case auto-fix works; check the default replacements:
-          // TODO: @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/rules/shared/abbreviations.js
-          allowList: {
-            getInitialProps: true,
-          },
-          extendDefaultReplacements: true,
+      // // @see https://github.com/sindresorhus/eslint-plugin-unicorn
+      // "unicorn/catch-error-name": [
+      // 	"off",
+      // 	{
+      // 		name: "e",
+      // 	},
+      // ],
 
-          // note: if rule script realizes that it cannot rename specific word elsewhere, then auto-fix is turned off
-          ignore: [String.raw`\.e2e$`, /^ignore/i],
-          replacements: {
-            db: {
-              database: false,
-            },
-            arg: {
-              argument: false,
-            },
-            args: {
-              arguments: false,
-            },
-            ctx: {
-              context: false,
-            },
-            dev: {
-              development: false,
-            },
-            dir: {
-              direction: false,
-            },
-            dst: {
-              daylightSavingTime: false,
-              distribution: false,
-            },
-            e: {
-              error: false,
-            },
-            env: {
-              environment: false,
-            },
-            mod: {
-              module: false,
-            },
-            param: {
-              parameter: false,
-            },
-            params: {
-              parameters: false,
-            },
-            props: {
-              properties: false,
-            },
-            ref: {
-              reference: false,
-            },
-            refs: {
-              references: false,
-            },
-            req: {
-              request: false,
-            },
-            res: {
-              resource: false,
-              response: false,
-              result: false,
-            },
-            src: {
-              source: false,
-            },
-            str: {
-              string: false,
-            },
-          },
-        },
-      ],
-      "unicorn/switch-case-braces": ["off", "avoid"],
-      "unicorn/text-encoding-identifier-case": "off",
-      "use-isnan": "off",
-      "valid-typeof": "off",
-      yoda: [
-        "error",
-        "never",
-        {
-          onlyEquality: true,
-        },
-      ],
+      // "unicorn/consistent-destructuring": "off",
+      // "unicorn/consistent-function-scoping": "off",
+      // "unicorn/empty-brace-spaces": "off",
+      // "unicorn/filename-case": [
+      // 	"off",
+      // 	{
+      // 		case: "pascalCase",
+      // 		ignore: [
+      // 			String.raw`.*\.(jsx|tsx)$`,
+      // 			// TODO: remove in GA branch of 1.3.0 version
+      // 			String.raw`.*\.(js|ts|cjs|cts|mjs|mts|d\.ts)$`,
+      // 			// TODO: decide in 1.3.x
+      // 			String.raw`^(layout|page|loading|not-found|error|global-error)\.(jsx|tsx)$`,
+      // 			String.raw`^(template|default|icon|apple-icon|opengraph-image)\.(jsx|tsx)$`,
+      // 		],
+      // 	},
+      // ],
+      // "unicorn/import-style": "off",
+      // "unicorn/no-abusive-eslint-disable": "off",
+      // "unicorn/no-anonymous-default-export": "off",
+      // "unicorn/no-array-callback-reference": "off",
+      // "unicorn/no-array-for-each": "off",
+      // "unicorn/no-array-reduce": "off",
+      // "unicorn/no-await-expression-member": "off",
+      // "unicorn/no-empty-file": "off",
+      // "unicorn/no-negated-condition": "off",
+      // "unicorn/no-nested-ternary": "off",
+      // "unicorn/no-null": [
+      // 	"off",
+      // 	{
+      // 		checkStrictEquality: true,
+      // 	},
+      // ],
+      // "unicorn/no-object-as-default-parameter": "off",
+      // "unicorn/no-process-exit": "off",
+      // "unicorn/no-static-only-class": "off",
+      // "unicorn/no-unused-properties": "off",
+      // "unicorn/no-useless-switch-case": "off",
+      // "unicorn/numeric-separators-style": [
+      // 	"off",
+      // 	{
+      // 		onlyIfContainsSeparator: true,
+      // 	},
+      // ],
+      // "unicorn/prefer-add-event-listener": "off",
+      // "unicorn/prefer-array-flat-map": "off",
+      // "unicorn/prefer-array-some": "off",
+      // "unicorn/prefer-blob-reading-methods": "off",
+      // "unicorn/prefer-code-point": "off",
+      // "unicorn/prefer-date-now": "off",
+      // "unicorn/prefer-dom-node-text-content": "off",
+      // "unicorn/prefer-global-this": "off",
+      // "unicorn/prefer-logical-operator-over-ternary": "off",
+      // "unicorn/prefer-module": "off",
+      // "unicorn/prefer-native-coercion-functions": "off",
+      // "unicorn/prefer-node-protocol": "off",
+      // "unicorn/prefer-number-properties": "off",
+      // "unicorn/prefer-optional-catch-binding": "off",
+      // "unicorn/prefer-spread": "off",
+      // "unicorn/prefer-string-raw": "off",
+      // "unicorn/prefer-string-replace-all": "off",
+      // "unicorn/prefer-string-slice": "off",
+      // "unicorn/prefer-switch": "off",
+      // "unicorn/prefer-ternary": "off",
+      // "unicorn/prefer-top-level-await": "off",
+      // "unicorn/prevent-abbreviations": [
+      // 	"off",
+      // 	{
+      // 		// TODO: consider limiting to a single option, in this case auto-fix works; check the default replacements:
+      // 		// TODO: @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/rules/shared/abbreviations.js
+      // 		allowList: {
+      // 			getInitialProps: true,
+      // 		},
+      // 		extendDefaultReplacements: true,
+
+      // 		// note: if rule script realizes that it cannot rename specific word elsewhere, then auto-fix is turned off
+      // 		ignore: [String.raw`\.e2e$`, /^ignore/i],
+      // 		replacements: {
+      // 			db: {
+      // 				database: false,
+      // 			},
+      // 			arg: {
+      // 				argument: false,
+      // 			},
+      // 			args: {
+      // 				arguments: false,
+      // 			},
+      // 			ctx: {
+      // 				context: false,
+      // 			},
+      // 			dev: {
+      // 				development: false,
+      // 			},
+      // 			dir: {
+      // 				direction: false,
+      // 			},
+      // 			dst: {
+      // 				daylightSavingTime: false,
+      // 				distribution: false,
+      // 			},
+      // 			e: {
+      // 				error: false,
+      // 			},
+      // 			env: {
+      // 				environment: false,
+      // 			},
+      // 			mod: {
+      // 				module: false,
+      // 			},
+      // 			param: {
+      // 				parameter: false,
+      // 			},
+      // 			params: {
+      // 				parameters: false,
+      // 			},
+      // 			props: {
+      // 				properties: false,
+      // 			},
+      // 			ref: {
+      // 				reference: false,
+      // 			},
+      // 			refs: {
+      // 				references: false,
+      // 			},
+      // 			req: {
+      // 				request: false,
+      // 			},
+      // 			res: {
+      // 				resource: false,
+      // 				response: false,
+      // 				result: false,
+      // 			},
+      // 			src: {
+      // 				source: false,
+      // 			},
+      // 			str: {
+      // 				string: false,
+      // 			},
+      // 		},
+      // 	},
+      // ],
+      // "unicorn/switch-case-braces": ["off", "avoid"],
+      // "unicorn/text-encoding-identifier-case": "off",
+      // "use-isnan": "off",
+      // "valid-typeof": "off",
+      // yoda: [
+      // 	"error",
+      // 	"never",
+      // 	{
+      // 		onlyEquality: true,
+      // 	},
+      // ],
     },
     settings: {
-      // @see https://github.com/jsx-eslint/eslint-plugin-react#configuration
-      formComponents: ["Form"],
-      // @see https://github.com/un-ts/eslint-plugin-import-x
-      "import-x/internal-regex": "^~/",
+      // // @see https://github.com/jsx-eslint/eslint-plugin-react#configuration
+      // formComponents: ["Form"],
+      // // @see https://github.com/un-ts/eslint-plugin-import-x
+      // "import-x/internal-regex": "^~/",
 
-      // @see https://github.com/jsx-eslint/eslint-plugin-react#configuration
-      linkComponents: [
-        {
-          name: "Link",
-          linkAttribute: ["href"],
-        },
-      ],
+      // // @see https://github.com/jsx-eslint/eslint-plugin-react#configuration
+      // linkComponents: [
+      // 	{
+      // 		name: "Link",
+      // 		linkAttribute: ["href"],
+      // 	},
+      // ],
 
-      // @see https://github.com/jsx-eslint/eslint-plugin-react#configuration
-      react: {
-        version: "detect",
-      },
+      // // @see https://github.com/jsx-eslint/eslint-plugin-react#configuration
+      // react: {
+      // 	version: "detect",
+      // },
 
-      // @see https://eslint-react.xyz/docs/configuration
-      reactOptions: {
-        additionalHooks: {
-          useLayoutEffect: ["useIsomorphicLayoutEffect"],
-        },
-        importSource: "react",
-        jsxPragma: "createElement",
-        jsxPragmaFrag: "Fragment",
-        version: "detect",
-      },
+      // // @see https://eslint-react.xyz/docs/configuration
+      // reactOptions: {
+      // 	additionalHooks: {
+      // 		useLayoutEffect: ["useIsomorphicLayoutEffect"],
+      // 	},
+      // 	importSource: "react",
+      // 	jsxPragma: "createElement",
+      // 	jsxPragmaFrag: "Fragment",
+      // 	version: "detect",
+      // },
 
       // @see https://tailwindcss.com
       tailwindcss: {
@@ -1857,19 +1941,20 @@ export default tseslint.config(
       },
     },
   },
-  {
-    name: "@reliverse/eslint-config/js",
-    files: ["**/*.{js,jsx}"],
-    ...tseslint.configs.disableTypeChecked,
-  },
-  {
-    name: "@reliverse/eslint-config/md",
-    extends: [...markdown.configs.recommended],
-    files: ["**/*.md"],
-    plugins: {
-      markdown,
-    },
-  },
+
+  // {
+  // 	name: "@reliverse/eslint-config/js",
+  // 	files: ["**/*.{js,jsx}"],
+  // 	...tseslint.configs.disableTypeChecked,
+  // },
+  // {
+  // 	name: "@reliverse/eslint-config/md",
+  // 	extends: [...markdown.configs.recommended],
+  // 	files: ["**/*.md"],
+  // 	plugins: {
+  // 		markdown,
+  // 	},
+  // },
   // import * as mdx from "eslint-plugin-mdx";
   // {
   // name: "@reliverse/config-eslint/markdown-core",
@@ -1912,20 +1997,20 @@ export default tseslint.config(
   //   languageOptions: {},
   //   rules: { ...mdx.flatCodeBlocks.rules },
   // },
-  {
-    // @see https://ota-meshi.github.io/eslint-plugin-yml
-    name: "@reliverse/config-eslint/yaml",
-    extends: [...yaml.configs["flat/standard"]],
-    files: ["**/*.{yml,yaml}"],
-    plugins: {
-      yml: yaml,
-    },
-    rules: {
-      "@stylistic/max-len": "off",
-      "@stylistic/spaced-comment": "off",
-      "yml/no-empty-mapping-value": "off",
-    },
-  },
+  // {
+  // 	// @see https://ota-meshi.github.io/eslint-plugin-yml
+  // 	name: "@reliverse/config-eslint/yaml",
+  // 	extends: [...yaml.configs["flat/standard"]],
+  // 	files: ["**/*.{yml,yaml}"],
+  // 	plugins: {
+  // 		yml: yaml,
+  // 	},
+  // 	rules: {
+  // 		"@stylistic/max-len": "off",
+  // 		"@stylistic/spaced-comment": "off",
+  // 		"yml/no-empty-mapping-value": "off",
+  // 	},
+  // },
   {
     name: "@reliverse/config-eslint/jsonc-core",
 
@@ -1948,7 +2033,7 @@ export default tseslint.config(
       "jsonc/array-element-newline": ["off", "always"],
       "jsonc/comma-dangle": ["error", "never"],
       "jsonc/comma-style": ["error", "last"],
-      "jsonc/indent": ["error", 2],
+      "jsonc/indent": ["off", 2],
       "jsonc/key-spacing": [
         "error",
         {
@@ -2009,7 +2094,7 @@ export default tseslint.config(
 
       // @see https://ota-meshi.github.io/eslint-plugin-jsonc/rules/sort-array-values.html
       "jsonc/sort-array-values": [
-        "warn",
+        "off",
         {
           order: {
             natural: true,
@@ -2021,7 +2106,7 @@ export default tseslint.config(
 
       // @see https://ota-meshi.github.io/eslint-plugin-jsonc/rules/sort-keys.html
       "jsonc/sort-keys": [
-        "warn",
+        "off",
         {
           order: {
             natural: true,
@@ -2434,64 +2519,64 @@ export default tseslint.config(
     },
   },
   {
-    name: "@reliverse/config-eslint/addons-core",
-
-    // @see https://github.com/blefnk/reliverse-website-builder
-    files: ["addons/**/*.{ts,tsx}"],
+    name: "@reliverse/addons-i18n",
+    files: ["messages/**/*.json"],
     rules: {
-      "no-console": "off",
-      "no-relative-import-paths/no-relative-import-paths": [
-        "error",
-        {
-          allowSameFolder: true,
-          prefix: "@",
-          rootDir: "addons",
-        },
-      ],
-      "unicorn/no-process-exit": "off",
-    },
-  },
-  {
-    name: "@reliverse/config-eslint/addons-remotion",
-
-    // @see https://remotion.dev/docs/contributing/formatting#eslint
-    files: ["addons/scripts/reliverse/remotion/*.{ts,tsx}"],
-    rules: {
-      "no-relative-import-paths/no-relative-import-paths": "off",
-    },
-  },
-  {
-    name: "@reliverse/config-eslint/addons-eslint",
-
-    // @see https://eslint.org/docs/latest/use/configure
-    files: [
-      "eslint.config.js",
-      "addons/**/eslint.config.{recommended,minimal,rules-disabled}.{ts,js}",
-    ],
-    rules: {
-      "max-lines": "off",
-      "no-inline-comments": "off",
-    },
-  },
-  {
-    name: "@reliverse/config-eslint/addons-no-comments",
-
-    // @see https://npmjs.com/package/eslint-plugin-no-comments
-    files: ["addons/scripts/reliverse/template/index.ts"],
-    plugins: {
-      "no-comments": noComments,
-    },
-    rules: {
-      "no-comments/disallowComments": "warn",
+      "jsonc/sort-array-values": "off",
+      "jsonc/sort-keys": "off",
     },
   },
 
   // {
-  //   name: "@reliverse/addons-i18n",
-  //   files: ["messages/**/*.json"],
-  //   rules: {
-  //     "jsonc/sort-array-values": "off",
-  //     "jsonc/sort-keys": "off",
-  //   },
+  // 	name: "@reliverse/config-eslint/addons-core",
+
+  // 	// @see https://github.com/blefnk/reliverse-website-builder
+  // 	files: ["addons/**/*.{ts,tsx}"],
+  // 	rules: {
+  // 		"no-console": "off",
+  // 		"no-relative-import-paths/no-relative-import-paths": [
+  // 			"error",
+  // 			{
+  // 				allowSameFolder: true,
+  // 				prefix: "@",
+  // 				rootDir: "addons",
+  // 			},
+  // 		],
+  // 		"unicorn/no-process-exit": "off",
+  // 	},
+  // },
+  // {
+  // 	name: "@reliverse/config-eslint/addons-remotion",
+
+  // 	// @see https://remotion.dev/docs/contributing/formatting#eslint
+  // 	files: ["addons/scripts/reliverse/remotion/*.{ts,tsx}"],
+  // 	rules: {
+  // 		"no-relative-import-paths/no-relative-import-paths": "off",
+  // 	},
+  // },
+  // {
+  // 	name: "@reliverse/config-eslint/addons-eslint",
+
+  // 	// @see https://eslint.org/docs/latest/use/configure
+  // 	files: [
+  // 		"eslint.config.js",
+  // 		"addons/**/eslint.config.{recommended,minimal,rules-disabled}.{ts,js}",
+  // 	],
+  // 	rules: {
+  // 		"max-lines": "off",
+  // 		"no-inline-comments": "off",
+  // 	},
+  // },
+  // {
+  // 	name: "@reliverse/config-eslint/addons-no-comments",
+
+  // 	// @see https://npmjs.com/package/eslint-plugin-no-comments
+  // 	files: ["addons/scripts/reliverse/template/index.ts"],
+  // 	plugins: {
+  // 		"no-comments": noComments,
+  // 	},
+  // 	rules: {
+  // 		"no-comments/disallowComments": "warn",
+  // 	},
   // },
 );

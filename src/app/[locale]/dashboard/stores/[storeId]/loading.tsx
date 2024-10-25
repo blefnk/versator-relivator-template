@@ -37,9 +37,9 @@ export default function StoreLoading() {
         </CardContent>
         <CardFooter
           className={`
-            flex flex-col gap-2
+            xs:flex-row flex flex-col
 
-            xs:flex-row
+            gap-2
           `}
         >
           <Skeleton className="h-10 w-32" />

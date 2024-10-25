@@ -152,10 +152,10 @@ function ManageSubscriptionButton({
             ? `
               border border-slate-100 bg-transparent text-zinc-900
 
-              dark:border-zinc-600 dark:text-zinc-300 dark:hover:bg-white/80
-              dark:hover:text-zinc-900
+              hover:bg-white/80 hover:text-zinc-900 dark:border-zinc-600
+              dark:text-zinc-300
 
-              hover:bg-white/80 hover:text-zinc-900
+              dark:hover:bg-white/80 dark:hover:text-zinc-900
             `
             : ""
         }

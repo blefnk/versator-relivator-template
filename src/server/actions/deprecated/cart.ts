@@ -75,7 +75,6 @@ export async function getCartAction(storeId?: number): Promise<CartLineItem[]> {
       return items.map((item) => {
         const quantity =
           cart?.items?.find((cartItem) => cartItem.productId === item.id) &&
-          // @ts-expect-error TODO: fix id type
           cart.items.find((cartItem) => cartItem.productId === item.id)
             .quantity;
 
@@ -92,10 +91,9 @@ export async function getUniqueStoreIds(): Promise<number[]> {
   const carts = await db.query.carts.findMany();
 
   for (const cart of carts) {
+    // @ts-expect-error TODO: fix
     for (const item of (cart && cart.items) || []) {
-      // @ts-expect-error TODO: Fix ts
       if (!storeIds.includes(item.storeId)) {
-        // @ts-expect-error TODO: Fix ts
         storeIds.push(item.storeId);
       }
     }
@@ -198,9 +196,7 @@ export async function addToCartAction(
   if (!cartId) {
     await db
       .insert(carts) // create a new row in the carts table and sets relations with user
-      // @ts-expect-error TODO: Fix ts
       .values({
-        // @ts-expect-error TODO: fix
         email: user.email,
         items: [input],
         userId: session.id,

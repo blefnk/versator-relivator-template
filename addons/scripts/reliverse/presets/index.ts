@@ -1,7 +1,7 @@
 import { defineCommand, runMain } from "citty";
 import consola from "consola";
 
-import { defineAddon } from "@/scripts/utils";
+import { defineAddon } from "$/scripts/utils";
 
 const main = defineCommand({
   meta: {
@@ -23,7 +23,6 @@ const main = defineCommand({
       type: "select",
     });
 
-    // eslint-disable-next-line sonarjs/no-small-switch
     switch (selected) {
       case "vscode":
         await import("./vscode");

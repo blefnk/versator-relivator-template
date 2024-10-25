@@ -1,4 +1,4 @@
-import { protectedAction } from "@/server/reliverse/trpc";
+import { protectedAction } from "$/server/reliverse/trpc";
 import { z } from "zod";
 
 export const createPost = protectedAction

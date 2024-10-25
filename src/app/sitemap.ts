@@ -3,7 +3,7 @@ import type { MetadataRoute } from "next";
 import { defaultLocale, locales, pathnames } from "~/../reliverse.i18n";
 
 import { env } from "~/env";
-import { getPathname } from "~/navigation";
+import { getPathname } from "~/i18n/routing";
 
 const host = (() => {
   if (env.NEXT_PUBLIC_APP_URL) {

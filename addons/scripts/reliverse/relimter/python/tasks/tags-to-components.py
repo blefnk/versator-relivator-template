@@ -42,12 +42,12 @@ def replace_tags(content):
 
 def add_imports(content):
     imports = {
-        'Paragraph': 'import { Paragraph } from "@/components/ui/paragraph";',
-        'Span': 'import { Span } from "@/components/ui/span";',
-        'Heading': 'import { Heading } from "@/components/ui/heading";',
-        'Link': 'import { Link } from "@/components/ui/link";',
-        'Header': 'import { Header } from "@/components/ui/header";',
-        'Footer': 'import { Footer } from "@/components/ui/footer";'
+        'Paragraph': 'import { Paragraph } from "$/components/ui/paragraph";',
+        'Span': 'import { Span } from "$/components/ui/span";',
+        'Heading': 'import { Heading } from "$/components/ui/heading";',
+        'Link': 'import { Link } from "$/components/ui/link";',
+        'Header': 'import { Header } from "$/components/ui/header";',
+        'Footer': 'import { Footer } from "$/components/ui/footer";'
     }
 
     new_imports = []

@@ -120,11 +120,11 @@ export function SiteFooter() {
         </section>
         <section
           className={`
-            grid flex-1 grid-cols-1 gap-10 text-center
+            xxs:grid-cols-2 grid flex-1 grid-cols-1 gap-10
+
+            text-center
 
             sm:grid-cols-4
-
-            xxs:grid-cols-2
           `}
         >
           {siteConfig.footerNav.map((item) => (

@@ -1,5 +1,3 @@
-/* eslint-disable @stylistic/max-len */
-/* eslint-disable @eslint-react/dom/no-unsafe-target-blank */
 export function Footer() {
   return (
     <footer
@@ -14,7 +12,6 @@ export function Footer() {
         rel="noopener"
         target="_blank"
       >
-        {/* biome-ignore lint/a11y/noSvgWithoutTitle: <explanation> */}
         <svg
           fill="none"
           height="16"
@@ -53,7 +50,6 @@ export function Footer() {
             target="_blank"
           >
             Clerk Docs{" "}
-            {/* biome-ignore lint/a11y/noSvgWithoutTitle: <explanation> */}
             <svg
               fill="none"
               height="16"
@@ -84,7 +80,6 @@ export function Footer() {
             rel="noopener"
             target="_blank"
           >
-            {/* biome-ignore lint/a11y/noSvgWithoutTitle: <explanation> */}
             <svg
               fill="none"
               height="16"
@@ -119,7 +114,6 @@ export function Footer() {
             rel="noopener"
             target="_blank"
           >
-            {/* biome-ignore lint/a11y/noSvgWithoutTitle: <explanation> */}
             <svg
               fill="none"
               height="16"
@@ -154,7 +148,6 @@ export function Footer() {
             rel="noopener"
             target="_blank"
           >
-            {/* biome-ignore lint/a11y/noSvgWithoutTitle: <explanation> */}
             <svg
               fill="none"
               height="16"

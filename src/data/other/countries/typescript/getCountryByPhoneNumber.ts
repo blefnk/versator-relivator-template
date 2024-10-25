@@ -16,11 +16,9 @@ export default function getCountryByPhoneNumber(phoneNumber: string) {
 
   if (matchingCountries.length > 1) {
     // If there are multiple matching countries, we need to find the correct one
-    // @ts-expect-error TODO: fix
     matchingCountry = null;
 
     // We need to find the country that has the correct area code
-    // @ts-expect-error TODO: fix
     const { callingCode } = matchingCountries[0];
 
     for (const matchingCountry_ of matchingCountries) {

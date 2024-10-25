@@ -1,17 +1,18 @@
 import { useTranslations } from "next-intl";
-import { unstable_setRequestLocale } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
 
 import PageLayout from "~/components/Common/PageLayout";
 
-type Props = {
-  params: { locale: string };
+export type PageProps = {
+  params?: Promise<{ locale: string }>;
 };
 
-// export default function PathnamesPage({ params: { locale } }: Props) {
-export default function PathnamesPage({ params: { locale } }: Props) {
+export default async function PathnamesPage({ params }: PageProps) {
+  const locale = (await params)?.locale;
+
   // TODO: Reliverse CLI: Enable static rendering when
   // TODO: choosing static export in the next.config.js
-  unstable_setRequestLocale(locale);
+  setRequestLocale(locale);
 
   const t = useTranslations("PathnamesPage");
 

@@ -24,7 +24,6 @@ import { Link } from "~/components/ui/link";
 import { Main } from "~/components/ui/main";
 import { Section } from "~/components/ui/section";
 
-/* eslint-disable @stylistic/max-len */
 export default function DonatePage() {
   return (
     <Main>
@@ -43,7 +42,7 @@ export default function DonatePage() {
 }
 
 function PageDescription() {
-  const t = useTranslations();
+  const t = useTranslations("page");
 
   return (
     <Section>
@@ -62,17 +61,17 @@ function PageDescription() {
           advance!
         </span>
       </Balancer>
-      <Link href="/donate#sponsors">{t("page.seeOurSponsors")}</Link>
+      <Link href="/donate#sponsors">{t("seeOurSponsors")}</Link>
     </Section>
   );
 }
 
 function WaysToDonate() {
-  const t = useTranslations();
+  const t = useTranslations("page");
 
   return (
     <Section>
-      <Heading>{t("page.waysToDonate")}</Heading>
+      <Heading>{t("waysToDonate")}</Heading>
       <Balancer as="p">
         We accept donations through the following platforms.
       </Balancer>
@@ -122,7 +121,7 @@ function DonateCard({
 }
 
 function UsageDetails() {
-  const t = useTranslations();
+  const t = useTranslations("page");
 
   const usageDetails = [
     {
@@ -156,7 +155,7 @@ function UsageDetails() {
 
   return (
     <Section>
-      <Heading>{t("page.howTheMoneyIsUsed")}</Heading>
+      <Heading>{t("howTheMoneyIsUsed")}</Heading>
       <Balancer as="p">
         The Relivator project uses donated money to benefit the project and the
         Relivator community as a whole.
@@ -182,7 +181,7 @@ function UsageDetails() {
 }
 
 function DonationTiers() {
-  const t = useTranslations();
+  const t = useTranslations("page");
 
   const tiers = [
     {
@@ -210,7 +209,7 @@ function DonationTiers() {
 
   return (
     <Section>
-      <Heading>{t("page.donationTiers")}</Heading>
+      <Heading>{t("donationTiers")}</Heading>
       <br />
       <Balancer as="p">
         We are still working on the list of what our pledges offer.
@@ -241,7 +240,7 @@ function DonationTiers() {
 }
 
 function Questions() {
-  const t = useTranslations();
+  const t = useTranslations("page");
 
   const FAQs = [
     // {
@@ -312,7 +311,7 @@ function Questions() {
   return (
     <Accordion className="w-full" type="single" collapsible>
       <br />
-      <Heading>{t("page.frequentlyAskedQuestions")}</Heading>
+      <Heading>{t("frequentlyAskedQuestions")}</Heading>
       {FAQs.map((faq, index) => (
         <AccordionItem key={index} value={`item-${index}`}>
           <AccordionTrigger>{faq.question}</AccordionTrigger>
@@ -324,12 +323,12 @@ function Questions() {
 }
 
 function GetStarted() {
-  const t = useTranslations();
+  const t = useTranslations("page");
 
   return (
     <Section>
       <br />
-      <Heading>{t("page.readyToBuildYourEcommercePlatform")}</Heading>
+      <Heading>{t("readyToBuildYourEcommercePlatform")}</Heading>
       <Link href="https://reliverse.org/relivator" variant="default">
         Install Relivator
       </Link>
@@ -354,9 +353,9 @@ function DonateCards() {
 
         // content={
         //   <ul className="list-disc pl-5">
-        //     <li>{t("page.exclusiveUpdatesAndContent")}</li>
-        //     <li>{t("page.accessToAPrivateCommunity")}</li>
-        //     <li>{t("page.earlyAccessToNewFeatures")}</li>
+        //     <li>{t("exclusiveUpdatesAndContent")}</li>
+        //     <li>{t("accessToAPrivateCommunity")}</li>
+        //     <li>{t("earlyAccessToNewFeatures")}</li>
         //   </ul>
         // }
       />
@@ -368,13 +367,13 @@ function DonateCards() {
 
         // content={
         //   <ul className="list-disc pl-5">
-        //     <li>{t("page.donateThroughGithubBilling")}</li>
-        //     <li>{t("page.oneTimeAndRecurringDonations")}</li>
+        //     <li>{t("donateThroughGithubBilling")}</li>
+        //     <li>{t("oneTimeAndRecurringDonations")}</li>
         //     <li>
         //       Pay by credit card or use your existing billing relationship with
         //       GitHub (including invoicing)
         //     </li>
-        //     <li>{t("page.showASponsorBadgeOnYourGithubProfile")}</li>
+        //     <li>{t("showASponsorBadgeOnYourGithubProfile")}</li>
         //   </ul>
         // }
       />
@@ -386,9 +385,9 @@ function DonateCards() {
 
         // content={
         //   <ul className="list-disc pl-5">
-        //     <li>{t("page.instantDonations")}</li>
-        //     <li>{t("page.secureTransactions")}</li>
-        //     <li>{t("page.availableWorldwide")}</li>
+        //     <li>{t("instantDonations")}</li>
+        //     <li>{t("secureTransactions")}</li>
+        //     <li>{t("availableWorldwide")}</li>
         //   </ul>
         // }
       />
@@ -400,9 +399,9 @@ function DonateCards() {
 
         // content={
         //   <ul className="list-disc pl-5">
-        //     <li>{t("page.smallOneTimeDonations")}</li>
-        //     <li>{t("page.simpleAndFunWayToSupport")}</li>
-        //     <li>{t("page.easyAndQuickProcess")}</li>
+        //     <li>{t("smallOneTimeDonations")}</li>
+        //     <li>{t("simpleAndFunWayToSupport")}</li>
+        //     <li>{t("easyAndQuickProcess")}</li>
         //   </ul>
         // }
       />
@@ -414,9 +413,9 @@ function DonateCards() {
 
         // content={
         //   <ul className="list-disc pl-5">
-        //     <li>{t("page.oneTimeDonations")}</li>
-        //     <li>{t("page.supportWithNoFees")}</li>
-        //     <li>{t("page.availableWorldwide")}</li>
+        //     <li>{t("oneTimeDonations")}</li>
+        //     <li>{t("supportWithNoFees")}</li>
+        //     <li>{t("availableWorldwide")}</li>
         //   </ul>
         // }
       />
@@ -428,9 +427,9 @@ function DonateCards() {
 
         // content={
         //   <ul className="list-disc pl-5">
-        //     <li>{t("page.directSupport")}</li>
-        //     <li>{t("page.recurringAndOneTimeDonations")}</li>
-        //     <li>{t("page.secureTransactions")}</li>
+        //     <li>{t("directSupport")}</li>
+        //     <li>{t("recurringAndOneTimeDonations")}</li>
+        //     <li>{t("secureTransactions")}</li>
         //   </ul>
         // }
       />

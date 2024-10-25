@@ -1,8 +1,8 @@
 import { defineCommand, runMain } from "citty";
 import consola from "consola";
 
-import { activateVSCodePreset } from "@/scripts/reliverse/presets/utils";
-import { defineAddon } from "@/scripts/utils";
+import { activateVSCodePreset } from "$/scripts/reliverse/presets/utils";
+import { defineAddon } from "$/scripts/utils";
 
 const main = defineCommand({
   meta: {

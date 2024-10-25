@@ -1,7 +1,7 @@
 import { defineCommand, runMain } from "citty";
 import consola from "consola";
 
-import { defineAddon } from "@/scripts/utils";
+import { defineAddon } from "$/scripts/utils";
 
 const flags = ["--first", "--second"] as const;
 

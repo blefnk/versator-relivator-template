@@ -23,7 +23,7 @@ export default async function BillingPage() {
     return <UserNotFound />;
   }
 
-  console.log("user", user);
+  // console.log("user", user);
 
   const userPlanInfo = await getPlan({ userId: user.id });
 

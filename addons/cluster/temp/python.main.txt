@@ -2,12 +2,12 @@ import {
   getFlags,
   getScriptFiles,
   instructions,
-} from "@/reliverse/relimter/python/utils/helpers";
+} from "$/reliverse/relimter/python/utils/helpers";
 import {
   runScriptPython,
   validatePythonInstallation,
-} from "@/reliverse/relimter/python/utils/shell";
-import { defineAddon } from "@/shared/utils";
+} from "$/reliverse/relimter/python/utils/shell";
+import { defineAddon } from "$/shared/utils";
 import * as p from "@clack/prompts";
 import { defineCommand, runMain } from "citty";
 import consola from "consola";

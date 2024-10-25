@@ -13,17 +13,18 @@ import {
 import { Shell } from "~/components/Wrappers/ShellVariants";
 
 type CategoryPageProps = {
-  params: {
-    // @ts-expect-error TODO: Fix ts
-    category: Product["category"];
-  };
-  searchParams: Record<string, string | string[] | undefined>;
+  params: Promise<{
+    category: Product["categoryId"];
+  }>;
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
 };
 
-export function generateMetadata({ params }: CategoryPageProps): Metadata {
+export async function generateMetadata({
+  params,
+}: CategoryPageProps): Promise<Metadata> {
   return {
-    description: `Buy products from the ${params.category} category`,
-    title: titleCase(params.category || ""),
+    description: `Buy products from the ${(await params).category} category`,
+    title: titleCase((await params).category || ""),
   };
 }
 

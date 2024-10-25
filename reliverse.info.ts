@@ -67,7 +67,6 @@ const logUpdateInstructions = () => {
 
     if (semver.gt(reliverse.framework.version, frameworkVersion)) {
       consola.warn(
-        // eslint-disable-next-line @stylistic/max-len
         `🟢 A new ${reliverse.framework.name} ${reliverse.framework.version} version is available! The current version is ${frameworkVersion}.
         Download: ${reliverse.framework.repo}/releases/tag/${reliverse.framework.version}`,
       );
@@ -75,14 +74,14 @@ const logUpdateInstructions = () => {
 
     // if (semver.lt(reliverse.framework.version, frameworkVersion)) {
     //   consola.warn(
-    // eslint-disable-next-line @stylistic/max-len
+
     //     `🟡 The currently used ${frameworkVersion} version (${reliverse.framework.version}) is older than the bootstrapped version (${reliverse.framework.name}).
     //     This might lead to unexpected behavior.`,
     //   );
     // }
 
     // consola.info(
-    // eslint-disable-next-line @stylistic/max-len
+
     //   "Please find Q21 in the FAQ of README.md. Copy the adapted bun scripts and replace the current ones in package.json (scripts for other package managers coming soon).",
     // );
   }

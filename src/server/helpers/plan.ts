@@ -13,7 +13,7 @@ export function getPlanFeatures(planId?: SubscriptionPlanTypes["id"]) {
   const features = plan?.features.flatMap((feature) => feature.split(","));
 
   const maxStoreCount =
-    (features?.find((feature) => feature.match(/store/)) && // @ts-expect-error TODO: fix
+    (features?.find((feature) => feature.match(/store/)) &&
       features.find((feature) => feature.match(/store/)).match(/\d+/)) ||
     0;
 

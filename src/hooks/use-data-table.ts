@@ -27,7 +27,6 @@ import { z } from "zod";
 
 import { useDebounce } from "~/hooks/use-debounce";
 
-/* eslint-disable @stylistic/max-len */
 type UseDataTableProps<TData, TValue> = {
   /**
    * The columns of the table.

@@ -44,10 +44,10 @@ export function MobileMenu({
           className={`
             mr-2 px-0 text-base
 
-            focus-visible:bg-transparent focus-visible:ring-0
-            focus-visible:ring-offset-0
+            hover:bg-transparent focus-visible:bg-transparent
+            focus-visible:ring-0
 
-            hover:bg-transparent
+            focus-visible:ring-offset-0
 
             lg:hidden
           `}

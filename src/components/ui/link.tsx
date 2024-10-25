@@ -6,7 +6,7 @@ import { buttonVariants } from "~/components/ui/button";
 import { cn } from "~/utils/cn";
 
 // TODO: implement
-// import { Link as NextLink } from "~/navigation";
+// import { Link as NextLink } from "~/i18n/routing";
 
 type LinkProps = {
   variant?:

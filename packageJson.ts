@@ -257,9 +257,6 @@ const basicDependencies: string[] = [
   "react",
   "recharts",
   "redrun",
-  "remark-frontmatter",
-  "remark-gfm",
-  "remark-mdx",
   "remotion",
   "resend",
   "semver",
@@ -444,7 +441,6 @@ async function displayWelcomeMessage(): Promise<void> {
     "💡 Usage example 8: pnpm deps:install find-incorrectly-placed-packages (alternative: pnpm deps:locations)",
   );
   log.step(
-    // eslint-disable-next-line @stylistic/max-len
     `💡 Usage example 9: pnpm deps:use-next-15-rc (or: deps:use-next-15 (or: pnpm tsx packageJson.ts use ${useFlags.join(" / ")}))`,
   );
   log.info(
@@ -587,7 +583,6 @@ async function handleDependencies(
 
         if (!isBetaAlphaCanaryNextDepInstalled) {
           log.step(
-            // eslint-disable-next-line @stylistic/max-len
             `The following packages will be installed: ${[...rcBetaAlphaCanaryNextDepsDEV, ...rcBetaAlphaCanaryNextDeps].join(" ")}\n`,
           );
           await addDevDependency(rcBetaAlphaCanaryNextDepsDEV, {
@@ -607,10 +602,8 @@ async function handleDependencies(
 
         spinner.stop();
 
-        // eslint-disable-next-line @stylistic/max-len
         // log.warn("⭐ The Optional Next Steps:\n- Run `pnpm reli:setup` to switch to the 'ultimate' ESLint preset configured by the Reliverse.");
         log.success(
-          // eslint-disable-next-line @stylistic/max-len
           "🎉 Great! All dependencies registered in ./packageJson.ts are installed now. In VSCode: `Cmd/Ctrl+Shift+P`  ➞  `>Developer: Restart Extension Host`.\n",
         );
 
@@ -644,7 +637,6 @@ async function handleDependencies(
 
         if (!isBetaAlphaCanaryNextDepInstalled) {
           log.step(
-            // eslint-disable-next-line @stylistic/max-len
             `The following packages will be installed: ${[...rcBetaAlphaCanaryNextDepsDEV, ...rcBetaAlphaCanaryNextDeps].join(" ")}\n`,
           );
           await addDevDependency(rcBetaAlphaCanaryNextDepsDEV, {
@@ -656,7 +648,6 @@ async function handleDependencies(
         }
 
         log.step(
-          // eslint-disable-next-line @stylistic/max-len
           `The following packages will be installed: ${basicDepsToInstall.join(" ")} ${basicDevDepsToInstall.join(" ")}\n`,
         );
 
@@ -1039,7 +1030,6 @@ async function checkIncorrectlyPlacedPackages() {
 
   if (misplacedDependencies.length > 0) {
     log.warn(
-      // eslint-disable-next-line @stylistic/max-len
       "🚨 [package.json | packageJson.ts] The following packages are currently in `dependencies` but should be in `devDependencies`:",
     );
 
@@ -1048,7 +1038,6 @@ async function checkIncorrectlyPlacedPackages() {
     }
 
     log.info(
-      // eslint-disable-next-line @stylistic/max-len
       "💡 [package.json | packageJson.ts] Please move these packages from `dependencies` to `devDependencies`, then run `pnpm install` to update the lockfile.\n",
     );
 
@@ -1057,7 +1046,6 @@ async function checkIncorrectlyPlacedPackages() {
 
   if (misplacedDevDependencies.length > 0) {
     log.warn(
-      // eslint-disable-next-line @stylistic/max-len
       "🚨 [package.json | packageJson.ts] The following packages are currently in `devDependencies` but should be in `dependencies`:",
     );
 
@@ -1066,7 +1054,6 @@ async function checkIncorrectlyPlacedPackages() {
     }
 
     log.info(
-      // eslint-disable-next-line @stylistic/max-len
       "💡 [package.json | packageJson.ts] Please move these packages from `devDependencies` to `dependencies`, then run `pnpm install` to update the lockfile.\n",
     );
 
@@ -1075,7 +1062,7 @@ async function checkIncorrectlyPlacedPackages() {
 }
 
 // [usage example] ▶️ pnpm deps:use-next-15-rc (or: deps:use-next-15)
-// eslint-disable-next-line max-lines-per-function
+
 async function handleUseFlags(flag: UseFlag) {
   const reactStable = ["react", "react-dom"];
   const nextStable = [...reactStable, "next"];
@@ -1387,7 +1374,6 @@ async function handleUseFlags(flag: UseFlag) {
           log.error("⛔ The 'use' functional flag requires a secondary flag.");
           log.info(`💡 Available secondary flags: ${useFlags.join(", ")}`);
           log.info(
-            // eslint-disable-next-line @stylistic/max-len
             "💡 Example: pnpm deps:use-next-15-rc (or: deps:use-next-15 (or: pnpm tsx packageJson.ts use [secondary-flag]))",
           );
           break;
